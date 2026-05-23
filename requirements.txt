@@ -1,0 +1,5 @@
+python-dotenv
+pydantic-settings
+qdrant-client
+loguru
+# Add MinerU and sLLM related libraries as they are identified
