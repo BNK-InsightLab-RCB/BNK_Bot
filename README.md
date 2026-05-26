@@ -4,7 +4,7 @@ BNK_Bot은 은행 업무 매뉴얼, FAQ, 상담 스크립트, 규정 문서 등 
 
 이 프로젝트는 SQL 생성 챗봇이 아니라, 내부 문서를 검색하고 근거 문서에 기반해 상담 답변을 생성하는 AI 상담 시스템을 목표로 합니다. 외부 API에 의존하지 않는 Qwen 기반 로컬 LLM, KURE-v1 임베딩, Elasticsearch 기반 Hybrid Search, 권한 제어와 민감정보 마스킹을 포함한 보안 중심 구조를 설계합니다.
 
-> 현재 레포지토리는 초기 문서화/설계 단계입니다. 실제 애플리케이션 코드, 샘플 데이터, 실행 스크립트는 아직 포함되어 있지 않습니다.
+> 현재 레포지토리는 PDF 기반 문서 인입, Markdown 변환, 청크 생성, KURE-v1 임베딩, Elasticsearch 색인, BM25 + Vector Hybrid Search CLI까지 PoC 수준으로 구현되어 있습니다. Qwen 답변 생성, Spring Boot 연동, 고객용 UI는 아직 구현 전입니다.
 
 ## 문제 정의
 
@@ -17,8 +17,8 @@ LLM을 그대로 사용하면 모델이 근거 없는 답변을 생성하는 환
 | 구분 | 설명 | 상태 |
 | --- | --- | --- |
 | 자연어 상담 질의 | 사용자가 메뉴 탐색 없이 자연어로 은행 업무를 질문 | 설계 |
-| 내부 문서 기반 RAG 검색 | 매뉴얼, FAQ, 상담 스크립트, 규정 문서를 검색해 답변 근거로 사용 | 설계 |
-| Elasticsearch Hybrid Search | BM25 키워드 검색과 Dense Vector Search를 함께 사용 | 설계 |
+| 내부 문서 기반 RAG 검색 | 매뉴얼, FAQ, 상담 스크립트, 규정 문서를 검색해 답변 근거로 사용 | PoC 구현 |
+| Elasticsearch Hybrid Search | BM25 키워드 검색과 Dense Vector Search를 함께 사용 | PoC 구현 |
 | 근거 기반 답변 생성 | 검색된 문서 조각을 기반으로 로컬 LLM이 답변 생성 | 설계 |
 | 근거 부족 시 답변 거절 | 충분한 근거가 없으면 추측하지 않고 답변 제한 | 설계 |
 | 근거 문서 로그 저장 | 고객에게 출처를 직접 노출하지 않고, 답변에 사용된 근거 문서를 내부 로그로 저장 | 설계 |
@@ -51,12 +51,12 @@ flowchart LR
 | --- | --- | --- |
 | Frontend | React 또는 Vue | 현재 구현 전, 추후 부산은행/경남은행 모바일 채널 연동 고려 |
 | Backend | Spring Boot | 1차 구현 목표, 인증, 권한, 상담 이력, 로그, 관리자 기능, FastAPI 호출 |
-| AI Server | FastAPI | RAG 검색, 임베딩, Reranker, LLM 호출 |
+| AI Server | Python CLI / FastAPI 예정 | 현재는 RAG 인입/검색 CLI 구현, FastAPI 서버는 예정 |
 | Search Engine | Elasticsearch | BM25, dense_vector, 권한 필터링 |
 | Embedding | `nlpai-lab/KURE-v1` | 한국어 업무 문서용 임베딩 모델로 확정 |
 | LLM | Qwen 계열 로컬 모델 | 내부망 또는 로컬 환경 실행 |
 | Vector Search | Elasticsearch `dense_vector` | 벡터 기반 의미 검색 |
-| Reranker | BGE/Qwen 계열 reranker 후보 | 최종 근거 Top 3~5 선별 |
+| Reranker | BGE/Qwen 계열 reranker 후보 | 최종 근거 Top 3~5 선별, 현재 구현 전 |
 | Data Format | Markdown 기반 문서 | 구조화, 버전 관리, 청킹에 유리 |
 
 ## RAG 파이프라인
@@ -86,8 +86,8 @@ flowchart TD
 4. 검색에 적합한 크기로 청크를 분할하고 임베딩을 생성합니다.
 5. Elasticsearch에 BM25 검색용 텍스트와 Dense Vector Search용 벡터를 함께 저장합니다.
 6. 사용자 질문에 대해 BM25와 Vector Search를 수행하고 RRF로 병합합니다.
-7. Reranker가 최종 근거 문서 Top 3~5를 선별합니다.
-8. Local LLM은 선별된 근거 안에서만 답변을 생성합니다.
+7. 현재 PoC는 RRF 병합 결과를 검색 결과로 출력합니다.
+8. 이후 단계에서 Reranker와 Local LLM을 연결해 근거 기반 답변을 생성합니다.
 
 ## 데이터 품질 관리
 
@@ -153,64 +153,114 @@ BNK_Bot은 답변 생성보다 근거 검증을 우선합니다.
 
 ## 프로젝트 구조
 
-현재 레포지토리에는 `.git` 디렉터리 외 구현 파일이 없습니다. 아래 구조는 향후 구현을 위한 **예정 구조**입니다.
+현재 레포지토리는 아래와 같은 PoC 구조를 포함합니다.
 
 ```text
 BNK_Bot/
-├── frontend/
-├── backend-spring/
+├── .env.example
+├── docker-compose.yml
 ├── ai-server/
 │   ├── app/
+│   │   └── config.py
 │   ├── rag/
-│   ├── embeddings/
-│   ├── retriever/
-│   └── guardrails/
+│   │   ├── pdf_to_markdown.py
+│   │   ├── chunker.py
+│   │   ├── embedder.py
+│   │   ├── elastic_index.py
+│   │   ├── hybrid_search.py
+│   │   └── rrf.py
+│   ├── scripts/
+│   │   ├── ingest_pdfs.py
+│   │   └── search.py
+│   └── requirements.txt
 ├── data/
-│   ├── manuals/
+│   ├── raw_pdfs/
+│   ├── markdown/
 │   ├── chunks/
-│   └── samples/
-├── docs/
+│   └── samples/       # 예정
+├── models/
+│   └── KURE-v1/       # 로컬 다운로드 시 사용, Git 제외
 └── README.md
 ```
 
-예정 디렉터리 역할은 다음과 같습니다.
+주요 디렉터리와 파일 역할은 다음과 같습니다.
 
 | 경로 | 역할 |
 | --- | --- |
-| `frontend/` | 상담 화면, 부산은행/경남은행 모바일 채널 연동을 고려한 UI |
-| `backend-spring/` | 인증, 권한, 상담 이력, 로그, 관리자 기능, FastAPI 연동 |
-| `ai-server/` | FastAPI 기반 RAG/LLM 처리 서버 |
+| `docker-compose.yml` | 로컬 Elasticsearch 실행 |
+| `.env.example` | Elasticsearch 주소, 인덱스명, 모델 경로, 청크 설정 예시 |
+| `ai-server/app/config.py` | 환경변수와 기본 설정 로딩 |
+| `ai-server/scripts/ingest_pdfs.py` | PDF → Markdown → Chunk → KURE 임베딩 → Elasticsearch 색인 실행 |
+| `ai-server/scripts/search.py` | 질문을 받아 BM25 + Vector Search + RRF 결과 출력 |
+| `ai-server/` | 현재는 RAG CLI PoC, 추후 FastAPI 기반 AI 서버로 확장 |
 | `ai-server/rag/` | 문서 검색, RRF 병합, RAG 오케스트레이션 |
-| `ai-server/embeddings/` | 임베딩 모델 로딩과 벡터 생성 |
-| `ai-server/retriever/` | Elasticsearch 검색, 권한 필터링 |
-| `ai-server/guardrails/` | 근거 부족 거절, 마스킹, 프롬프트 인젝션 방어 |
-| `data/manuals/` | 비식별화된 샘플 매뉴얼 문서 |
-| `data/chunks/` | 청킹 결과 샘플 |
-| `data/samples/` | 공개 가능한 테스트용 예시 데이터 |
-| `docs/` | 설계 문서, 평가 기준, 데이터 정제 가이드 |
+| `data/raw_pdfs/` | 사용자가 샘플 PDF를 넣는 입력 디렉터리, Git 제외 |
+| `data/markdown/` | PDF에서 변환된 Markdown 출력, Git 제외 |
+| `data/chunks/` | 청크 JSONL 출력, Git 제외 |
+| `models/KURE-v1/` | KURE-v1 모델 로컬 저장 위치, Git 제외 |
 
 ## 실행 방법
 
-현재 레포지토리에는 실행 가능한 애플리케이션 코드가 아직 포함되어 있지 않습니다. 아래 명령어는 향후 구현 시 사용할 수 있는 **예시**입니다.
+현재 구현된 범위는 로컬 CLI 기반 RAG 검색 PoC입니다.
 
-### FastAPI AI 서버 예시
+### 1. Python 환경 준비
+
+```bash
+python -m venv ai-server/venv
+source ai-server/venv/bin/activate
+pip install -r ai-server/requirements.txt
+```
+
+### 2. Elasticsearch 실행
+
+```bash
+docker compose up -d
+```
+
+### 3. KURE-v1 모델 다운로드
+
+인터넷이 가능한 환경에서는 아래 명령으로 모델을 로컬에 저장합니다.
+
+```bash
+huggingface-cli download nlpai-lab/KURE-v1 --local-dir models/KURE-v1
+```
+
+모델을 미리 다운로드하지 않아도 `SentenceTransformer`가 최초 실행 시 Hugging Face에서 자동 다운로드를 시도합니다. 내부망/오프라인 환경에서는 `models/KURE-v1/`에 모델 파일을 옮긴 뒤 실행합니다.
+
+### 4. PDF 배치
+
+샘플 PDF를 아래 디렉터리에 넣습니다.
+
+```text
+data/raw_pdfs/
+```
+
+### 5. PDF 인입과 색인
 
 ```bash
 cd ai-server
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+python scripts/ingest_pdfs.py --recreate-index
 ```
 
-### Spring Boot 서버 예시
+이 명령은 PDF를 Markdown으로 변환하고, 청크를 만든 뒤, KURE-v1 임베딩을 생성해 Elasticsearch에 저장합니다.
+
+### 6. Hybrid Search 실행
+
+```bash
+cd ai-server
+python scripts/search.py "한도제한계좌 해제 조건이 뭐야?"
+```
+
+검색 결과는 고객에게 직접 노출하는 답변이 아니라 개발/검증용 결과입니다. `chunk_id`, `doc_id`, `title`, `section`, `source_file`, 점수, 본문 미리보기를 출력합니다.
+
+### Spring Boot 서버 예정
 
 ```bash
 cd backend-spring
 ./gradlew bootRun
 ```
 
-### Frontend 예시
+### Frontend 예정
 
 ```bash
 cd frontend
@@ -224,10 +274,10 @@ npm run dev
 
 | 단계 | 내용 | 상태 |
 | --- | --- | --- |
-| 1단계 | 문서 정리 및 Markdown 변환 | 예정 |
-| 2단계 | KURE-v1 기반 임베딩 테스트 | 예정 |
-| 3단계 | FAISS 또는 간단 검색으로 PoC 검증 | 예정 |
-| 4단계 | Elasticsearch Hybrid Search 적용 | 예정 |
+| 1단계 | 문서 정리 및 Markdown 변환 | PoC 구현 |
+| 2단계 | KURE-v1 기반 임베딩 테스트 | PoC 구현 |
+| 3단계 | Elasticsearch 기반 검색 PoC 검증 | PoC 구현 |
+| 4단계 | Elasticsearch Hybrid Search 적용 | PoC 구현 |
 | 5단계 | Reranker 적용 | 예정 |
 | 6단계 | FastAPI AI 서버 구축 | 예정 |
 | 7단계 | Spring Boot 연동 | 예정 |
