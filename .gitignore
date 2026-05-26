@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local configuration
+.env
+
+# Local models and generated RAG artifacts
+models/*
+!models/.gitkeep
+data/raw_pdfs/*
+!data/raw_pdfs/.gitkeep
+data/markdown/*
+!data/markdown/.gitkeep
+data/chunks/*
+!data/chunks/.gitkeep
+
+# macOS
+.DS_Store
