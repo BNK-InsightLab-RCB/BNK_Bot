@@ -161,9 +161,21 @@ BNK_Bot/
 ├── docker-compose.yml
 ├── ai-server/
 │   ├── app/
-│   │   └── config.py
+│   │   ├── api/
+│   │   │   ├── documents.py
+│   │   │   ├── health.py
+│   │   │   ├── refine.py
+│   │   │   └── search.py
+│   │   ├── config.py
+│   │   ├── deps.py
+│   │   ├── main.py
+│   │   └── schemas.py
+│   ├── llm/
+│   │   ├── mlx_client.py
+│   │   └── prompts.py
 │   ├── rag/
 │   │   ├── pdf_to_markdown.py
+│   │   ├── markdown_refiner.py
 │   │   ├── chunker.py
 │   │   ├── embedder.py
 │   │   ├── elastic_index.py
@@ -171,11 +183,13 @@ BNK_Bot/
 │   │   └── rrf.py
 │   ├── scripts/
 │   │   ├── ingest_pdfs.py
+│   │   ├── refine_markdown.py
 │   │   └── search.py
 │   └── requirements.txt
 ├── data/
 │   ├── raw_pdfs/
 │   ├── markdown/
+│   ├── refined_markdown/
 │   ├── chunks/
 │   └── samples/       # 예정
 ├── models/
@@ -189,19 +203,24 @@ BNK_Bot/
 | --- | --- |
 | `docker-compose.yml` | 로컬 Elasticsearch 실행 |
 | `.env.example` | Elasticsearch 주소, 인덱스명, 모델 경로, 청크 설정 예시 |
+| `ai-server/app/main.py` | FastAPI 앱 진입점 |
+| `ai-server/app/api/` | 문서 변환, Qwen 후처리, 검색 API |
 | `ai-server/app/config.py` | 환경변수와 기본 설정 로딩 |
+| `ai-server/llm/` | Qwen MLX 호출 클라이언트와 프롬프트 |
 | `ai-server/scripts/ingest_pdfs.py` | PDF → Docling Markdown → Chunk → KURE 임베딩 → Elasticsearch 색인 실행 |
+| `ai-server/scripts/refine_markdown.py` | Docling Markdown → Qwen 후처리 Markdown 실행 |
 | `ai-server/scripts/search.py` | 질문을 받아 BM25 + Vector Search + RRF 결과 출력 |
-| `ai-server/` | 현재는 RAG CLI PoC, 추후 FastAPI 기반 AI 서버로 확장 |
+| `ai-server/` | FastAPI 기반 AI 서버 및 CLI PoC |
 | `ai-server/rag/` | 문서 검색, RRF 병합, RAG 오케스트레이션 |
 | `data/raw_pdfs/` | 사용자가 샘플 PDF를 넣는 입력 디렉터리, Git 제외 |
 | `data/markdown/` | PDF에서 변환된 Markdown 출력, Git 제외 |
+| `data/refined_markdown/` | Qwen 후처리 결과, 검수 전 정제본, Git 제외 |
 | `data/chunks/` | 청크 JSONL 출력, Git 제외 |
 | `models/KURE-v1/` | KURE-v1 모델 로컬 저장 위치, Git 제외 |
 
 ## 실행 방법
 
-현재 구현된 범위는 로컬 CLI 기반 RAG 검색 PoC입니다.
+현재 구현된 범위는 로컬 CLI와 FastAPI 기반 RAG 검색 PoC입니다.
 
 ### 1. Python 환경 준비
 
@@ -254,6 +273,54 @@ python scripts/search.py "한도제한계좌 해제 조건이 뭐야?"
 ```
 
 검색 결과는 고객에게 직접 노출하는 답변이 아니라 개발/검증용 결과입니다. `chunk_id`, `doc_id`, `title`, `section`, `source_file`, 점수, 본문 미리보기를 출력합니다.
+
+### 7. Qwen 후처리 CLI
+
+Docling 변환 결과를 Qwen MLX 모델로 RAG 색인용 Markdown으로 정리합니다. 결과는 검수 전 정제본이며 `refine_status: needs_review` 메타데이터가 붙습니다.
+
+```bash
+cd ai-server
+python scripts/refine_markdown.py \
+  --input ../data/markdown/sample.md \
+  --output-dir ../data/refined_markdown
+```
+
+### 8. FastAPI 서버 실행
+
+```bash
+cd ai-server
+uvicorn app.main:app --reload
+```
+
+헬스 체크:
+
+```bash
+curl http://localhost:8000/health
+```
+
+PDF → Markdown 변환:
+
+```bash
+curl -X POST http://localhost:8000/documents/convert \
+  -H "Content-Type: application/json" \
+  -d '{"pdf_path":"data/raw_pdfs/sample.pdf"}'
+```
+
+Qwen 후처리:
+
+```bash
+curl -X POST http://localhost:8000/documents/refine \
+  -H "Content-Type: application/json" \
+  -d '{"markdown_path":"data/markdown/sample.md"}'
+```
+
+Hybrid Search:
+
+```bash
+curl -X POST http://localhost:8000/search \
+  -H "Content-Type: application/json" \
+  -d '{"query":"분할인출 가능한가요?", "top_k":5}'
+```
 
 ### Spring Boot 서버 예정
 
