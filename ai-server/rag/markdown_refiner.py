@@ -31,8 +31,11 @@ def refine_markdown_file(
     refined_blocks = []
 
     for block in _split_blocks(body):
+        if _is_image_only_block(block):
+            continue
         refined = llm.generate(build_refine_prompt(block), max_tokens=max_tokens).text
-        refined_blocks.append(_strip_empty_think(refined))
+        cleaned = _select_refined_or_source(_clean_generated_markdown(refined), block)
+        refined_blocks.append(cleaned)
 
     output_path = output_dir / input_path.name
     output_path.write_text(
@@ -87,6 +90,40 @@ def _split_blocks(markdown: str) -> list[str]:
     return parts
 
 
-def _strip_empty_think(text: str) -> str:
-    return re.sub(r"\A\s*<think>\s*</think>\s*", "", text, flags=re.DOTALL).strip()
+def _is_image_only_block(markdown: str) -> bool:
+    without_images = markdown.replace("<!-- image -->", "").strip()
+    return not without_images
 
+
+def _clean_generated_markdown(text: str) -> str:
+    cleaned = text.strip()
+    cleaned = re.sub(r"<think>.*?</think>", "", cleaned, flags=re.DOTALL)
+    cleaned = re.sub(r"</?think>", "", cleaned)
+    cleaned = cleaned.replace("<|im_start|>", "").replace("<|im_end|>", "")
+    cleaned = re.sub(r"\A\s*```(?:markdown)?\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s*```\s*\Z", "", cleaned)
+    cleaned = re.sub(r"(?m)^```(?:markdown)?\s*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"(?m)^```\s*$", "", cleaned)
+    lines = [
+        line.rstrip()
+        for line in cleaned.splitlines()
+        if "(이미지에서 추출된 텍스트)" not in line
+    ]
+    cleaned = "\n".join(lines)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned.strip()
+
+
+def _clean_source_markdown(markdown: str) -> str:
+    cleaned = markdown.replace("<!-- image -->", "")
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned.strip()
+
+
+def _select_refined_or_source(refined: str, source: str) -> str:
+    source_cleaned = _clean_source_markdown(source)
+    if not refined:
+        return source_cleaned
+    if len(source_cleaned) >= 1000 and len(refined) < len(source_cleaned) * 0.35:
+        return source_cleaned
+    return refined
