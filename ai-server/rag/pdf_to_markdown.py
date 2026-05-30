@@ -3,7 +3,11 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Optional
 
+from docling.datamodel.accelerator_options import AcceleratorOptions
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter
+from docling.document_converter import PdfFormatOption
 
 
 def default_metadata(pdf_path: Path) -> dict[str, object]:
@@ -56,5 +60,17 @@ def convert_pdf_to_markdown(
 
 def convert_pdf_directory(pdf_dir: Path, markdown_dir: Path) -> list[Path]:
     pdf_paths = sorted(pdf_dir.glob("*.pdf"))
-    converter = DocumentConverter()
+    converter = create_pdf_converter()
     return [convert_pdf_to_markdown(pdf_path, markdown_dir, converter) for pdf_path in pdf_paths]
+
+
+def create_pdf_converter() -> DocumentConverter:
+    pipeline_options = PdfPipelineOptions()
+    pipeline_options.accelerator_options = AcceleratorOptions(device="cpu")
+    pipeline_options.do_ocr = False
+
+    return DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options),
+        }
+    )
