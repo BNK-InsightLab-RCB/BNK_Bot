@@ -57,13 +57,13 @@ flowchart LR
 | LLM | Qwen 계열 로컬 모델 | 내부망 또는 로컬 환경 실행 |
 | Vector Search | Elasticsearch `dense_vector` | 벡터 기반 의미 검색 |
 | Reranker | BGE/Qwen 계열 reranker 후보 | 최종 근거 Top 3~5 선별, 현재 구현 전 |
-| Data Format | Markdown 기반 문서 | 구조화, 버전 관리, 청킹에 유리 |
+| Data Format | Markdown 기반 문서 | Docling으로 PDF를 Markdown으로 변환한 뒤 청킹 |
 
 ## RAG 파이프라인
 
 ```mermaid
 flowchart TD
-    A["원본 문서 수집"] --> B["PDF/DOCX/HTML/Markdown 변환"]
+    A["원본 문서 수집"] --> B["Docling 기반 PDF/문서 Markdown 변환"]
     B --> C["데이터 정제"]
     C --> D["Markdown 구조화"]
     D --> E["청크 분할"]
@@ -80,7 +80,7 @@ flowchart TD
     N --> P["근거 문서 내부 로그 저장"]
 ```
 
-1. 원본 문서를 수집하고 PDF, DOCX, HTML, Markdown 형식을 Markdown 중심 구조로 변환합니다.
+1. 원본 문서를 수집하고 Docling을 사용해 PDF 등 문서 형식을 Markdown 중심 구조로 변환합니다.
 2. 반복 헤더/푸터, 표 구조, 폐기 문서 등을 정제합니다.
 3. 문서명, 업무영역, 고객구분, 채널, 버전, 시행일, 권한 메타데이터를 부여합니다.
 4. 검색에 적합한 크기로 청크를 분할하고 임베딩을 생성합니다.
@@ -190,7 +190,7 @@ BNK_Bot/
 | `docker-compose.yml` | 로컬 Elasticsearch 실행 |
 | `.env.example` | Elasticsearch 주소, 인덱스명, 모델 경로, 청크 설정 예시 |
 | `ai-server/app/config.py` | 환경변수와 기본 설정 로딩 |
-| `ai-server/scripts/ingest_pdfs.py` | PDF → Markdown → Chunk → KURE 임베딩 → Elasticsearch 색인 실행 |
+| `ai-server/scripts/ingest_pdfs.py` | PDF → Docling Markdown → Chunk → KURE 임베딩 → Elasticsearch 색인 실행 |
 | `ai-server/scripts/search.py` | 질문을 받아 BM25 + Vector Search + RRF 결과 출력 |
 | `ai-server/` | 현재는 RAG CLI PoC, 추후 FastAPI 기반 AI 서버로 확장 |
 | `ai-server/rag/` | 문서 검색, RRF 병합, RAG 오케스트레이션 |
@@ -205,8 +205,10 @@ BNK_Bot/
 
 ### 1. Python 환경 준비
 
+Docling 사용을 위해 Python 3.10 이상을 권장합니다.
+
 ```bash
-python -m venv ai-server/venv
+python3.11 -m venv ai-server/venv
 source ai-server/venv/bin/activate
 pip install -r ai-server/requirements.txt
 ```
@@ -242,7 +244,7 @@ cd ai-server
 python scripts/ingest_pdfs.py --recreate-index
 ```
 
-이 명령은 PDF를 Markdown으로 변환하고, 청크를 만든 뒤, KURE-v1 임베딩을 생성해 Elasticsearch에 저장합니다.
+이 명령은 Docling으로 PDF를 Markdown으로 변환하고, 청크를 만든 뒤, KURE-v1 임베딩을 생성해 Elasticsearch에 저장합니다.
 
 ### 6. Hybrid Search 실행
 
