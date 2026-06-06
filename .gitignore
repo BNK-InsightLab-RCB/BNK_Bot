@@ -16,11 +16,10 @@ __pycache__/
 .DS_Store
 
 # Data & Logs (Ignore files but keep directory names)
-data/raw/*
-data/processed/*
-data/chunks/*
-data/failed/*
+data/*
 logs/*
 
 # Exceptions
 !.gitignore
+
+CLAUDE.md

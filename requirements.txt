@@ -2,4 +2,16 @@ python-dotenv
 pydantic-settings
 qdrant-client
 loguru
-# Add MinerU and sLLM related libraries as they are identified
+
+# PDF Parsing (MinerU replaced due to AGPL licensing constraints)
+# - pdfplumber: deterministic lattice table extraction for born-digital,
+#   ruled-table PDFs (primary path for BNK 설명서/약관)
+# - docling: general/fallback parser for scanned or non-ruled layouts
+# - rapidocr + onnxruntime: Korean OCR backend used by the Docling fallback
+pdfplumber
+PyMuPDF
+docling
+rapidocr
+onnxruntime
+
+# Add embedding / sLLM related libraries as they are identified

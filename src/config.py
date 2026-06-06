@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     # Paths
     base_dir: Path = Path(__file__).parent.parent
     data_dir: Path = base_dir / "data"
-    raw_dir: Path = data_dir / "raw"
+    raw_dir: Path = Path("/Users/jhyeong/Project/InsightLab/Data_PDF/예금")
     processed_dir: Path = data_dir / "processed"
     chunks_dir: Path = data_dir / "chunks"
     failed_dir: Path = data_dir / "failed"
