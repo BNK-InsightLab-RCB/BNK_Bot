@@ -74,10 +74,17 @@ class PDFParser:
         return result.document.export_to_markdown()
 
     # ----- public API ---------------------------------------------------------
-    def parse(self, pdf_path: str | Path) -> Path:
+    def parse(self, pdf_path: str | Path, force: bool = False) -> Path:
         pdf_path = Path(pdf_path)
         result_dir = self.output_base_dir / pdf_path.stem
         result_dir.mkdir(parents=True, exist_ok=True)
+        out_md = result_dir / f"{pdf_path.stem}.md"
+
+        # Cache: skip the (slow, esp. Docling) parse if the MD already exists.
+        # Makes re-ingestion fast and idempotent. Pass force=True to re-parse.
+        if out_md.exists() and not force:
+            logger.info(f"{pdf_path.name}: cached MD exists, skip parse")
+            return out_md
 
         has_text, has_tables = self._profile(pdf_path)
         try:

@@ -14,4 +14,8 @@ docling
 rapidocr
 onnxruntime
 
-# Add embedding / sLLM related libraries as they are identified
+# Embedding: KURE-v1 (Korean retrieval, BGE-M3 based, 1024-dim, 8192 ctx) — loaded
+# via sentence-transformers; model weights (~2GB) auto-download to HF cache on first use.
+sentence-transformers==5.5.1
+
+# Add sLLM related libraries as they are identified
