@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Optional
 
+import yaml
 from docling.datamodel.accelerator_options import AcceleratorOptions
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import PdfPipelineOptions
@@ -27,15 +28,12 @@ def default_metadata(pdf_path: Path) -> dict[str, object]:
 
 
 def render_front_matter(metadata: dict[str, object]) -> str:
-    lines = ["---"]
-    for key, value in metadata.items():
-        if isinstance(value, bool):
-            rendered = "true" if value else "false"
-        else:
-            rendered = str(value).replace("\n", " ").strip()
-        lines.append(f"{key}: {rendered}")
-    lines.append("---")
-    return "\n".join(lines)
+    normalized = {
+        key: value if isinstance(value, bool) else str(value).replace("\n", " ").strip()
+        for key, value in metadata.items()
+    }
+    body = yaml.safe_dump(normalized, allow_unicode=True, sort_keys=False).strip()
+    return f"---\n{body}\n---"
 
 
 def convert_pdf_to_markdown(
