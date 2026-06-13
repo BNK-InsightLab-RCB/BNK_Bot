@@ -19,6 +19,8 @@ data/refined_markdown/*
 !data/refined_markdown/.gitkeep
 data/chunks/*
 !data/chunks/.gitkeep
+data/table_extracts/*
+!data/table_extracts/.gitkeep
 
 # macOS
 .DS_Store

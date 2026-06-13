@@ -21,6 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--markdown-dir", default=str(ROOT_DIR / "data/markdown"))
     parser.add_argument("--chunks-file", default=str(ROOT_DIR / "data/chunks/chunks.jsonl"))
     parser.add_argument("--recreate-index", action="store_true")
+    parser.add_argument("--use-pdfplumber-tables", action="store_true")
     return parser.parse_args()
 
 
@@ -40,7 +41,11 @@ def main() -> None:
         raise SystemExit(f"No PDF files found in: {pdf_dir}")
 
     print(f"Converting {len(pdf_paths)} PDF file(s) to Markdown...")
-    markdown_paths = convert_pdf_directory(pdf_dir, markdown_dir)
+    markdown_paths = convert_pdf_directory(
+        pdf_dir,
+        markdown_dir,
+        use_pdfplumber_tables=args.use_pdfplumber_tables,
+    )
     print(f"Markdown files written: {len(markdown_paths)}")
 
     print("Chunking Markdown files...")
@@ -71,4 +76,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

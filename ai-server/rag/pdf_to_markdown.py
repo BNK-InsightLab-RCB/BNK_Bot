@@ -10,6 +10,8 @@ from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter
 from docling.document_converter import PdfFormatOption
 
+from rag.pdfplumber_tables import render_pdfplumber_tables_markdown
+
 
 def default_metadata(pdf_path: Path) -> dict[str, object]:
     stem = pdf_path.stem
@@ -40,6 +42,7 @@ def convert_pdf_to_markdown(
     pdf_path: Path,
     markdown_dir: Path,
     converter: Optional[DocumentConverter] = None,
+    use_pdfplumber_tables: bool = False,
 ) -> Path:
     markdown_dir.mkdir(parents=True, exist_ok=True)
     output_path = markdown_dir / f"{pdf_path.stem}.md"
@@ -47,19 +50,35 @@ def convert_pdf_to_markdown(
     document_converter = converter or DocumentConverter()
     result = document_converter.convert(str(pdf_path))
     md_body = result.document.export_to_markdown()
+    table_supplement = render_pdfplumber_tables_markdown(pdf_path) if use_pdfplumber_tables else ""
 
     metadata = default_metadata(pdf_path)
+    body_parts = [f"# {pdf_path.stem}", md_body.strip()]
+    if table_supplement:
+        body_parts.append(table_supplement)
     output_path.write_text(
-        f"{render_front_matter(metadata)}\n\n# {pdf_path.stem}\n\n{md_body.strip()}\n",
+        f"{render_front_matter(metadata)}\n\n" + "\n\n".join(body_parts).strip() + "\n",
         encoding="utf-8",
     )
     return output_path
 
 
-def convert_pdf_directory(pdf_dir: Path, markdown_dir: Path) -> list[Path]:
+def convert_pdf_directory(
+    pdf_dir: Path,
+    markdown_dir: Path,
+    use_pdfplumber_tables: bool = False,
+) -> list[Path]:
     pdf_paths = sorted(pdf_dir.glob("*.pdf"))
     converter = create_pdf_converter()
-    return [convert_pdf_to_markdown(pdf_path, markdown_dir, converter) for pdf_path in pdf_paths]
+    return [
+        convert_pdf_to_markdown(
+            pdf_path,
+            markdown_dir,
+            converter,
+            use_pdfplumber_tables=use_pdfplumber_tables,
+        )
+        for pdf_path in pdf_paths
+    ]
 
 
 def create_pdf_converter() -> DocumentConverter:

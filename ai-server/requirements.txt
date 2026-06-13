@@ -3,6 +3,7 @@ docling>=2.31.0
 fastapi>=0.115.0
 huggingface-hub>=0.23.0
 mlx-lm>=0.31.0
+pdfplumber>=0.11.0
 python-dotenv>=1.0.1
 pyyaml>=6.0.1
 sentence-transformers>=2.7.0
