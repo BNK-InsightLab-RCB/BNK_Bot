@@ -7,9 +7,11 @@ class Settings(BaseSettings):
     qdrant_api_key: str | None = None
     qdrant_collection_name: str = "bnk_bot_collection"
 
-    # LLM
-    llm_api_key: str | None = None
-    llm_model: str = "gpt-4o"
+    # LLM (답변 생성: Ollama 로컬, OpenAI 호환 엔드포인트로 호출.
+    # 운영 전환 시 vLLM/GPU 로 base_url 만 교체하면 됨 — 코드 불변.)
+    llm_base_url: str = "http://localhost:11434/v1"
+    llm_api_key: str = "ollama"  # Ollama 는 키 검증 안 함 (더미; OpenAI SDK 가 빈 키를 거부해서 채움)
+    llm_model: str = "qwen3.5:9b"
 
     # Paths
     base_dir: Path = Path(__file__).parent.parent

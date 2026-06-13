@@ -17,6 +17,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from loguru import logger
 
+from src.chat.generator import Generator
 from src.chat.retriever import Retriever
 from src.chat.router import router as chat_router
 from src.config import settings
@@ -36,7 +37,11 @@ async def lifespan(app: FastAPI):
         api_key=settings.qdrant_api_key,
     )
     app.state.retriever = Retriever(embedder, store)
-    logger.success(f"Engine ready. collection points={store.count()}")
+    # LLM 어댑터(가벼움; 클라이언트만 생성, 모델은 Ollama 가 첫 호출 시 lazy 로드).
+    app.state.generator = Generator()
+    logger.success(
+        f"Engine ready. collection points={store.count()} · LLM={settings.llm_model}"
+    )
     yield
     # shutdown: nothing to release for now.
 
