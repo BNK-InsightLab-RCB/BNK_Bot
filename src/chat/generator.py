@@ -2,14 +2,17 @@
 
 질문(E4 부터는 검색 근거 포함 프롬프트)을 받아 Qwen 으로 답변 문장을 만든다.
 여기서 책임지는 건 **LLM 호출 어댑터** 하나뿐: Ollama 의 OpenAI 호환 엔드포인트로
-호출하고, thinking 모드를 꺼서(``content`` 오염 방지 + 추론 지연 절약) 최종 답변
-텍스트만 돌려준다.
+호출하고, thinking 모드를 꺼서(추론 지연 절약) 최종 답변 텍스트만 돌려준다.
 
-- thinking off: Ollama 는 추론을 별도 ``reasoning_content`` 필드로 분리하므로 끄지
-  않아도 ``content`` 엔 ``<think>`` 가 안 섞이지만, 불필요한 추론 토큰/지연을 막기
-  위해 ``think=False`` 로 호출한다.
+- thinking off: ``reasoning_effort="none"`` 으로 호출(OpenAI 표준 파라미터). E4
+  진단에서 ``think=False`` / ``/no_think`` / ``chat_template_kwargs`` 는 Ollama
+  OpenAI-compat 엔드포인트에서 무시됐고, ``reasoning_effort="none"`` 만 추론을
+  실제로 껐다. 켜두면 답변당 5천 토큰을 추론에 써 90~230초가 걸린다(끄면 ~2초).
+- num_ctx: 큰 표 근거가 4천 토큰을 넘어 Ollama 기본 창(4096)에선 답변이 비어
+  나온다 → 파생 모델 ``qwen3.5-bnk``(Modelfile, num_ctx=16384)를 쓴다.
 - 운영 전환: Ollama → vLLM/GPU 로 갈 때 ``config.llm_base_url`` 만 바꾸면 됨
-  (둘 다 OpenAI 호환이라 이 코드는 불변).
+  (둘 다 OpenAI 호환이라 이 코드는 불변. num_ctx 는 vLLM 의 --max-model-len 으로,
+  reasoning_effort 는 동일 파라미터로 이어진다).
 - E4 에서 RAG 프롬프트(검색 sources 를 컨텍스트로)를 만들어 ``generate`` 에 넘기고,
   E5 가드레일(근거강제 · "모름" 경로 등)을 ``system`` 지시로 주입한다.
 
@@ -45,6 +48,7 @@ class Generator:
             model=self.model,
             messages=messages,
             temperature=temperature,
-            extra_body={"think": False},  # 추론 비활성 — 지연↓, content 오염 방지
+            # 추론 비활성: 이 엔드포인트에선 reasoning_effort 만 먹힘(~2s vs 90s+).
+            extra_body={"reasoning_effort": "none"},
         )
         return (resp.choices[0].message.content or "").strip()

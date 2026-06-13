@@ -20,6 +20,7 @@ from loguru import logger
 from src.chat.generator import Generator
 from src.chat.retriever import Retriever
 from src.chat.router import router as chat_router
+from src.chat.service import ChatService
 from src.config import settings
 from src.ingestion.embedder import Embedder
 from src.ingestion.qdrant import QdrantStore
@@ -36,9 +37,13 @@ async def lifespan(app: FastAPI):
         dim=embedder.dim,  # forces model load now, not on first request
         api_key=settings.qdrant_api_key,
     )
-    app.state.retriever = Retriever(embedder, store)
+    retriever = Retriever(embedder, store)
     # LLM 어댑터(가벼움; 클라이언트만 생성, 모델은 Ollama 가 첫 호출 시 lazy 로드).
-    app.state.generator = Generator()
+    generator = Generator()
+    app.state.retriever = retriever
+    app.state.generator = generator
+    # RAG 오케스트레이터(E4): 검색→근거 프롬프트→Qwen→답변+출처. router 가 이걸 호출.
+    app.state.chat_service = ChatService(retriever, generator)
     logger.success(
         f"Engine ready. collection points={store.count()} · LLM={settings.llm_model}"
     )
