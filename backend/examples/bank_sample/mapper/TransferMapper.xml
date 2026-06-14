@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="TransferMapper">
+  <select id="selectAccount" parameterType="string" resultType="Account">
+    SELECT ACCOUNT_NO,
+           BALANCE,
+           STATUS
+      FROM TB_ACCOUNT
+     WHERE ACCOUNT_NO = #{accountNo}
+       AND USE_YN = 'Y'
+  </select>
+
+  <select id="selectTodayTransferAmount" parameterType="string" resultType="long">
+    SELECT COALESCE(SUM(AMOUNT), 0)
+      FROM TB_TRANSFER
+     WHERE FROM_ACCOUNT_NO = #{accountNo}
+       AND TRANSFER_DATE = CURRENT_DATE
+       AND STATUS = 'COMPLETED'
+  </select>
+
+  <insert id="insertTransferHistory" parameterType="TransferDto">
+    INSERT INTO TB_TRANSFER (
+        TRANSFER_ID,
+        FROM_ACCOUNT_NO,
+        TO_ACCOUNT_NO,
+        AMOUNT,
+        STATUS,
+        TRANSFER_DATE
+    ) VALUES (
+        #{transferId},
+        #{fromAccountNo},
+        #{toAccountNo},
+        #{amount},
+        'COMPLETED',
+        CURRENT_DATE
+    )
+  </insert>
+
+  <update id="updateAccountBalance" parameterType="TransferDto">
+    UPDATE TB_ACCOUNT
+       SET BALANCE = BALANCE - #{amount}
+     WHERE ACCOUNT_NO = #{fromAccountNo}
+       AND BALANCE >= #{amount}
+       AND STATUS = 'ACTIVE'
+  </update>
+</mapper>

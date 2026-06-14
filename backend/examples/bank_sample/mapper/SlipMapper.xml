@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="SlipMapper">
+  <update id="approveSlip" parameterType="SlipDto">
+    UPDATE TB_SLIP
+       SET STATUS = 'APPROVED',
+           APPROVED_AT = CURRENT_TIMESTAMP
+     WHERE SLIP_NO = #{slipNo}
+       AND STATUS = 'READY'
+  </update>
+</mapper>

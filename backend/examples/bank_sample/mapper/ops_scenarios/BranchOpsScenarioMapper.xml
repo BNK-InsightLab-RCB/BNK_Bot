@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="BranchOpsScenarioMapper">
+  <select id="selectDormantAccount" parameterType="string" resultType="Account">
+    SELECT ACCOUNT_NO, CUSTOMER_NO, STATUS, TRANSACTION_RESTRICTED_YN
+    FROM TB_DORMANT_ACCOUNT
+    WHERE ACCOUNT_NO = #{accountNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <update id="updateDormantRelease" parameterType="DormantReleaseRequest">
+    UPDATE TB_DORMANT_ACCOUNT
+    SET STATUS = 'ACTIVE',
+        RELEASE_DTM = CURRENT_TIMESTAMP
+    WHERE ACCOUNT_NO = #{accountNo}
+      AND STATUS = 'DORMANT'
+  </update>
+
+  <select id="selectTransferLimitPolicy" parameterType="string" resultType="LimitPolicy">
+    SELECT CUSTOMER_NO, MAX_DAILY_LIMIT, MINOR_CUSTOMER_YN
+    FROM TB_TRANSFER_LIMIT_POLICY
+    WHERE CUSTOMER_NO = #{customerNo}
+      AND STATUS = 'ACTIVE'
+  </select>
+
+  <update id="updateTransferLimit" parameterType="TransferLimitRequest">
+    UPDATE TB_TRANSFER_LIMIT
+    SET DAILY_LIMIT = #{dailyLimit},
+        CHANGE_REASON = #{changeReason}
+    WHERE CUSTOMER_NO = #{customerNo}
+      AND STATUS = 'ACTIVE'
+  </update>
+
+  <select id="selectReissueCard" parameterType="string" resultType="Card">
+    SELECT CARD_NO, CUSTOMER_NO, REPORT_STATUS, REISSUE_COUNT_THIS_MONTH
+    FROM TB_CARD
+    WHERE CARD_NO = #{cardNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <select id="existsOverdueAccount" parameterType="string" resultType="boolean">
+    SELECT COUNT(1)
+    FROM TB_LOAN
+    WHERE CUSTOMER_NO = #{customerNo}
+      AND STATUS = 'OVERDUE'
+  </select>
+
+  <insert id="insertCardReissueRequest" parameterType="CardReissueRequest">
+    INSERT INTO TB_CARD_REISSUE_REQ (CARD_NO, ZIP_CODE, DELIVERY_ADDRESS, REQ_DTM)
+    VALUES (#{cardNo}, #{zipCode}, #{deliveryAddress}, CURRENT_TIMESTAMP)
+  </insert>
+
+  <select id="selectLoanForExtension" parameterType="string" resultType="Loan">
+    SELECT LOAN_NO, STATUS, CREDIT_SCORE_EXPIRE_YN, COLLATERAL_REVIEW_YN
+    FROM TB_LOAN
+    WHERE LOAN_NO = #{loanNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <update id="updateLoanMaturity" parameterType="LoanExtensionRequest">
+    UPDATE TB_LOAN
+    SET MATURITY_DATE = ADD_MONTHS(MATURITY_DATE, #{extendMonths})
+    WHERE LOAN_NO = #{loanNo}
+      AND STATUS = 'ACTIVE'
+  </update>
+
+  <select id="selectFundAccount" parameterType="string" resultType="FundAccount">
+    SELECT FUND_ACCOUNT_NO, AVAILABLE_UNITS, BRANCH_RESTRICTED_YN
+    FROM TB_FUND_ACCOUNT
+    WHERE FUND_ACCOUNT_NO = #{fundAccountNo}
+      AND STATUS = 'ACTIVE'
+  </select>
+
+  <insert id="insertFundRedemption" parameterType="FundRedemptionRequest">
+    INSERT INTO TB_FUND_REDEMPTION (FUND_ACCOUNT_NO, UNITS, REQ_DTM)
+    VALUES (#{fundAccountNo}, #{units}, CURRENT_TIMESTAMP)
+  </insert>
+
+  <select id="selectRemittanceLimit" parameterType="string" resultType="RemitLimit">
+    SELECT CUSTOMER_NO, REMAIN_USD
+    FROM TB_FX_REMIT_LIMIT
+    WHERE CUSTOMER_NO = #{customerNo}
+      AND BASE_DATE = CURRENT_DATE
+  </select>
+
+  <insert id="insertForeignRemittance" parameterType="ForeignRemittanceRequest">
+    INSERT INTO TB_FX_REMITTANCE (CUSTOMER_NO, BENEFICIARY_NAME, AMOUNT_USD, DOCUMENT_NO, COUNTRY_CODE)
+    VALUES (#{customerNo}, #{beneficiaryName}, #{amountUsd}, #{documentNo}, #{countryCode})
+  </insert>
+
+  <select id="selectCashWithdrawalAccount" parameterType="string" resultType="Account">
+    SELECT ACCOUNT_NO, STATUS, BALANCE
+    FROM TB_ACCOUNT
+    WHERE ACCOUNT_NO = #{accountNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <select id="existsCashPreCheck" parameterType="string" resultType="boolean">
+    SELECT COUNT(1)
+    FROM TB_CASH_PRECHECK
+    WHERE PRE_CHECK_NO = #{preCheckNo}
+      AND STATUS = 'COMPLETED'
+  </select>
+
+  <insert id="insertCashWithdrawalApproval" parameterType="CashWithdrawalRequest">
+    INSERT INTO TB_CASH_WITHDRAWAL_APPROVAL (ACCOUNT_NO, AMOUNT, PRE_CHECK_NO, APPROVAL_DTM)
+    VALUES (#{accountNo}, #{amount}, #{preCheckNo}, CURRENT_TIMESTAMP)
+  </insert>
+
+  <select id="selectAutoDebitAccount" parameterType="string" resultType="Account">
+    SELECT ACCOUNT_NO, STATUS, EXPIRE_DATE
+    FROM TB_ACCOUNT
+    WHERE ACCOUNT_NO = #{withdrawAccountNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <select id="existsAutoDebit" parameterType="AutoDebitRequest" resultType="boolean">
+    SELECT COUNT(1)
+    FROM TB_AUTO_DEBIT
+    WHERE WITHDRAW_ACCOUNT_NO = #{withdrawAccountNo}
+      AND PAYER_NO = #{payerNo}
+      AND STATUS = 'ACTIVE'
+  </select>
+
+  <insert id="insertAutoDebit" parameterType="AutoDebitRequest">
+    INSERT INTO TB_AUTO_DEBIT (WITHDRAW_ACCOUNT_NO, PAYER_NO, WITHDRAW_DAY, STATUS)
+    VALUES (#{withdrawAccountNo}, #{payerNo}, #{withdrawDay}, 'ACTIVE')
+  </insert>
+
+  <select id="selectCorporateCustomer" parameterType="string" resultType="CorporateCustomer">
+    SELECT BUSINESS_NO, STATUS, ADMIN_APPROVED_YN
+    FROM TB_CORPORATE_CUSTOMER
+    WHERE BUSINESS_NO = #{businessNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <select id="existsCorporateUser" resultType="boolean">
+    SELECT COUNT(1)
+    FROM TB_CORPORATE_USER
+    WHERE BUSINESS_NO = #{businessNo}
+      AND USER_ID = #{userId}
+      AND STATUS = 'ACTIVE'
+  </select>
+
+  <insert id="insertCorporateUser" parameterType="CorporateUserRequest">
+    INSERT INTO TB_CORPORATE_USER (BUSINESS_NO, USER_ID, OTP_SERIAL_NO, STATUS)
+    VALUES (#{businessNo}, #{userId}, #{otpSerialNo}, 'ACTIVE')
+  </insert>
+
+  <select id="selectCertificateAccount" parameterType="string" resultType="CertificateAccount">
+    SELECT ACCOUNT_NO, SEIZED_YN, FEE_AVAILABLE_BALANCE, ENGLISH_NAME
+    FROM TB_ACCOUNT
+    WHERE ACCOUNT_NO = #{accountNo}
+      AND USE_YN = 'Y'
+  </select>
+
+  <insert id="insertBalanceCertificateIssue" parameterType="BalanceCertificateRequest">
+    INSERT INTO TB_BALANCE_CERTIFICATE (ACCOUNT_NO, BASE_DATE, LANGUAGE, ISSUE_DTM)
+    VALUES (#{accountNo}, #{baseDate}, #{language}, CURRENT_TIMESTAMP)
+  </insert>
+</mapper>

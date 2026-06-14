@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="CustomerMapper">
+  <select id="selectCustomer" parameterType="string" resultType="CustomerDto">
+    SELECT CUSTOMER_NO,
+           CUSTOMER_NM,
+           STATUS,
+           USE_YN
+      FROM TB_CUSTOMER
+     WHERE CUSTOMER_NO = #{customerNo}
+       AND USE_YN = 'Y'
+  </select>
+
+  <update id="updateCustomer" parameterType="CustomerDto">
+    UPDATE TB_CUSTOMER
+       SET CUSTOMER_NM = #{customerName},
+           UPDATED_AT = CURRENT_TIMESTAMP
+     WHERE CUSTOMER_NO = #{customerNo}
+       AND STATUS != 'CLOSED'
+  </update>
+</mapper>
