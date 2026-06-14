@@ -1,8 +1,8 @@
 """FastAPI application entry point — the BNK Bot CS chatbot engine.
 
 This is the API layer that sits ON TOP of the existing pipeline:
-- chat domain  : POST /query   (질문 → 검색 → Qwen 답변; E2 검색 연결됨, E3~E5 예정)
-- ingestion    : POST /admin/* (적재 트리거; E6에서 기존 pipeline 호출)
+- chat domain  : POST /query        (질문 → 검색 → Qwen 답변+출처; E1~E5)
+- ingestion    : POST /admin/ingest (적재 비동기 트리거 + 상태조회; E6)
 
 Heavy resources (KURE model, Qdrant client) are built ONCE at startup
 (``lifespan``) and shared via ``app.state`` — a singleton, not per-request.
@@ -23,7 +23,9 @@ from src.chat.router import router as chat_router
 from src.chat.service import ChatService
 from src.config import settings
 from src.ingestion.embedder import Embedder
+from src.ingestion.jobs import JobRegistry
 from src.ingestion.qdrant import QdrantStore
+from src.ingestion.router import router as admin_router
 
 
 @asynccontextmanager
@@ -44,6 +46,9 @@ async def lifespan(app: FastAPI):
     app.state.generator = generator
     # RAG 오케스트레이터(E4): 검색→근거 프롬프트→Qwen→답변+출처. router 가 이걸 호출.
     app.state.chat_service = ChatService(retriever, generator)
+    # 적재 job 레지스트리(E6): /admin/ingest 가 적재를 별도 스레드로 돌리고 상태를 여기에.
+    # 가벼움(자원 미로딩) — 적재 스레드가 자체 KURE/Qdrant 를 따로 만든다.
+    app.state.ingest_jobs = JobRegistry()
     logger.success(
         f"Engine ready. collection points={store.count()} · LLM={settings.llm_model}"
     )
@@ -53,7 +58,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="BNK Bot Engine", version="0.2.0", lifespan=lifespan)
 
-app.include_router(chat_router)
+app.include_router(chat_router)   # [고객] /query
+app.include_router(admin_router)  # [관리자] /admin/ingest
 
 
 @app.get("/health", tags=["system"])
