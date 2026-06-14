@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     llm_base_url: str = "http://localhost:11434/v1"
     llm_api_key: str = "ollama"  # Ollama 는 키 검증 안 함 (더미; OpenAI SDK 가 빈 키를 거부해서 채움)
     llm_model: str = "qwen3.5-bnk"  # Modelfile 파생(num_ctx=16384); base는 qwen3.5:9b
+    llm_timeout_s: float = 120.0  # LLM 호출 타임아웃(초). 큰 표 답변 ~30s + 동시적재 슬로다운 여유
 
     # Paths
     base_dir: Path = Path(__file__).parent.parent

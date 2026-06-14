@@ -13,9 +13,15 @@ generator(E3, Qwen)에 넘겨 답변을 만든 뒤 출처와 함께 돌려준다
 """
 from __future__ import annotations
 
+import time
+
+from loguru import logger
+
 from src.chat.generator import Generator
 from src.chat.retriever import Retriever
 from src.chat.schemas import QueryRequest, QueryResponse, Source
+
+_REFUSAL_MARK = "확인되지 않습니다"  # 거부 여부 로깅 판별용
 
 # 가드레일 규칙(근거강제·"모름"·숫자보존·간결). 검색 근거는 [근거] 블록으로 user 에 붙는다.
 SYSTEM_PROMPT = """너는 부산은행(BNK) 금융상품 고객상담 챗봇이다. 다음 규칙을 반드시 지켜라.
@@ -35,6 +41,12 @@ SYSTEM_PROMPT = """너는 부산은행(BNK) 금융상품 고객상담 챗봇이�
 # 검색 0건일 때 LLM 호출 없이 즉시 반환(규칙 2와 동일 문구).
 _NO_CONTEXT_ANSWER = (
     "제공된 자료에서 확인되지 않습니다. "
+    "정확한 내용은 영업점 또는 고객센터로 문의해 주세요."
+)
+
+# 방어: LLM 이 빈 content 를 줄 때(드묾, num_ctx 버그로 실제 겪음) 빈 문자열 노출 방지.
+_EMPTY_FALLBACK = (
+    "죄송합니다. 답변을 생성하지 못했습니다. "
     "정확한 내용은 영업점 또는 고객센터로 문의해 주세요."
 )
 
@@ -63,6 +75,7 @@ class ChatService:
         self.generator = generator
 
     def answer(self, req: QueryRequest) -> QueryResponse:
+        t0 = time.time()
         hits = self.retriever.retrieve(
             req.question,
             top_k=req.top_k,
@@ -72,6 +85,7 @@ class ChatService:
         )
         # 가드레일: 근거가 없으면 LLM 부르지 않고 즉시 "모름"(환각 차단 + 비용 절약).
         if not hits:
+            logger.info(f"/query no-context refused q={req.question[:50]!r} {time.time()-t0:.1f}s")
             return QueryResponse(answer=_NO_CONTEXT_ANSWER, sources=[], used_chunks=0)
 
         sources = [
@@ -86,5 +100,12 @@ class ChatService:
             for h in hits
         ]
         prompt = _build_prompt(req.question, hits)
-        answer = self.generator.generate(prompt, system=SYSTEM_PROMPT)
+        answer = self.generator.generate(prompt, system=SYSTEM_PROMPT)  # GeneratorError → router 503
+        if not answer:  # 방어: 빈 content 면 안내문으로 폴백(빈 답변 노출 금지).
+            logger.warning(f"/query empty-content fallback q={req.question[:50]!r}")
+            answer = _EMPTY_FALLBACK
+        logger.info(
+            f"/query q={req.question[:50]!r} chunks={len(sources)} "
+            f"refused={_REFUSAL_MARK in answer} {time.time()-t0:.1f}s"
+        )
         return QueryResponse(answer=answer, sources=sources, used_chunks=len(sources))

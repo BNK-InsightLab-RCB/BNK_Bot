@@ -21,14 +21,23 @@
 """
 from __future__ import annotations
 
-from openai import OpenAI
+from openai import APIError, OpenAI
 
 from src.config import settings
 
 
+class GeneratorError(RuntimeError):
+    """LLM 호출 실패(타임아웃·연결 불가·서버 오류). router 에서 503 으로 매핑."""
+
+
 class Generator:
     def __init__(self) -> None:
-        self.client = OpenAI(base_url=settings.llm_base_url, api_key=settings.llm_api_key)
+        # timeout: Ollama 가 느리거나 죽었을 때 /query 가 무한 대기하지 않도록 상한.
+        self.client = OpenAI(
+            base_url=settings.llm_base_url,
+            api_key=settings.llm_api_key,
+            timeout=settings.llm_timeout_s,
+        )
         self.model = settings.llm_model
 
     def generate(
@@ -44,11 +53,14 @@ class Generator:
             messages.append({"role": "system", "content": system})
         messages.append({"role": "user", "content": prompt})
 
-        resp = self.client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-            temperature=temperature,
-            # 추론 비활성: 이 엔드포인트에선 reasoning_effort 만 먹힘(~2s vs 90s+).
-            extra_body={"reasoning_effort": "none"},
-        )
+        try:
+            resp = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=temperature,
+                # 추론 비활성: 이 엔드포인트에선 reasoning_effort 만 먹힘(~2s vs 90s+).
+                extra_body={"reasoning_effort": "none"},
+            )
+        except APIError as e:  # 타임아웃·연결불가·LLM 서버오류 → 도메인 예외로 변환
+            raise GeneratorError(f"LLM call failed: {e}") from e
         return (resp.choices[0].message.content or "").strip()

@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Request
 from loguru import logger
 
 from src.chat.generator import Generator
@@ -63,5 +63,20 @@ app.include_router(admin_router)  # [관리자] /admin/ingest
 
 
 @app.get("/health", tags=["system"])
-def health() -> dict:
-    return {"status": "ok"}
+def health(request: Request) -> dict:
+    """Readiness: Qdrant 연결 + 컬렉션 포인트 확인. 운영/SpringBoot 의 준비상태 판단용.
+
+    - Qdrant 연결 불가 → 503 (핵심 의존성 다운).
+    - 포인트 0 → 200 "degraded" (떠 있으나 적재 전이라 /query 가 전부 "모름").
+    """
+    store = request.app.state.retriever.store
+    try:
+        n = store.count()
+    except Exception as e:
+        logger.error(f"/health qdrant check failed: {e}")
+        raise HTTPException(status_code=503, detail=f"qdrant unavailable: {e}")
+    return {
+        "status": "ok" if n > 0 else "degraded",
+        "collection_points": n,
+        "llm_model": settings.llm_model,
+    }
