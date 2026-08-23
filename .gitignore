@@ -1,0 +1,25 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# IDEs & OS
+.idea/
+.vscode/
+.DS_Store
+
+# Data & Logs (Ignore files but keep directory names)
+data/*
+logs/*
+
+# Exceptions
+!.gitignore
+
+CLAUDE.md

@@ -1,0 +1,11 @@
+# BNK Bot 전용 Qwen 파생 모델.
+# 이유: 금융 약관/설명서의 표 청크가 커서(질문당 근거 3~5청크 ≈ 4천~수천 토큰)
+# Ollama 기본 num_ctx(4096)로는 프롬프트가 잘려 답변이 비어 나온다(E4 진단).
+# OpenAI 호환 엔드포인트는 num_ctx 를 요청 파라미터로 못 받으므로 서버 측(=여기)에서 고정.
+# 프로덕션 vLLM 전환 시엔 vLLM 의 --max-model-len 이 같은 역할을 한다.
+#
+# 빌드:  ollama create qwen3.5-bnk -f Modelfile
+FROM qwen3.5:9b
+
+# 컨텍스트 창: 큰 표 근거 + 추론 + 답변을 모두 담을 여유.
+PARAMETER num_ctx 16384
