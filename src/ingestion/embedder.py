@@ -56,6 +56,28 @@ class Embedder:
         """Return a single (dim,) vector. Same encoding as chunks (no prefix)."""
         return self.embed_texts([text])[0]
 
+    def release_cache(self) -> None:
+        """가속기(MPS/CUDA) 할당 캐시를 반환한다. **긴 배치에서 필수.**
+
+        왜: PyTorch 는 해제한 텐서 메모리를 OS 로 바로 돌려주지 않고 캐시로 들고 있다.
+        문서 1건이면 무해하지만 수백 건을 한 프로세스에서 돌리면 캐시가 단조 증가해
+        후반부에 OOM 이 난다 — 실제로 펀드 배치 58건째에서
+        ``MPS backend out of memory (MPS allocated: 12.14 GiB ...)`` 로 2건이 실패했다.
+        청크가 커서가 아니라(최대 4.5천자) **누적**이 원인이라 배치 중간에 비워야 한다.
+
+        호출 위치는 배치 소유자(`pipeline.ingest_paths`)이며, 문서 1건이 끝날 때마다
+        부른다. ``/query`` 경로(단건 임베딩)에서는 부르지 않는다 — 지연만 늘고 이득이 없다.
+        """
+        try:
+            import torch
+
+            if torch.backends.mps.is_available():
+                torch.mps.empty_cache()
+            elif torch.cuda.is_available():
+                torch.cuda.empty_cache()
+        except Exception:  # 캐시 반환 실패가 적재를 멈출 이유는 없다
+            pass
+
 
 if __name__ == "__main__":
     import json

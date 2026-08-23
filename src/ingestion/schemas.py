@@ -1,14 +1,27 @@
 """Ingestion(admin) domain DTOs. chat/schemas.py 와 대칭."""
 from __future__ import annotations
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class IngestRequest(BaseModel):
-    """적재 트리거 요청. 전부 선택 — CLI(run_ingestion.py)와 동일 의미."""
+    """적재 트리거 요청.
 
-    root: str | None = Field(None, description="적재할 디렉토리(기본: settings.raw_dir)")
-    recreate: bool = Field(False, description="컬렉션을 비우고 재생성 후 적재")
+    ⚠️ **`recreate` 는 의도적으로 없다.** 컬렉션 전체 삭제(`delete_collection`)는
+    HTTP 로 노출하지 않는다 — 무인증 상태에서 요청 한 번에 전량이 소실될 수 있고,
+    시연 중 오조작으로도 터진다. 재생성이 필요하면 CLI 전용:
+    ``python scripts/run_ingestion.py --recreate``.
+
+    `root` 는 ``settings.data_root`` **하위로 제한**된다(임의 경로 스캔 차단).
+    """
+
+    # extra="forbid": 옛 클라이언트가 `recreate: true` 를 보내면 **조용히 무시하지 않고**
+    # 422 로 거절한다 — "먹힌 줄 알았는데 아니었다" 가 가장 나쁜 실패라서.
+    model_config = ConfigDict(extra="forbid")
+
+    root: str | None = Field(
+        None, description="적재할 디렉토리. settings.data_root 하위여야 함(기본: data_root 전체)"
+    )
     limit: int | None = Field(None, ge=1, description="앞 N개 PDF만(스모크 테스트)")
 
 

@@ -26,7 +26,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from src.config import settings  # noqa: E402
-from src.ingestion.pipeline import ingest_directory, ingest_paths  # noqa: E402
+from src.ingestion.pipeline import find_documents, ingest_directory, ingest_paths  # noqa: E402
 
 
 def main() -> None:
@@ -42,9 +42,10 @@ def main() -> None:
     root = Path(args.root)
     t0 = time.time()
     if args.limit:
-        pdfs = sorted(root.rglob("*.pdf"))[: args.limit]
-        print(f"[limit] ingesting {len(pdfs)} of {len(sorted(root.rglob('*.pdf')))} PDFs under {root}")
-        summary = ingest_paths(pdfs, recreate=args.recreate)
+        all_docs = find_documents(root)
+        docs = all_docs[: args.limit]
+        print(f"[limit] ingesting {len(docs)} of {len(all_docs)} documents under {root}")
+        summary = ingest_paths(docs, recreate=args.recreate)
     else:
         summary = ingest_directory(root, recreate=args.recreate)
     summary["elapsed_sec"] = round(time.time() - t0, 1)

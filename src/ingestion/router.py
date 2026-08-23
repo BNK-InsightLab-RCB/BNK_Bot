@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 
-from src.ingestion.jobs import JobConflictError, JobRegistry
+from src.ingestion.jobs import IngestRootError, JobConflictError, JobRegistry
 from src.ingestion.schemas import IngestJob, IngestRequest
 
 router = APIRouter(prefix="/admin", tags=["admin"])
@@ -21,9 +21,15 @@ def get_jobs(request: Request) -> JobRegistry:
 
 @router.post("/ingest", response_model=IngestJob, status_code=202)
 def start_ingest(req: IngestRequest, jobs: JobRegistry = Depends(get_jobs)) -> IngestJob:
-    """적재 시작 → 즉시 job 반환(202). 이미 진행 중이면 409."""
+    """적재 시작 → 즉시 job 반환(202).
+
+    400 = root 가 허용 경계(`settings.data_root`) 밖 / 409 = 이미 진행 중.
+    컬렉션 재생성(`recreate`)은 이 API 로 불가 — CLI 전용(schemas 주석 참조).
+    """
     try:
-        job = jobs.start(root=req.root, recreate=req.recreate, limit=req.limit)
+        job = jobs.start(root=req.root, limit=req.limit)
+    except IngestRootError as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except JobConflictError as e:
         raise HTTPException(status_code=409, detail=str(e))
     return IngestJob(**job)

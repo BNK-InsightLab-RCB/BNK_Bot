@@ -46,6 +46,17 @@ class Block:
 _PAGE_RE = re.compile(r"<!--\s*page\s+(\d+)\s*-->")
 _TABLE_SEP_RE = re.compile(r"^\|[\s:|-]+\|$")
 
+# Docling 경로(스캔 PDF 폴백 · docx)가 내보내는 '내용 없는 placeholder'.
+# 그대로 두면 텍스트 청크에 노이즈로 섞여 임베딩 품질을 떨어뜨린다.
+#
+# 광범위한 정규식(`<!--.*-->`)이 아니라 **정확 일치 허용목록**만 지운다: 금융 문서에서
+# 정규식으로 쓸어내다 실제 데이터를 날리는 쪽이 노이즈보다 훨씬 위험하기 때문.
+# 새 placeholder 를 발견하면 여기에 '정확한 문자열로' 추가할 것.
+_PLACEHOLDER_LINES = frozenset({
+    "<!-- image -->",
+    "<!-- missing-text -->",
+})
+
 
 def parse_blocks(md: str) -> list[Block]:
     """Split Markdown into page-tagged table/text blocks (blank-line separated)."""
@@ -60,19 +71,17 @@ def parse_blocks(md: str) -> list[Block]:
         blocks.append(Block(page, "table" if is_table else "text", "\n".join(buf)))
         buf.clear()
 
-    # TODO(fallback-cleanup): The Docling fallback path can emit content-less
-    # placeholders like ``<!-- image -->`` that would currently leak into a text
-    # chunk as noise. The lattice path (current docs) emits none, so this is not
-    # an issue yet. When we actually process fallback (scanned / non-ruled) docs,
-    # strip ONLY exact-match known-empty placeholders (allowlist, not a broad
-    # regex) and assert content-char conservation so no real data is dropped.
     for line in md.splitlines():
-        m = _PAGE_RE.match(line.strip())
+        s = line.strip()
+        m = _PAGE_RE.match(s)
         if m:
             flush()
             page = int(m.group(1))
             continue
-        if line.strip() == "":
+        if s in _PLACEHOLDER_LINES:
+            # 내용이 없으므로 버린다. 단락 경계로는 쓰지 않는다(주변 빈 줄이 이미 경계).
+            continue
+        if s == "":
             flush()
             continue
         buf.append(line)
@@ -103,11 +112,14 @@ class DocProfile:
     _DOC_TYPE_WORDS = ("상품설명서", "설명서", "특약", "집합투자규약", "신탁계약서", "약관", "규약")
 
     def product_name(self, source_stem: str) -> str:
-        s = re.sub(r"\[[^\]]*\]", "", source_stem)          # drop [부산은행] etc.
-        # drop leading list-number prefix "14.", "6.", "403164_" — but the
-        # lookahead (?=\D) keeps decimal product names like "3.6%정기예금" intact
-        # (the char after the separator must be a non-digit).
-        s = re.sub(r"^\s*\d+\s*[._]\s*(?=\D)", "", s)
+        s = re.sub(r"\[[^\]]*\]", "", source_stem)          # drop [부산은행]/[신탁계약서] etc.
+        # 선두 문서번호가 괄호 그룹 바로 앞에 오는 형태: "2605(부산은행)부산은행 …"
+        s = re.sub(r"^\s*\d{3,}\s*(?=\()", "", s)
+        # 선두 목록번호 제거: "14.", "6._", 그리고 펀드 신탁계약서의 "9-다.", "1-다."
+        # (하위 항목 표기 `-가/-나/-다`까지 함께 벗긴다.)
+        # 뒤의 (?=\D) 가 "3.6%정기예금" 같은 소수점 상품명을 보호한다 —
+        # 구분자 다음 글자가 숫자면 목록번호가 아니라 상품명의 일부다.
+        s = re.sub(r"^\s*\d+(?:\s*-\s*[가-힣])?\s*[._]\s*(?=\D)", "", s)
         for w in self._DOC_TYPE_WORDS:                       # cut at doc-type word
             if w in s:
                 s = s.split(w)[0]
@@ -115,7 +127,15 @@ class DocProfile:
         s = re.sub(r"\([^)]*\)", "", s)                      # drop (date)/(ver)
         s = re.sub(r"[_\s]+", " ", s).strip(" _-")
         s = re.sub(r"\s*\d{4,6}\s*심의\s*$", "", s).strip()  # drop trailing "YYYYMM 심의"
-        return s or source_stem
+        if s:
+            return s
+        # 문서종류 앞이 비는 형태 — "(적립식)상품설명서(OnlyOne주거래우대적금)" 처럼
+        # 상품명이 **뒤쪽 괄호 안에** 있는 경우. 원본에서 가장 긴 괄호 그룹을 쓴다
+        # (날짜·버전 괄호보다 상품명이 길다는 경험칙; 없으면 원본 그대로).
+        groups = [g for g in re.findall(r"\(([^)]*)\)", source_stem) if not re.fullmatch(r"[\d.\s_-]*", g)]
+        if groups:
+            return max(groups, key=len).strip()
+        return source_stem
 
     def section_title(self, block: "Block") -> str | None:
         """A section header renders as a 1-row, 2-col table whose first cell is
@@ -183,8 +203,23 @@ class Chunk:
 # --------------------------------------------------------------------------- #
 # Chunking core
 # --------------------------------------------------------------------------- #
-def _context_header(product: str, category: str, doc_type: str, section: str) -> str:
-    head = f"[{product}]"
+def _context_header(label: str, category: str, doc_type: str, section: str) -> str:
+    """청크 앞에 붙는 컨텍스트 한 줄. **이 줄까지 포함해서 임베딩된다.**
+
+    ``label`` 에는 **가공하지 않은 파일명(stem)** 을 쓴다. 예전엔 파일명에서 상품명을
+    잘라낸 값을 넣었는데, 그 추출은 파일명 형태에 따라 성공/실패가 갈려
+    (`약관_신한지수연계…`, `개정후주택청약종합저축`) **원본에 없는 오류를 만들어냈다**.
+
+    측정 근거(`scripts/ab_context_header.py`, 예금 163건·15문항):
+      A 정제된 상품명 pass@1 14/15 · pass@5 15/15
+      B 파일명 그대로 pass@1 13/15 · pass@5 15/15   ← 채택
+      C 헤더 없음     pass@1 10/15 · pass@5 13/15
+    → **헤더 자체는 반드시 필요**(C 가 확연히 나쁨)하지만, **정제의 이득은 입증되지 않았다**
+      (A·B 는 pass@5 동일, pass@1 1문항 차이인데 그마저 같은 문서 내 청크 순서 차이).
+      게다가 질문셋이 상품명을 명시한 문항 위주라 A 에 유리한 조건이었다.
+    → 이득이 측정되지 않는 가공은 넣지 않는다. 실패할 수 없는 쪽을 고른다.
+    """
+    head = f"[{label}]"
     if category or doc_type:
         head += f" · {category}/{doc_type}".rstrip("/")
     if section:
@@ -211,6 +246,9 @@ def chunk_markdown(
         if stem.endswith(ext):
             stem = stem[: -len(ext)]
             break
+    # macOS 파일명은 NFD 라 반드시 정규화한다 — 헤더는 임베딩에 들어가므로
+    # 정규화를 빠뜨리면 겉보기 같은 한글이 다른 토큰으로 인코딩된다.
+    stem = _nfc(stem)
     product = _nfc(product_name or profile.product_name(stem))
     category = _nfc(category)
     doc_type = _nfc(doc_type)
@@ -226,7 +264,11 @@ def chunk_markdown(
         body = _nfc(body.strip())
         if not body:
             return
-        header = _context_header(product, category, doc_type, section)
+        # 헤더에는 가공 없는 파일명(stem)을, payload 라벨에는 추출된 상품명을 쓴다.
+        # 둘을 분리한 이유: 헤더는 **검색 벡터에 들어가므로** 추출 실패가 검색 품질을
+        # 오염시킨다. payload 는 표시·필터용이라 틀려도 검색엔 영향이 없다.
+        # (payload product_name 을 어떻게 할지는 미결정 — CLAUDE.md "자료 가공 원칙" 참조)
+        header = _context_header(stem, category, doc_type, section)
         chunks.append(
             Chunk(
                 text=f"{header}\n{body}",

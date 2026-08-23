@@ -109,11 +109,24 @@ class QdrantStore:
         ]
         return Filter(must=conds) if conds else None
 
-    def search(self, query_vector, top_k: int = 5, flt: Filter | None = None):
+    def search(
+        self,
+        query_vector,
+        top_k: int = 5,
+        flt: Filter | None = None,
+        score_threshold: float | None = None,
+    ):
+        """top-k 검색. ``score_threshold`` 아래 결과는 Qdrant 가 제외한다.
+
+        임계가 없으면 질문이 아무리 무관해도 항상 top_k 가 채워져 나온다 —
+        그러면 "근거 없음" 판단이 LLM 몫이 된다. 임계를 주면 **빈 리스트**가 돌아와
+        호출부(`ChatService`)가 LLM 없이 즉시 거부할 수 있다.
+        """
         vec = query_vector.tolist() if hasattr(query_vector, "tolist") else list(query_vector)
         return self.client.query_points(
             self.collection, query=vec, limit=top_k,
             query_filter=flt, with_payload=True,
+            score_threshold=score_threshold,
         ).points
 
 

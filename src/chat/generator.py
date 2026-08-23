@@ -41,12 +41,23 @@ class Generator:
         self.model = settings.llm_model
 
     def generate(
-        self, prompt: str, system: str | None = None, temperature: float = 0.2
+        self, prompt: str, system: str | None = None, temperature: float = 0.0
     ) -> str:
         """프롬프트 → 답변 텍스트(``content`` 만, thinking 제외).
 
-        temperature 는 금융 답변 일관성을 위해 낮게(기본 0.2). ``system`` 은 역할/
-        가드레일 지시 자리 — E4~E5 에서 근거강제 · "모름" 경로 · 출처표시 등을 여기에.
+        **temperature 는 0.0(결정론)이 기본이다.** 원래 0.2 였는데, 같은 질문·같은 근거로
+        5회 돌린 실측에서 답이 세 갈래로 갈렸고 그중 둘이 **틀렸다**:
+          "저탄소실천적금 개인형 우대이율 최대?" → (3회) "최대 0.50%p" ✅
+                                                → (2회) "탄소포인트제 0.20%p 가 가장 높으므로…" ❌
+        후자는 **개별 항목의 최댓값을 전체 최대 우대이율로 오인**한 것이다. 게다가 `0.20` 은
+        근거에 실재하는 숫자라 **숫자 가드레일을 그대로 통과**한다(= guardrails 가 못 잡는
+        mis-selection 유형의 실제 사례). temperature 0.0 에서는 5/5 동일·정답이었다.
+
+        금융 상담에서 온도를 두는 이득(표현 다양성)은 없고, 손실은 크다 —
+        같은 질문에 다른 답이 나가면 재현·감사·회귀측정이 모두 무너진다.
+        (평가 점수 자체도 실행마다 흔들려 회귀 판정이 불가능해진다.)
+
+        ``system`` 은 역할/가드레일 지시 자리 — 근거강제 · "모름" 경로 등을 여기에.
         """
         messages: list[dict[str, str]] = []
         if system:

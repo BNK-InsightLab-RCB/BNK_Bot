@@ -17,9 +17,12 @@ import time
 
 from loguru import logger
 
+from src.chat.audit import record_query
 from src.chat.generator import Generator
+from src.chat.guardrails import number_violations, sources_text
 from src.chat.retriever import Retriever
 from src.chat.schemas import QueryRequest, QueryResponse, Source
+from src.config import settings
 
 _REFUSAL_MARK = "확인되지 않습니다"  # 거부 여부 로깅 판별용
 
@@ -86,12 +89,17 @@ class ChatService:
         # 가드레일: 근거가 없으면 LLM 부르지 않고 즉시 "모름"(환각 차단 + 비용 절약).
         if not hits:
             logger.info(f"/query no-context refused q={req.question[:50]!r} {time.time()-t0:.1f}s")
+            record_query(
+                question=req.question, answer=_NO_CONTEXT_ANSWER, hits=[],
+                grounded=True, violations=[], refused=True, latency_s=time.time() - t0,
+            )
             return QueryResponse(answer=_NO_CONTEXT_ANSWER, sources=[], used_chunks=0)
 
         sources = [
             Source(
                 product_name=h.payload.get("product_name", ""),
                 doc_type=h.payload.get("doc_type", ""),
+                source_file=h.payload.get("source_file", ""),
                 page=h.payload.get("page", 0),
                 section=h.payload.get("section", ""),
                 snippet=(h.payload.get("body", "") or "").replace("\n", " ")[:200],
@@ -104,8 +112,30 @@ class ChatService:
         if not answer:  # 방어: 빈 content 면 안내문으로 폴백(빈 답변 노출 금지).
             logger.warning(f"/query empty-content fallback q={req.question[:50]!r}")
             answer = _EMPTY_FALLBACK
+
+        # 가드레일(출력 통제): 답변의 수치가 근거에 실재하는지 프로그램 검증.
+        # 프롬프트 지시와 달리 이건 모델 협조가 필요 없다. 위반이면 "정확하거나 모른다"
+        # 원칙에 따라 **답변을 폐기**한다(추측을 내보내느니 모른다고 하는 편이 낫다).
+        violations = number_violations(answer, sources_text(hits), req.question)
+        grounded = not violations
+        if violations:
+            logger.warning(
+                f"/query NUMBER-VIOLATION q={req.question[:50]!r} values={violations} "
+                f"block={settings.guardrail_block_on_number_violation}"
+            )
+            if settings.guardrail_block_on_number_violation:
+                answer = _NO_CONTEXT_ANSWER
+
         logger.info(
             f"/query q={req.question[:50]!r} chunks={len(sources)} "
-            f"refused={_REFUSAL_MARK in answer} {time.time()-t0:.1f}s"
+            f"refused={_REFUSAL_MARK in answer} grounded={grounded} {time.time()-t0:.1f}s"
         )
-        return QueryResponse(answer=answer, sources=sources, used_chunks=len(sources))
+        record_query(
+            question=req.question, answer=answer, hits=hits,
+            grounded=grounded, violations=violations,
+            refused=_REFUSAL_MARK in answer, latency_s=time.time() - t0,
+        )
+        return QueryResponse(
+            answer=answer, sources=sources, used_chunks=len(sources),
+            grounded=grounded, violations=violations,
+        )

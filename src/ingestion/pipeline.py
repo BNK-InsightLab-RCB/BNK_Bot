@@ -17,6 +17,7 @@ so pointing the batch at ``Data_PDF/`` tags every file correctly with no map.
 """
 from __future__ import annotations
 
+import hashlib
 import shutil
 from dataclasses import asdict
 from pathlib import Path
@@ -33,6 +34,54 @@ from src.ingestion.qdrant import QdrantStore
 def derive_metadata(pdf_path: Path) -> tuple[str, str]:
     """(category, doc_type) from layout: .../{category}/{doc_type}/file.pdf"""
     return pdf_path.parent.parent.name, pdf_path.parent.name
+
+
+def find_documents(root: str | Path) -> list[Path]:
+    """``root`` 아래의 처리 가능한 원본 문서를 재귀 수집(정렬).
+
+    ⚠️ 원래 ``*.pdf`` 만 훑었는데, 이 때문에 **개정후 약관이 docx 로만 존재하는
+    문서를 파이프라인이 아예 인지하지 못하고 폐지된 `(개정전)` PDF 만 적재**되는
+    일이 실제로 있었다(계좌통합관리서비스 이용약관). 적재 실패로도 안 잡히는
+    '미인지' 유형이라 로그만 봐서는 발견되지 않는다 → 지원 포맷 전체를 훑는다.
+
+    같은 이유로 **확장자 대소문자도 무시**한다. `rglob("*.pdf")` 는 POSIX 에서
+    대소문자를 가려 `.PDF` 파일 6건(펀드/약관)을 통째로 놓치고 있었다 — 역시
+    실패가 아니라 '미인지'라 로그에 흔적이 남지 않는다.
+
+    숨김/리소스 파일(`.DS_Store`, `._foo`)은 제외한다.
+
+    마지막으로 **내용이 같은 사본을 제거**한다(내용 해시 기준). 실측상 펀드 약관
+    326건 중 172건(53%)이 `이름(1).pdf` 형태의 **바이트 단위 동일 사본**이었고,
+    113개 사본 그룹 전부가 100% 일치했다. 사본을 그대로 넣으면
+      · 적재 시간이 두 배로 들고
+      · **top-k 자리를 같은 문장이 나눠 먹어** 근거 다양성이 줄어든다
+        (실제로 검색 시 top-1/top-2 가 동일 청크로 나오는 것을 관찰).
+    이름이 아니라 **내용**으로 판정하므로, 사본처럼 보이지만 내용이 다른 파일은
+    그대로 남는다(이름 기반 제거는 위험해서 쓰지 않는다).
+    """
+    root = Path(root)
+    sufs = {s.lower() for s in PDFParser.SUPPORTED_SUFFIXES}
+    files = sorted(
+        p for p in root.rglob("*")
+        if p.is_file() and not p.name.startswith(".") and p.suffix.lower() in sufs
+    )
+
+    seen: dict[str, Path] = {}
+    for p in files:
+        try:
+            digest = hashlib.md5(p.read_bytes()).hexdigest()
+        except OSError:          # 읽기 실패는 여기서 거르지 않는다 — parser 가 사유를 진단
+            seen[f"unreadable:{p}"] = p
+            continue
+        prev = seen.get(digest)
+        # 사본 중에서는 **이름이 짧은 쪽**을 정본으로 삼는다("X.pdf" > "X(1).pdf").
+        if prev is None or (len(p.name), p.name) < (len(prev.name), prev.name):
+            seen[digest] = p
+
+    dropped = len(files) - len(seen)
+    if dropped:
+        logger.info(f"deduplicated {dropped} identical copies ({len(files)} → {len(seen)} documents)")
+    return sorted(seen.values())
 
 
 def ingest_document(
@@ -99,6 +148,11 @@ def ingest_paths(
                 shutil.copy2(p, settings.failed_dir / p.name)
             except Exception:
                 pass
+        finally:
+            # 문서 1건이 끝날 때마다 가속기 캐시를 반환한다. 안 하면 캐시가 단조 증가해
+            # 배치 후반에 OOM 이 난다(실측: 58건째 MPS 12.14GiB 누적으로 2건 실패).
+            # finally 라서 실패한 문서 뒤에도 반드시 비운다 — OOM 직후가 가장 위험하다.
+            embedder.release_cache()
 
     summary = {
         "ok": len(ok),
@@ -115,12 +169,12 @@ def ingest_paths(
     return summary
 
 
-def ingest_directory(root: str | Path, *, recreate: bool = False, pattern: str = "*.pdf") -> dict:
-    """Ingest every PDF under ``root`` (recursively, incl. subfolders)."""
+def ingest_directory(root: str | Path, *, recreate: bool = False) -> dict:
+    """Ingest every supported document under ``root`` (recursive, incl. docx)."""
     root = Path(root)
-    pdfs = sorted(root.rglob(pattern))
-    logger.info(f"found {len(pdfs)} PDFs under {root}")
-    return ingest_paths(pdfs, recreate=recreate)
+    docs = find_documents(root)
+    logger.info(f"found {len(docs)} documents under {root}")
+    return ingest_paths(docs, recreate=recreate)
 
 
 if __name__ == "__main__":
