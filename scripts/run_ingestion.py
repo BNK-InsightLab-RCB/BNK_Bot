@@ -36,15 +36,22 @@ def main() -> None:
     ap.add_argument("--recreate", action="store_true",
                     help="wipe and recreate the collection before ingesting")
     ap.add_argument("--limit", type=int, default=0,
-                    help="process only the first N PDFs (smoke test)")
+                    help="process only N documents (from --offset)")
+    # 오프셋이 필요한 이유: 대형 카테고리를 **여러 프로세스로 쪼개 돌기** 위해서다.
+    # 한 프로세스로 642건(평균 185쪽)을 연속 처리하면 Python 힙·파서 객체가 누적돼
+    # 후반부에 스와핑이 심해진다(실측: 2.2분/건 → 7.0분/건, 잔여 추정 23h → 72h).
+    # --offset/--limit 로 100건씩 끊으면 배치마다 프로세스가 새로 떠 메모리가 반환된다.
+    ap.add_argument("--offset", type=int, default=0,
+                    help="skip the first N documents (배치 분할용)")
     args = ap.parse_args()
 
     root = Path(args.root)
     t0 = time.time()
-    if args.limit:
+    if args.limit or args.offset:
         all_docs = find_documents(root)
-        docs = all_docs[: args.limit]
-        print(f"[limit] ingesting {len(docs)} of {len(all_docs)} documents under {root}")
+        end = args.offset + args.limit if args.limit else len(all_docs)
+        docs = all_docs[args.offset : end]
+        print(f"[slice {args.offset}:{end}] ingesting {len(docs)} of {len(all_docs)} documents under {root}")
         summary = ingest_paths(docs, recreate=args.recreate)
     else:
         summary = ingest_directory(root, recreate=args.recreate)

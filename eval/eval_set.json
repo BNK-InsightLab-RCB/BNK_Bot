@@ -1,0 +1,6883 @@
+{
+  "seed": 20260905,
+  "per_category": 60,
+  "n": 914,
+  "styles": {
+    "exact": 468,
+    "realistic": 446
+  },
+  "variants": {
+    "template": 468,
+    "tag_stripped": 199,
+    "spaced": 235,
+    "partial": 12
+  },
+  "items": [
+    {
+      "q": "아파트관리비 자동계좌이체 거래 어떤 서비스야?",
+      "gold_product": "아파트관리비 자동계좌이체 거래",
+      "category": "기타",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "계좌간자동이체 내용 알려줘",
+      "gold_product": "계좌간자동이체",
+      "category": "기타",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산안정추구형플러스 202410 준법심의필 이용 조건은?",
+      "gold_product": "BNK부산안정추구형플러스 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산 디지털바우처 서비스 이용 어떤 서비스야?",
+      "gold_product": "부산 디지털바우처 서비스 이용",
+      "category": "기타",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "계좌통합관리서비스이용 내용 알려줘",
+      "gold_product": "계좌통합관리서비스이용",
+      "category": "기타",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "다모아상해보험 이용 조건은?",
+      "gold_product": "다모아상해보험",
+      "category": "기타",
+      "gold_chunks": 109,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산안정추구형글로벌 202410 준법심의필 어떤 서비스야?",
+      "gold_product": "BNK부산안정추구형글로벌 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금융결제원CMS출금이체서비스+이용 내용 알려줘",
+      "gold_product": "금융결제원CMS출금이체서비스+이용",
+      "category": "기타",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "골드바 매매대행 거래 이용 조건은?",
+      "gold_product": "골드바 매매대행 거래",
+      "category": "기타",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산 디지털바우처 운영정책 어떤 서비스야?",
+      "gold_product": "부산 디지털바우처 운영정책",
+      "category": "기타",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산안정형플러스 202410 준법심의필 내용 알려줘",
+      "gold_product": "BNK부산안정형플러스 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK머닝플러스회원서비스 이용 조건은?",
+      "gold_product": "BNK머닝플러스회원서비스",
+      "category": "기타",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산적극수익추구형글로벌 202410 준법심의필 어떤 서비스야?",
+      "gold_product": "BNK부산적극수익추구형글로벌 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금융주소한번에서비스안내문 내용 알려줘",
+      "gold_product": "금융주소한번에서비스안내문",
+      "category": "기타",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "납부자자동이체 이용 조건은?",
+      "gold_product": "납부자자동이체",
+      "category": "기타",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "계좌이동 서비스 이용 어떤 서비스야?",
+      "gold_product": "계좌이동 서비스 이용",
+      "category": "기타",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "지로자동이체이용 내용 알려줘",
+      "gold_product": "지로자동이체이용",
+      "category": "기타",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산중수익추구형글로벌 202410 준법심의필 이용 조건은?",
+      "gold_product": "BNK부산중수익추구형글로벌 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산적극수익추구형플러스 202410 준법심의필 어떤 서비스야?",
+      "gold_product": "BNK부산적극수익추구형플러스 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "캠퍼스락 이용 내용 알려줘",
+      "gold_product": "캠퍼스락 이용",
+      "category": "기타",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산중수익추구형플러스 202410 준법심의필 이용 조건은?",
+      "gold_product": "BNK부산중수익추구형플러스 202410 준법심의필",
+      "category": "기타",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK 안정추구형플러스 설명해줘",
+      "gold_product": "BNK부산안정추구형플러스 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "디지털바우처 서비스 설명해줘",
+      "gold_product": "부산 디지털바우처 서비스 이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "계좌통합관리서비스 좀 알려줘",
+      "gold_product": "계좌통합관리서비스이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "계좌통합관리 서비스 좀 알려줘",
+      "gold_product": "계좌통합관리서비스이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "다모아 상해보험 있어?",
+      "gold_product": "다모아상해보험",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 안정추구형글로벌 설명해줘",
+      "gold_product": "BNK부산안정추구형글로벌 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금융결제원CMS출금이체서비스+ 이거 뭐야?",
+      "gold_product": "금융결제원CMS출금이체서비스+이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금융결제원CMS출금이체 서비스+ 이거 뭐야?",
+      "gold_product": "금융결제원CMS출금이체서비스+이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "디지털바우처 운영정책 어때?",
+      "gold_product": "부산 디지털바우처 운영정책",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 안정형플러스 이거 뭐야?",
+      "gold_product": "BNK부산안정형플러스 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK머닝플러스회원 서비스 있어?",
+      "gold_product": "BNK머닝플러스회원서비스",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 적극수익추구형글로벌 이거 뭐야?",
+      "gold_product": "BNK부산적극수익추구형글로벌 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금융주소한번에 서비스안내문 어때?",
+      "gold_product": "금융주소한번에서비스안내문",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "계좌이동 서비스 설명해줘",
+      "gold_product": "계좌이동 서비스 이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "지로자동이체 이거 뭐야?",
+      "gold_product": "지로자동이체이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 중수익추구형글로벌 설명해줘",
+      "gold_product": "BNK부산중수익추구형글로벌 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 적극수익추구형플러스 이거 뭐야?",
+      "gold_product": "BNK부산적극수익추구형플러스 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "캠퍼스락 이거 뭐야?",
+      "gold_product": "캠퍼스락 이용",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 중수익추구형플러스 설명해줘",
+      "gold_product": "BNK부산중수익추구형플러스 202410 준법심의필",
+      "category": "기타",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "유동화적격대출+ 대출 조건 알려줘",
+      "gold_product": "유동화적격대출+",
+      "category": "대출",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "CD수익률 상환 방법이 어떻게 돼?",
+      "gold_product": "CD수익률",
+      "category": "대출",
+      "gold_chunks": 15,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서청년가구버팀목전세자금대출용) 중도상환수수료 있어?",
+      "gold_product": "추가약정서청년가구버팀목전세자금대출용)",
+      "category": "대출",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK팩토링거래약정서 대출 조건 알려줘",
+      "gold_product": "BNK팩토링거래약정서",
+      "category": "대출",
+      "gold_chunks": 34,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금리우대추가약정서) 상환 방법이 어떻게 돼?",
+      "gold_product": "금리우대추가약정서)",
+      "category": "대출",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "주택담보노후연금대출거래약정서2312 중도상환수수료 있어?",
+      "gold_product": "주택담보노후연금대출거래약정서2312",
+      "category": "대출",
+      "gold_chunks": 18,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "기간연장및거래조건변경추가약정서 공동대출용 대출 조건 알려줘",
+      "gold_product": "기간연장및거래조건변경추가약정서 공동대출용",
+      "category": "대출",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "최종 502932 추가약정서 20200120 상환 방법이 어떻게 돼?",
+      "gold_product": "최종 502932 추가약정서 20200120",
+      "category": "대출",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "채권양도계약서 중도상환수수료 있어?",
+      "gold_product": "채권양도계약서",
+      "category": "대출",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK평생행복 주택연금대출추가약정서 대출 조건 알려줘",
+      "gold_product": "BNK평생행복 주택연금대출추가약정서",
+      "category": "대출",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대출이동시스템을 통한 대환대출서비스 이용 상환 방법이 어떻게 돼?",
+      "gold_product": "대출이동시스템을 통한 대환대출서비스 이용",
+      "category": "대출",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "인터넷예적금담보대출약정서 중도상환수수료 있어?",
+      "gold_product": "인터넷예적금담보대출약정서",
+      "category": "대출",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서 공동대출용 대출 조건 알려줘",
+      "gold_product": "추가약정서 공동대출용",
+      "category": "대출",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "내집마련디딤돌대출 상환 방법이 어떻게 돼?",
+      "gold_product": "내집마련디딤돌대출",
+      "category": "대출",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서 전입의무 중도상환수수료 있어?",
+      "gold_product": "추가약정서 전입의무",
+      "category": "대출",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK팩토링이용약정서 대출 조건 알려줘",
+      "gold_product": "BNK팩토링이용약정서",
+      "category": "대출",
+      "gold_chunks": 15,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK 인터넷공무원우대대출약정서 상환 방법이 어떻게 돼?",
+      "gold_product": "BNK 인터넷공무원우대대출약정서",
+      "category": "대출",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대출거래약정서 중도상환수수료 있어?",
+      "gold_product": "대출거래약정서",
+      "category": "대출",
+      "gold_chunks": 142,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서 상품 및 일반대출 거래실적연동 옵션거래용 대출 조건 알려줘",
+      "gold_product": "추가약정서 상품 및 일반대출 거래실적연동 옵션거래용",
+      "category": "대출",
+      "gold_chunks": 12,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서 공통안 상환 방법이 어떻게 돼?",
+      "gold_product": "추가약정서 공통안",
+      "category": "대출",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서 2020.09.16 중도상환수수료 있어?",
+      "gold_product": "추가약정서 2020.09.16",
+      "category": "대출",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "햇살론17에 따른 추가약정서 대출 조건 알려줘",
+      "gold_product": "햇살론17에 따른 추가약정서",
+      "category": "대출",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금리우대추가약정서 상환 방법이 어떻게 돼?",
+      "gold_product": "금리우대추가약정서",
+      "category": "대출",
+      "gold_chunks": 26,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "은행여신거래기본 중도상환수수료 있어?",
+      "gold_product": "은행여신거래기본",
+      "category": "대출",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외화대출추가약정서 대출 조건 알려줘",
+      "gold_product": "외화대출추가약정서",
+      "category": "대출",
+      "gold_chunks": 15,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자방식 외상매출채권 결제제도 기본 상환 방법이 어떻게 돼?",
+      "gold_product": "전자방식 외상매출채권 결제제도 기본",
+      "category": "대출",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대출거래약정서-공동대출용 중도상환수수료 있어?",
+      "gold_product": "대출거래약정서-공동대출용",
+      "category": "대출",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자어음할인 이용가이드 대출 조건 알려줘",
+      "gold_product": "전자어음할인 이용가이드",
+      "category": "대출",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "501050 여신거래조건변경 신청및추가약정서 상환 방법이 어떻게 돼?",
+      "gold_product": "501050 여신거래조건변경 신청및추가약정서",
+      "category": "대출",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서 공동대출 고액신용대출의 사후용도 관리 강화 관련 추가약정용 중도상환수수료 있어?",
+      "gold_product": "추가약정서 공동대출 고액신용대출의 사후용도 관리 강화 관련 추가약정용",
+      "category": "대출",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서] 대출 조건 알려줘",
+      "gold_product": "추가약정서]",
+      "category": "대출",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "HF 주택연금사전예약보금자리론 상환 방법이 어떻게 돼?",
+      "gold_product": "HF 주택연금사전예약보금자리론",
+      "category": "대출",
+      "gold_chunks": 45,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "여신한도거래조건변경신청및추가약정서 중도상환수수료 있어?",
+      "gold_product": "여신한도거래조건변경신청및추가약정서",
+      "category": "대출",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "팩토링서비스이용계약서 대출 조건 알려줘",
+      "gold_product": "팩토링서비스이용계약서",
+      "category": "대출",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전세권저당권설정통지서 상환 방법이 어떻게 돼?",
+      "gold_product": "전세권저당권설정통지서",
+      "category": "대출",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "채권양도통지서 중도상환수수료 있어?",
+      "gold_product": "채권양도통지서",
+      "category": "대출",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "제2금융권더나은보금자리론 대출 조건 알려줘",
+      "gold_product": "제2금융권더나은보금자리론",
+      "category": "대출",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "주택도시기금대출 상환 방법이 어떻게 돼?",
+      "gold_product": "주택도시기금대출",
+      "category": "대출",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "HF 안심전환대출 중도상환수수료 있어?",
+      "gold_product": "HF 안심전환대출",
+      "category": "대출",
+      "gold_chunks": 45,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "주택연금대출 추가약정서 대출 조건 알려줘",
+      "gold_product": "주택연금대출 추가약정서",
+      "category": "대출",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "은행여신거래 상환 방법이 어떻게 돼?",
+      "gold_product": "은행여신거래",
+      "category": "대출",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "여신거래약정서 26.06 중도상환수수료 있어?",
+      "gold_product": "여신거래약정서 26.06",
+      "category": "대출",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "추가약정서) 대출 조건 알려줘",
+      "gold_product": "추가약정서)",
+      "category": "대출",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "매출채권양도계약서 상환 방법이 어떻게 돼?",
+      "gold_product": "매출채권양도계약서",
+      "category": "대출",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "버팀목전세자금대출대출거래약정서 중도상환수수료 있어?",
+      "gold_product": "버팀목전세자금대출대출거래약정서",
+      "category": "대출",
+      "gold_chunks": 20,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대출거래약정서 1 대출 조건 알려줘",
+      "gold_product": "대출거래약정서 1",
+      "category": "대출",
+      "gold_chunks": 32,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2023-03 근저당권 설정계약서 상환 방법이 어떻게 돼?",
+      "gold_product": "2023-03 근저당권 설정계약서",
+      "category": "대출",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "가계대출핵심 중도상환수수료 있어?",
+      "gold_product": "가계대출핵심",
+      "category": "대출",
+      "gold_chunks": 32,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안전망 대출에 따른 추가약정서 대출 조건 알려줘",
+      "gold_product": "안전망 대출에 따른 추가약정서",
+      "category": "대출",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "유동화적격 대출+ 설명해줘",
+      "gold_product": "유동화적격대출+",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "청년가구버팀목전세자금대출용) 설명해줘",
+      "gold_product": "추가약정서청년가구버팀목전세자금대출용)",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "청년가구버팀목전세자금 대출용) 어때?",
+      "gold_product": "추가약정서청년가구버팀목전세자금대출용)",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK팩토링거래 어때?",
+      "gold_product": "BNK팩토링거래약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금리우대 ) 이거 뭐야?",
+      "gold_product": "금리우대추가약정서)",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "주택담보노후연금대출거래 설명해줘",
+      "gold_product": "주택담보노후연금대출거래약정서2312",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "주택담보노후연금 대출거래 어때?",
+      "gold_product": "주택담보노후연금대출거래약정서2312",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "기간연장및거래조건변경 공동대출용 어때?",
+      "gold_product": "기간연장및거래조건변경추가약정서 공동대출용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "기간연장및거래조건변경 공동 대출용 설명해줘",
+      "gold_product": "기간연장및거래조건변경추가약정서 공동대출용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "채권양도 있어?",
+      "gold_product": "채권양도계약서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK평생행복 주택연금대출 설명해줘",
+      "gold_product": "BNK평생행복 주택연금대출추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK평생행복 주택연금 대출 어때?",
+      "gold_product": "BNK평생행복 주택연금대출추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK평생행복 좀 알려줘",
+      "gold_product": "BNK평생행복 주택연금대출추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "대출이동시스템을 통한 대환대출서비스 있어?",
+      "gold_product": "대출이동시스템을 통한 대환대출서비스 이용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "대출이동시스템을 통한 대환대출 서비스 어때?",
+      "gold_product": "대출이동시스템을 통한 대환대출서비스 이용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "대출이동시스템을 통한 이거 뭐야?",
+      "gold_product": "대출이동시스템을 통한 대환대출서비스 이용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "인터넷예적금담보대출 설명해줘",
+      "gold_product": "인터넷예적금담보대출약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "인터넷예 적금담보대출 좀 알려줘",
+      "gold_product": "인터넷예적금담보대출약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "공동대출용 좀 알려줘",
+      "gold_product": "추가약정서 공동대출용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "공동 대출용 좀 알려줘",
+      "gold_product": "추가약정서 공동대출용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "내집마련디딤돌 대출 이거 뭐야?",
+      "gold_product": "내집마련디딤돌대출",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전입의무 이거 뭐야?",
+      "gold_product": "추가약정서 전입의무",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 인터넷공무원우대대출 이거 뭐야?",
+      "gold_product": "BNK 인터넷공무원우대대출약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 인터넷공무원우대 대출 이거 뭐야?",
+      "gold_product": "BNK 인터넷공무원우대대출약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "대출거래 이거 뭐야?",
+      "gold_product": "대출거래약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "상품 및 일반대출 거래실적연동 옵션거래용 이거 뭐야?",
+      "gold_product": "추가약정서 상품 및 일반대출 거래실적연동 옵션거래용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "상품 및 일반 대출 거래실적연동 옵션거래용 있어?",
+      "gold_product": "추가약정서 상품 및 일반대출 거래실적연동 옵션거래용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "햇살론17에 따른 이거 뭐야?",
+      "gold_product": "햇살론17에 따른 추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금리우대 이거 뭐야?",
+      "gold_product": "금리우대추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "외화대출 설명해줘",
+      "gold_product": "외화대출추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "외화 대출 있어?",
+      "gold_product": "외화대출추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "대출거래 -공동대출용 있어?",
+      "gold_product": "대출거래약정서-공동대출용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "대출거래 -공동 대출용 설명해줘",
+      "gold_product": "대출거래약정서-공동대출용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전자어음할인 가이드 이거 뭐야?",
+      "gold_product": "전자어음할인 이용가이드",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "전자어음할인 있어?",
+      "gold_product": "전자어음할인 이용가이드",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "여신거래조건변경 신청및 설명해줘",
+      "gold_product": "501050 여신거래조건변경 신청및추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "공동대출 고액신용대출의 사후용도 관리 강화 관련 추가약정용 설명해줘",
+      "gold_product": "추가약정서 공동대출 고액신용대출의 사후용도 관리 강화 관련 추가약정용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "공동대출 고액신용 대출의 사후용도 관리 강화 관련 추가약정용 이거 뭐야?",
+      "gold_product": "추가약정서 공동대출 고액신용대출의 사후용도 관리 강화 관련 추가약정용",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "여신한도거래조건변경신청및 있어?",
+      "gold_product": "여신한도거래조건변경신청및추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "팩토링서비스 어때?",
+      "gold_product": "팩토링서비스이용계약서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "팩토링 서비스 설명해줘",
+      "gold_product": "팩토링서비스이용계약서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "주택도시기금 대출 설명해줘",
+      "gold_product": "주택도시기금대출",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "HF 안심전환 대출 설명해줘",
+      "gold_product": "HF 안심전환대출",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "주택연금대출 어때?",
+      "gold_product": "주택연금대출 추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "주택연금 대출 좀 알려줘",
+      "gold_product": "주택연금대출 추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "매출채권양도 설명해줘",
+      "gold_product": "매출채권양도계약서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "버팀목전세자금대출대출거래 있어?",
+      "gold_product": "버팀목전세자금대출대출거래약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "버팀목전세자금대출 대출거래 이거 뭐야?",
+      "gold_product": "버팀목전세자금대출대출거래약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "가계대출 있어?",
+      "gold_product": "가계대출핵심",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "가계 대출 있어?",
+      "gold_product": "가계대출핵심",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "안전망 대출에 따른 좀 알려줘",
+      "gold_product": "안전망 대출에 따른 추가약정서",
+      "category": "대출",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KB라이프 KB하이브리드연금보험무배당안내장 준법감시인확인필-SM-2508048-3 어떤 보험이야?",
+      "gold_product": "KB라이프 KB하이브리드연금보험무배당안내장 준법감시인확인필-SM-2508048-3",
+      "category": "보험",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "TheBestChoice연금보험Ⅱ 부산 보장 내용 알려줘",
+      "gold_product": "TheBestChoice연금보험Ⅱ 부산",
+      "category": "보험",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KDB생명 KDB든든한상해 안내장 보험료 납입기간은?",
+      "gold_product": "KDB생명 KDB든든한상해 안내장",
+      "category": "보험",
+      "gold_chunks": 12,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안내장 MAX연금보험뉴 하이브리드거치형리플렛 1면2P부산 어떤 보험이야?",
+      "gold_product": "안내장 MAX연금보험뉴 하이브리드거치형리플렛 1면2P부산",
+      "category": "보험",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2401 연금저축스마트하이드림 안내장 부산 보장 내용 알려줘",
+      "gold_product": "2401 연금저축스마트하이드림 안내장 부산",
+      "category": "보험",
+      "gold_chunks": 21,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "백년친구건강보험 안내장 2504 최종 웹용 20250425 보험료 납입기간은?",
+      "gold_product": "백년친구건강보험 안내장 2504 최종 웹용 20250425",
+      "category": "보험",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "비대면제2023-PA258호보너스주는e저축보험Ⅵ안내장 어떤 보험이야?",
+      "gold_product": "비대면제2023-PA258호보너스주는e저축보험Ⅵ안내장",
+      "category": "보험",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "IBK연금보험무배당IBK5년든든연금보험 2404 부산 보장 내용 알려줘",
+      "gold_product": "IBK연금보험무배당IBK5년든든연금보험 2404 부산",
+      "category": "보험",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "8 1더확실한저축 안내장 부산 보험료 납입기간은?",
+      "gold_product": "8 1더확실한저축 안내장 부산",
+      "category": "보험",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KDB생명 KDB든든한건강보험 안내장2601 부산 어떤 보험이야?",
+      "gold_product": "KDB생명 KDB든든한건강보험 안내장2601 부산",
+      "category": "보험",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "미래 변액저축보험2305 F 모바일 보장 내용 알려줘",
+      "gold_product": "미래 변액저축보험2305 F 모바일",
+      "category": "보험",
+      "gold_chunks": 31,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "AIA 무배당골든타임연금보험상품안내장 부산은행 보험료 납입기간은?",
+      "gold_product": "AIA 무배당골든타임연금보험상품안내장 부산은행",
+      "category": "보험",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안심드림상해보험 어떤 보험이야?",
+      "gold_product": "안심드림상해보험",
+      "category": "보험",
+      "gold_chunks": 236,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB손보 건강한치아보험이야기 모바일안내장 보장 내용 알려줘",
+      "gold_product": "KB손보 건강한치아보험이야기 모바일안내장",
+      "category": "보험",
+      "gold_chunks": 34,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안내장 221107 신한VIP암이면다암보험 부산 보험료 납입기간은?",
+      "gold_product": "안내장 221107 신한VIP암이면다암보험 부산",
+      "category": "보험",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "푸폰 MAX연금보험하이브리드플러스적립형리플렛 어떤 보험이야?",
+      "gold_product": "푸폰 MAX연금보험하이브리드플러스적립형리플렛",
+      "category": "보험",
+      "gold_chunks": 33,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "백년친구상해보험-10월 보장 내용 알려줘",
+      "gold_product": "백년친구상해보험-10월",
+      "category": "보험",
+      "gold_chunks": 16,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "상품안내장 6180실버암보험 260701 보험료 납입기간은?",
+      "gold_product": "상품안내장 6180실버암보험 260701",
+      "category": "보험",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "현대하이라이프더블건강암보험 안내장 부산 Tmp 어떤 보험이야?",
+      "gold_product": "현대하이라이프더블건강암보험 안내장 부산 Tmp",
+      "category": "보험",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "NH힘이되는치매보험2301 안내장 보장 내용 알려줘",
+      "gold_product": "NH힘이되는치매보험2301 안내장",
+      "category": "보험",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "202512-067 NH해외여행보험 안내장 보험료 납입기간은?",
+      "gold_product": "202512-067 NH해외여행보험 안내장",
+      "category": "보험",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안내장 푸본현대상해보험안심픽리플렛 1면2P버전웹용부산 어떤 보험이야?",
+      "gold_product": "안내장 푸본현대상해보험안심픽리플렛 1면2P버전웹용부산",
+      "category": "보험",
+      "gold_chunks": 16,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2507안심보험 안내 부산 수정 보장 내용 알려줘",
+      "gold_product": "2507안심보험 안내 부산 수정",
+      "category": "보험",
+      "gold_chunks": 41,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "자녀사랑안내장부산 보험료 납입기간은?",
+      "gold_product": "자녀사랑안내장부산",
+      "category": "보험",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "★DB손해보험New상해안심보험2204 부산모바일 20220407 어떤 보험이야?",
+      "gold_product": "★DB손해보험New상해안심보험2204 부산모바일 20220407",
+      "category": "보험",
+      "gold_chunks": 34,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "현대해상 현대하이라이프더블건강암보험 안내장 보장 내용 알려줘",
+      "gold_product": "현대해상 현대하이라이프더블건강암보험 안내장",
+      "category": "보험",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "흥국 안심케어보험2504)접이식 부산 250926 보험료 납입기간은?",
+      "gold_product": "흥국 안심케어보험2504)접이식 부산 250926",
+      "category": "보험",
+      "gold_chunks": 80,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "변액저축보험2608F 어떤 보험이야?",
+      "gold_product": "변액저축보험2608F",
+      "category": "보험",
+      "gold_chunks": 50,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "삼성행복플러스연금보험 보장 내용 알려줘",
+      "gold_product": "삼성행복플러스연금보험",
+      "category": "보험",
+      "gold_chunks": 39,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "IBK연금보험무배당IBKe-세액공제연금저축보험 2404 안내장 보험료 납입기간은?",
+      "gold_product": "IBK연금보험무배당IBKe-세액공제연금저축보험 2404 안내장",
+      "category": "보험",
+      "gold_chunks": 26,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "미래 변액연금보험2410 F 어떤 보험이야?",
+      "gold_product": "미래 변액연금보험2410 F",
+      "category": "보험",
+      "gold_chunks": 116,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "미래 미래에셋생명변액저축보험2108 2204 통합 보장 내용 알려줘",
+      "gold_product": "미래 미래에셋생명변액저축보험2108 2204 통합",
+      "category": "보험",
+      "gold_chunks": 296,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "암걱정없는표적치료암보험 부산은행 안내장 2301 보험료 납입기간은?",
+      "gold_product": "암걱정없는표적치료암보험 부산은행 안내장 2301",
+      "category": "보험",
+      "gold_chunks": 16,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "헤아림NH다솜저축보험2509 부산 어떤 보험이야?",
+      "gold_product": "헤아림NH다솜저축보험2509 부산",
+      "category": "보험",
+      "gold_chunks": 12,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안심 안내장 부산 26.01 보장 내용 알려줘",
+      "gold_product": "안심 안내장 부산 26.01",
+      "category": "보험",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "다사랑저축보험2210)접이 부산 220908 보험료 납입기간은?",
+      "gold_product": "다사랑저축보험2210)접이 부산 220908",
+      "category": "보험",
+      "gold_chunks": 17,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "하나생명 Top3CEO안심보험 안내장 부산은행 어떤 보험이야?",
+      "gold_product": "하나생명 Top3CEO안심보험 안내장 부산은행",
+      "category": "보험",
+      "gold_chunks": 26,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB손보 CEO안심상해보험Ⅱ 접이식안내장 부산 보장 내용 알려줘",
+      "gold_product": "KB손보 CEO안심상해보험Ⅱ 접이식안내장 부산",
+      "category": "보험",
+      "gold_chunks": 79,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "★DB손해보험New상해안심보험2206 부산 20220525 보험료 납입기간은?",
+      "gold_product": "★DB손해보험New상해안심보험2206 부산 20220525",
+      "category": "보험",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "백년친구e-생활보험 안내장 모바일용 웹용 어떤 보험이야?",
+      "gold_product": "백년친구e-생활보험 안내장 모바일용 웹용",
+      "category": "보험",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB손보안내장상해부산 보장 내용 알려줘",
+      "gold_product": "KB손보안내장상해부산",
+      "category": "보험",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안심안내장부산 보험료 납입기간은?",
+      "gold_product": "안심안내장부산",
+      "category": "보험",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금쪽같은자녀보험 안내장 어떤 보험이야?",
+      "gold_product": "금쪽같은자녀보험 안내장",
+      "category": "보험",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB손보 슬기로운간편간병인보험 접이식안내장부산 보장 내용 알려줘",
+      "gold_product": "KB손보 슬기로운간편간병인보험 접이식안내장부산",
+      "category": "보험",
+      "gold_chunks": 19,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "한화손해 2601 한화케어밸런스건강보험2601 안내장 부산 보험료 납입기간은?",
+      "gold_product": "한화손해 2601 한화케어밸런스건강보험2601 안내장 부산",
+      "category": "보험",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "상품안내장 더쉬운자산관리ETF변액보험2.0 20220401 어떤 보험이야?",
+      "gold_product": "상품안내장 더쉬운자산관리ETF변액보험2.0 20220401",
+      "category": "보험",
+      "gold_chunks": 34,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "하나생명 ETF투자의정석변액저축보험 안내장 부산은행 보장 내용 알려줘",
+      "gold_product": "하나생명 ETF투자의정석변액저축보험 안내장 부산은행",
+      "category": "보험",
+      "gold_chunks": 56,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "변액저축보험2504 2601F 보험료 납입기간은?",
+      "gold_product": "변액저축보험2504 2601F",
+      "category": "보험",
+      "gold_chunks": 100,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2203바로연금안내장한화생명 어떤 보험이야?",
+      "gold_product": "2203바로연금안내장한화생명",
+      "category": "보험",
+      "gold_chunks": 17,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "스마트하이브리드연금보험 부산 안내장 보장 내용 알려줘",
+      "gold_product": "스마트하이브리드연금보험 부산 안내장",
+      "category": "보험",
+      "gold_chunks": 36,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "백년친구생활비보험 안내장 2403 최종 웹용 보험료 납입기간은?",
+      "gold_product": "백년친구생활비보험 안내장 2403 최종 웹용",
+      "category": "보험",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "e달러연금보험QⅡ 부산 어떤 보험이야?",
+      "gold_product": "e달러연금보험QⅡ 부산",
+      "category": "보험",
+      "gold_chunks": 45,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB손보안내장자녀부산 보장 내용 알려줘",
+      "gold_product": "KB손보안내장자녀부산",
+      "category": "보험",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "TheBestChoice연금보험 부산 보험료 납입기간은?",
+      "gold_product": "TheBestChoice연금보험 부산",
+      "category": "보험",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "미래에셋생명 시간에투자하는변액연금보험2504 2509 어떤 보험이야?",
+      "gold_product": "미래에셋생명 시간에투자하는변액연금보험2504 2509",
+      "category": "보험",
+      "gold_chunks": 58,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KDB양로저축보험 보장 내용 알려줘",
+      "gold_product": "KDB양로저축보험",
+      "category": "보험",
+      "gold_chunks": 110,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "손안에VIP상해보험-모바일-부산 보험료 납입기간은?",
+      "gold_product": "손안에VIP상해보험-모바일-부산",
+      "category": "보험",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB손보 슬기로운간편건강보험 모바일안내장 어떤 보험이야?",
+      "gold_product": "KB손보 슬기로운간편건강보험 모바일안내장",
+      "category": "보험",
+      "gold_chunks": 18,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "드림건강안내장 보장 내용 알려줘",
+      "gold_product": "드림건강안내장",
+      "category": "보험",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "안심케어보험2402)접이 부산 240130 보험료 납입기간은?",
+      "gold_product": "안심케어보험2402)접이 부산 240130",
+      "category": "보험",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "TheBestChoice연금보험Ⅱ 설명해줘",
+      "gold_product": "TheBestChoice연금보험Ⅱ 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "TheBestChoice 연금보험Ⅱ 설명해줘",
+      "gold_product": "TheBestChoice연금보험Ⅱ 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KDB생명 KDB든든한상해 어때?",
+      "gold_product": "KDB생명 KDB든든한상해 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "MAX연금보험뉴 하이브리드거치형리플렛 1면2P 이거 뭐야?",
+      "gold_product": "안내장 MAX연금보험뉴 하이브리드거치형리플렛 1면2P부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "MAX 연금보험뉴 하이브리드거치형리플렛 1면2P 어때?",
+      "gold_product": "안내장 MAX연금보험뉴 하이브리드거치형리플렛 1면2P부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "연금저축스마트하이드림 이거 뭐야?",
+      "gold_product": "2401 연금저축스마트하이드림 안내장 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "백년친구건강보험 있어?",
+      "gold_product": "백년친구건강보험 안내장 2504 최종 웹용 20250425",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "백년친구 건강보험 설명해줘",
+      "gold_product": "백년친구건강보험 안내장 2504 최종 웹용 20250425",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "제 -PA258호보너스주는e저축보험Ⅵ 어때?",
+      "gold_product": "비대면제2023-PA258호보너스주는e저축보험Ⅵ안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "제 -PA258호보너스주는e 저축보험Ⅵ 어때?",
+      "gold_product": "비대면제2023-PA258호보너스주는e저축보험Ⅵ안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "IBK연금보험무배당IBK5년든든연금보험 어때?",
+      "gold_product": "IBK연금보험무배당IBK5년든든연금보험 2404 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "IBK연금보험무배당IBK5년든든 연금보험 이거 뭐야?",
+      "gold_product": "IBK연금보험무배당IBK5년든든연금보험 2404 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KDB생명 KDB든든한건강보험 이거 뭐야?",
+      "gold_product": "KDB생명 KDB든든한건강보험 안내장2601 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KDB생명 KDB든든한 건강보험 이거 뭐야?",
+      "gold_product": "KDB생명 KDB든든한건강보험 안내장2601 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "미래 변액저축보험 F 이거 뭐야?",
+      "gold_product": "미래 변액저축보험2305 F 모바일",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "미래 변액 저축보험 F 있어?",
+      "gold_product": "미래 변액저축보험2305 F 모바일",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "AIA 무배당골든타임연금보험상품 이거 뭐야?",
+      "gold_product": "AIA 무배당골든타임연금보험상품안내장 부산은행",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "AIA 무배당골든타임 연금보험상품 설명해줘",
+      "gold_product": "AIA 무배당골든타임연금보험상품안내장 부산은행",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "안심드림 상해보험 설명해줘",
+      "gold_product": "안심드림상해보험",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB손보 건강한치아보험이야기 설명해줘",
+      "gold_product": "KB손보 건강한치아보험이야기 모바일안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KB손보 건강한치아 보험이야기 이거 뭐야?",
+      "gold_product": "KB손보 건강한치아보험이야기 모바일안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신한VIP암이면다암보험 어때?",
+      "gold_product": "안내장 221107 신한VIP암이면다암보험 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "신한VIP암이면다 암보험 설명해줘",
+      "gold_product": "안내장 221107 신한VIP암이면다암보험 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "푸폰 MAX 연금보험하이브리드플러스적립형리플렛 설명해줘",
+      "gold_product": "푸폰 MAX연금보험하이브리드플러스적립형리플렛",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "백년친구 상해보험-10월 좀 알려줘",
+      "gold_product": "백년친구상해보험-10월",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "상품 실버암보험 있어?",
+      "gold_product": "상품안내장 6180실버암보험 260701",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "상품 실버 암보험 설명해줘",
+      "gold_product": "상품안내장 6180실버암보험 260701",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "현대하이라이프더블건강암보험 Tmp 좀 알려줘",
+      "gold_product": "현대하이라이프더블건강암보험 안내장 부산 Tmp",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "현대하이라이프더블건강 암보험 Tmp 설명해줘",
+      "gold_product": "현대하이라이프더블건강암보험 안내장 부산 Tmp",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "NH힘이되는치매보험 설명해줘",
+      "gold_product": "NH힘이되는치매보험2301 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "NH힘이되는치매 보험 있어?",
+      "gold_product": "NH힘이되는치매보험2301 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "푸본현대상해보험안심픽리플렛 1면2P버전 있어?",
+      "gold_product": "안내장 푸본현대상해보험안심픽리플렛 1면2P버전웹용부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "푸본현대 상해보험안심픽리플렛 1면2P버전 있어?",
+      "gold_product": "안내장 푸본현대상해보험안심픽리플렛 1면2P버전웹용부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "안심보험 안내 수정 설명해줘",
+      "gold_product": "2507안심보험 안내 부산 수정",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "안심 보험 안내 수정 이거 뭐야?",
+      "gold_product": "2507안심보험 안내 부산 수정",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "자녀사랑 이거 뭐야?",
+      "gold_product": "자녀사랑안내장부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "★DB손해보험New상해안심보험 있어?",
+      "gold_product": "★DB손해보험New상해안심보험2204 부산모바일 20220407",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "★DB손해보험New상해 안심보험 어때?",
+      "gold_product": "★DB손해보험New상해안심보험2204 부산모바일 20220407",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "현대해상 현대하이라이프더블건강암보험 설명해줘",
+      "gold_product": "현대해상 현대하이라이프더블건강암보험 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "현대해상 현대하이라이프더블건강 암보험 어때?",
+      "gold_product": "현대해상 현대하이라이프더블건강암보험 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "흥국 안심케어보험 )접이식 어때?",
+      "gold_product": "흥국 안심케어보험2504)접이식 부산 250926",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "흥국 안심케어 보험 )접이식 있어?",
+      "gold_product": "흥국 안심케어보험2504)접이식 부산 250926",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "변액저축보험 F 이거 뭐야?",
+      "gold_product": "변액저축보험2608F",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "변액 저축보험 F 이거 뭐야?",
+      "gold_product": "변액저축보험2608F",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "삼성행복플러스 연금보험 어때?",
+      "gold_product": "삼성행복플러스연금보험",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "IBK연금보험무배당IBKe-세액공제연금저축보험 설명해줘",
+      "gold_product": "IBK연금보험무배당IBKe-세액공제연금저축보험 2404 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "IBK 연금보험무배당IBKe-세액공제연금저축보험 설명해줘",
+      "gold_product": "IBK연금보험무배당IBKe-세액공제연금저축보험 2404 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "미래 변액연금보험 F 좀 알려줘",
+      "gold_product": "미래 변액연금보험2410 F",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "미래 변액 연금보험 F 있어?",
+      "gold_product": "미래 변액연금보험2410 F",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "미래 미래에셋생명변액저축보험 통합 있어?",
+      "gold_product": "미래 미래에셋생명변액저축보험2108 2204 통합",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "미래 미래에셋생명변액 저축보험 통합 좀 알려줘",
+      "gold_product": "미래 미래에셋생명변액저축보험2108 2204 통합",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "암걱정없는표적치료암보험 이거 뭐야?",
+      "gold_product": "암걱정없는표적치료암보험 부산은행 안내장 2301",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "암걱정없는표적치료 암보험 있어?",
+      "gold_product": "암걱정없는표적치료암보험 부산은행 안내장 2301",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "헤아림NH다솜저축보험 설명해줘",
+      "gold_product": "헤아림NH다솜저축보험2509 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "헤아림NH다솜 저축보험 이거 뭐야?",
+      "gold_product": "헤아림NH다솜저축보험2509 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "다사랑저축보험 )접이 어때?",
+      "gold_product": "다사랑저축보험2210)접이 부산 220908",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "다사랑 저축보험 )접이 있어?",
+      "gold_product": "다사랑저축보험2210)접이 부산 220908",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "하나생명 Top3CEO안심보험 있어?",
+      "gold_product": "하나생명 Top3CEO안심보험 안내장 부산은행",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "하나생명 Top3CEO 안심보험 어때?",
+      "gold_product": "하나생명 Top3CEO안심보험 안내장 부산은행",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB손보 CEO안심상해보험Ⅱ 접이식 이거 뭐야?",
+      "gold_product": "KB손보 CEO안심상해보험Ⅱ 접이식안내장 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KB손보 CEO안심 상해보험Ⅱ 접이식 설명해줘",
+      "gold_product": "KB손보 CEO안심상해보험Ⅱ 접이식안내장 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "★DB손해보험New상해안심보험 좀 알려줘",
+      "gold_product": "★DB손해보험New상해안심보험2206 부산 20220525",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "★DB손해보험New상해 안심보험 있어?",
+      "gold_product": "★DB손해보험New상해안심보험2206 부산 20220525",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "백년친구e-생활보험 어때?",
+      "gold_product": "백년친구e-생활보험 안내장 모바일용 웹용",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "백년친구e-생활 보험 이거 뭐야?",
+      "gold_product": "백년친구e-생활보험 안내장 모바일용 웹용",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB손보 상해 이거 뭐야?",
+      "gold_product": "KB손보안내장상해부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금쪽같은자녀보험 있어?",
+      "gold_product": "금쪽같은자녀보험 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금쪽같은자녀 보험 이거 뭐야?",
+      "gold_product": "금쪽같은자녀보험 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB손보 슬기로운간편간병인보험 접이식 있어?",
+      "gold_product": "KB손보 슬기로운간편간병인보험 접이식안내장부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KB손보 슬기로운간편간병인 보험 접이식 설명해줘",
+      "gold_product": "KB손보 슬기로운간편간병인보험 접이식안내장부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "한화손해 한화케어밸런스건강보험 어때?",
+      "gold_product": "한화손해 2601 한화케어밸런스건강보험2601 안내장 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "한화손해 한화케어밸런스 건강보험 있어?",
+      "gold_product": "한화손해 2601 한화케어밸런스건강보험2601 안내장 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "하나생명 ETF투자의정석변액저축보험 설명해줘",
+      "gold_product": "하나생명 ETF투자의정석변액저축보험 안내장 부산은행",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "하나생명 ETF투자의정석변액 저축보험 좀 알려줘",
+      "gold_product": "하나생명 ETF투자의정석변액저축보험 안내장 부산은행",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "변액저축보험 F 어때?",
+      "gold_product": "변액저축보험2504 2601F",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "변액 저축보험 F 어때?",
+      "gold_product": "변액저축보험2504 2601F",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "바로연금 한화생명 어때?",
+      "gold_product": "2203바로연금안내장한화생명",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "스마트하이브리드연금보험 좀 알려줘",
+      "gold_product": "스마트하이브리드연금보험 부산 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "스마트하이브리드 연금보험 좀 알려줘",
+      "gold_product": "스마트하이브리드연금보험 부산 안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "백년친구생활비보험 어때?",
+      "gold_product": "백년친구생활비보험 안내장 2403 최종 웹용",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "백년친구생활비 보험 어때?",
+      "gold_product": "백년친구생활비보험 안내장 2403 최종 웹용",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "e달러연금보험QⅡ 좀 알려줘",
+      "gold_product": "e달러연금보험QⅡ 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "e달러 연금보험QⅡ 어때?",
+      "gold_product": "e달러연금보험QⅡ 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB손보 자녀 좀 알려줘",
+      "gold_product": "KB손보안내장자녀부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "TheBestChoice연금보험 어때?",
+      "gold_product": "TheBestChoice연금보험 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "TheBestChoice 연금보험 어때?",
+      "gold_product": "TheBestChoice연금보험 부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "미래에셋생명 시간에투자하는변액연금보험 어때?",
+      "gold_product": "미래에셋생명 시간에투자하는변액연금보험2504 2509",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "미래에셋생명 시간에투자하는변액 연금보험 어때?",
+      "gold_product": "미래에셋생명 시간에투자하는변액연금보험2504 2509",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KDB양로 저축보험 좀 알려줘",
+      "gold_product": "KDB양로저축보험",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "손안에VIP상해보험- 이거 뭐야?",
+      "gold_product": "손안에VIP상해보험-모바일-부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "손안에VIP 상해보험- 있어?",
+      "gold_product": "손안에VIP상해보험-모바일-부산",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB손보 슬기로운간편건강보험 이거 뭐야?",
+      "gold_product": "KB손보 슬기로운간편건강보험 모바일안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KB손보 슬기로운간편 건강보험 있어?",
+      "gold_product": "KB손보 슬기로운간편건강보험 모바일안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "드림건강 좀 알려줘",
+      "gold_product": "드림건강안내장",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "안심케어보험 )접이 이거 뭐야?",
+      "gold_product": "안심케어보험2402)접이 부산 240130",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "안심케어 보험 )접이 좀 알려줘",
+      "gold_product": "안심케어보험2402)접이 부산 240130",
+      "category": "보험",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전북지역개발26-04 어떤 상품이야?",
+      "gold_product": "전북지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경남지역개발26-01 신탁 기간 알려줘",
+      "gold_product": "경남지역개발26-01",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금융소비자보호법상중요사항 중도해지 가능해?",
+      "gold_product": "금융소비자보호법상중요사항",
+      "category": "신탁",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "광주지역개발26-01 어떤 상품이야?",
+      "gold_product": "광주지역개발26-01",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구도시철도26-05 신탁 기간 알려줘",
+      "gold_product": "대구도시철도26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "강원지역개발26-02 중도해지 가능해?",
+      "gold_product": "강원지역개발26-02",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "개인형퇴직연금+운용관리계약서 어떤 상품이야?",
+      "gold_product": "개인형퇴직연금+운용관리계약서",
+      "category": "신탁",
+      "gold_chunks": 33,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경남지역개발25-11 신탁 기간 알려줘",
+      "gold_product": "경남지역개발25-11",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "울산지역개발26-05 중도해지 가능해?",
+      "gold_product": "울산지역개발26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경북지역개발26-07 어떤 상품이야?",
+      "gold_product": "경북지역개발26-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "광주지역개발26-04 신탁 기간 알려줘",
+      "gold_product": "광주지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전남지역개발26-03 중도해지 가능해?",
+      "gold_product": "전남지역개발26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "채권 민평정보 비교 리포트 경기지역개발26-03 어떤 상품이야?",
+      "gold_product": "채권 민평정보 비교 리포트 경기지역개발26-03",
+      "category": "신탁",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "특정금전신탁핵심 신탁 기간 알려줘",
+      "gold_product": "특정금전신탁핵심",
+      "category": "신탁",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "광주지역개발26-03 중도해지 가능해?",
+      "gold_product": "광주지역개발26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구지역개발25-07 어떤 상품이야?",
+      "gold_product": "대구지역개발25-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산지역개발26-04 신탁 기간 알려줘",
+      "gold_product": "부산지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "울산지역개발26-04 중도해지 가능해?",
+      "gold_product": "울산지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "충남지역개발26-02 어떤 상품이야?",
+      "gold_product": "충남지역개발26-02",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산지역개발26-01 신탁 기간 알려줘",
+      "gold_product": "부산지역개발26-01",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "울산지역개발26-07 중도해지 가능해?",
+      "gold_product": "울산지역개발26-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구도시철도25-12 어떤 상품이야?",
+      "gold_product": "대구도시철도25-12",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산도시철도26-08 신탁 기간 알려줘",
+      "gold_product": "부산도시철도26-08",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대전지역개발26-03 중도해지 가능해?",
+      "gold_product": "대전지역개발26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "인천지역개발26-03 어떤 상품이야?",
+      "gold_product": "인천지역개발26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전북지역개발26-01 신탁 기간 알려줘",
+      "gold_product": "전북지역개발26-01",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "충남지역개발26-05 중도해지 가능해?",
+      "gold_product": "충남지역개발26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "충남지역개발26-08 어떤 상품이야?",
+      "gold_product": "충남지역개발26-08",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구지역개발26-04 신탁 기간 알려줘",
+      "gold_product": "대구지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK투자증권 중도해지 가능해?",
+      "gold_product": "BNK투자증권",
+      "category": "신탁",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "국민주택1종26-02 어떤 상품이야?",
+      "gold_product": "국민주택1종26-02",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "광주지역개발25-12 신탁 기간 알려줘",
+      "gold_product": "광주지역개발25-12",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경북지역개발26-05 중도해지 가능해?",
+      "gold_product": "경북지역개발26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "퇴직연금 채권 핵심 어떤 상품이야?",
+      "gold_product": "퇴직연금 채권 핵심",
+      "category": "신탁",
+      "gold_chunks": 145,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경북지역개발26-02 신탁 기간 알려줘",
+      "gold_product": "경북지역개발26-02",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "확정급여형+퇴직연금+자산관리 중도해지 가능해?",
+      "gold_product": "확정급여형+퇴직연금+자산관리",
+      "category": "신탁",
+      "gold_chunks": 62,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "강원지역개발26-05 어떤 상품이야?",
+      "gold_product": "강원지역개발26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전남지역개발26-04 신탁 기간 알려줘",
+      "gold_product": "전남지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구도시철도26-03 중도해지 가능해?",
+      "gold_product": "대구도시철도26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경기지역개발26-07 어떤 상품이야?",
+      "gold_product": "경기지역개발26-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산도시철도26-03 신탁 기간 알려줘",
+      "gold_product": "부산도시철도26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "13 02 연금저축안정형개정대비표 20130329 중도해지 가능해?",
+      "gold_product": "13 02 연금저축안정형개정대비표 20130329",
+      "category": "신탁",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "경남지역개발26-02 어떤 상품이야?",
+      "gold_product": "경남지역개발26-02",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "메리츠증권 신탁 기간 알려줘",
+      "gold_product": "메리츠증권",
+      "category": "신탁",
+      "gold_chunks": 74,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "강원지역개발26-04 중도해지 가능해?",
+      "gold_product": "강원지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "울산지역개발26-01 어떤 상품이야?",
+      "gold_product": "울산지역개발26-01",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "개인형퇴직연금 운용관리계약서 신탁 기간 알려줘",
+      "gold_product": "개인형퇴직연금 운용관리계약서",
+      "category": "신탁",
+      "gold_chunks": 50,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산도시철도26-01 중도해지 가능해?",
+      "gold_product": "부산도시철도26-01",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "단기추가금전신탁제1호 어떤 상품이야?",
+      "gold_product": "단기추가금전신탁제1호",
+      "category": "신탁",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "키움증권 드림ELB 661 신탁 기간 알려줘",
+      "gold_product": "키움증권 드림ELB 661",
+      "category": "신탁",
+      "gold_chunks": 18,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "퇴직연금채권 중도해지 가능해?",
+      "gold_product": "퇴직연금채권",
+      "category": "신탁",
+      "gold_chunks": 87,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "강원지역개발26-07 어떤 상품이야?",
+      "gold_product": "강원지역개발26-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "충남지역개발26-07 신탁 기간 알려줘",
+      "gold_product": "충남지역개발26-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구지역개발26-06 중도해지 가능해?",
+      "gold_product": "대구지역개발26-06",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "충북지역개발26-05 어떤 상품이야?",
+      "gold_product": "충북지역개발26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "충남지역개발26-03 신탁 기간 알려줘",
+      "gold_product": "충남지역개발26-03",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "대구도시철도26-07 중도해지 가능해?",
+      "gold_product": "대구도시철도26-07",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "특정금전신탁요약및추가 어떤 상품이야?",
+      "gold_product": "특정금전신탁요약및추가",
+      "category": "신탁",
+      "gold_chunks": 49,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "인천지역개발26-05 신탁 기간 알려줘",
+      "gold_product": "인천지역개발26-05",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "제주지역개발26-04 중도해지 가능해?",
+      "gold_product": "제주지역개발26-04",
+      "category": "신탁",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "개인형퇴직연금+운용관리 설명해줘",
+      "gold_product": "개인형퇴직연금+운용관리계약서",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "특정금전신탁 좀 알려줘",
+      "gold_product": "특정금전신탁핵심",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "특정 금전신탁 이거 뭐야?",
+      "gold_product": "특정금전신탁핵심",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "지역개발26-04 이거 뭐야?",
+      "gold_product": "부산지역개발26-04",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "지역개발26-01 좀 알려줘",
+      "gold_product": "부산지역개발26-01",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "도시철도26-08 좀 알려줘",
+      "gold_product": "부산도시철도26-08",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "퇴직연금 채권 있어?",
+      "gold_product": "퇴직연금 채권 핵심",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "도시철도26-03 이거 뭐야?",
+      "gold_product": "부산도시철도26-03",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "개인형퇴직연금 운용관리 어때?",
+      "gold_product": "개인형퇴직연금 운용관리계약서",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "도시철도26-01 설명해줘",
+      "gold_product": "부산도시철도26-01",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "단기추가 금전신탁제1호 좀 알려줘",
+      "gold_product": "단기추가금전신탁제1호",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "특정 금전신탁요약및추가 어때?",
+      "gold_product": "특정금전신탁요약및추가",
+      "category": "신탁",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "뱅크라인통장 어떤 상품이야?",
+      "gold_product": "뱅크라인통장",
+      "category": "예금",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "주택청약종합저축 가입 대상 알려줘",
+      "gold_product": "주택청약종합저축",
+      "category": "예금",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "레저서포터스통장 금리 조건이 어떻게 돼?",
+      "gold_product": "레저서포터스통장",
+      "category": "예금",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK어울림 정기예금 어떤 상품이야?",
+      "gold_product": "BNK어울림 정기예금",
+      "category": "예금",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK아기천사적금 가입 대상 알려줘",
+      "gold_product": "BNK아기천사적금",
+      "category": "예금",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK주택연금 지킴이 통장 금리 조건이 어떻게 돼?",
+      "gold_product": "BNK주택연금 지킴이 통장",
+      "category": "예금",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK썸농구단우승기원적금 어떤 상품이야?",
+      "gold_product": "BNK썸농구단우승기원적금",
+      "category": "예금",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "평생주거래사업자통장 가입 대상 알려줘",
+      "gold_product": "평생주거래사업자통장",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "9.2030부산등록엑스포적금 금리 조건이 어떻게 돼?",
+      "gold_product": "9.2030부산등록엑스포적금",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK어울림적금 어떤 상품이야?",
+      "gold_product": "BNK어울림적금",
+      "category": "예금",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "가계당좌예금 가입 대상 알려줘",
+      "gold_product": "가계당좌예금",
+      "category": "예금",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산 중수익추구형플러스 금리 조건이 어떻게 돼?",
+      "gold_product": "BNK부산 중수익추구형플러스",
+      "category": "예금",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산이라좋다Big적금 어떤 상품이야?",
+      "gold_product": "부산이라좋다Big적금",
+      "category": "예금",
+      "gold_chunks": 16,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK오픈뱅킹 정기예금 가입 대상 알려줘",
+      "gold_product": "BNK오픈뱅킹 정기예금",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK지역사랑통장 금리 조건이 어떻게 돼?",
+      "gold_product": "BNK지역사랑통장",
+      "category": "예금",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK참잘했어요!적금 어떤 상품이야?",
+      "gold_product": "BNK참잘했어요!적금",
+      "category": "예금",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK은퇴디자인 정기예금 가입 대상 알려줘",
+      "gold_product": "BNK은퇴디자인 정기예금",
+      "category": "예금",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "코리보금리연동정기예금 금리 조건이 어떻게 돼?",
+      "gold_product": "코리보금리연동정기예금",
+      "category": "예금",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "챌린지 적금 어떤 상품이야?",
+      "gold_product": "챌린지 적금",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK내맘대로 적금 가입 대상 알려줘",
+      "gold_product": "BNK내맘대로 적금",
+      "category": "예금",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK마이폰통장 금리 조건이 어떻게 돼?",
+      "gold_product": "BNK마이폰통장",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "백세청춘 실버정기예금 어떤 상품이야?",
+      "gold_product": "백세청춘 실버정기예금",
+      "category": "예금",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "개정후주택청약종합저축 가입 대상 알려줘",
+      "gold_product": "개정후주택청약종합저축",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "오징어통장 금리 조건이 어떻게 돼?",
+      "gold_product": "오징어통장",
+      "category": "예금",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK가을야구예금 어떤 상품이야?",
+      "gold_product": "BNK가을야구예금",
+      "category": "예금",
+      "gold_chunks": 16,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "Simple정기예금 가입 대상 알려줘",
+      "gold_product": "Simple정기예금",
+      "category": "예금",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "기업자유예금 금리 조건이 어떻게 돼?",
+      "gold_product": "기업자유예금",
+      "category": "예금",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "비과세종합저축 어떤 상품이야?",
+      "gold_product": "비과세종합저축",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "주택청약부금 가입 대상 알려줘",
+      "gold_product": "주택청약부금",
+      "category": "예금",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "너만솔로 적금 금리 조건이 어떻게 돼?",
+      "gold_product": "너만솔로 적금",
+      "category": "예금",
+      "gold_chunks": 17,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK e-스마트정기예금 어떤 상품이야?",
+      "gold_product": "BNK e-스마트정기예금",
+      "category": "예금",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "OnlyOne주거래우대적금 가입 대상 알려줘",
+      "gold_product": "OnlyOne주거래우대적금",
+      "category": "예금",
+      "gold_chunks": 19,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "ESG행복그림적금 금리 조건이 어떻게 돼?",
+      "gold_product": "ESG행복그림적금",
+      "category": "예금",
+      "gold_chunks": 15,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "양도성예금증서 어떤 상품이야?",
+      "gold_product": "양도성예금증서",
+      "category": "예금",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK증권플러스통장 가입 대상 알려줘",
+      "gold_product": "BNK증권플러스통장",
+      "category": "예금",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "아이사랑자유적금 금리 조건이 어떻게 돼?",
+      "gold_product": "아이사랑자유적금",
+      "category": "예금",
+      "gold_chunks": 19,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산이라 좋다 Big적금 어떤 상품이야?",
+      "gold_product": "부산이라 좋다 Big적금",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "클린녹색적금 가입 대상 알려줘",
+      "gold_product": "클린녹색적금",
+      "category": "예금",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산 안정추구형플러스 금리 조건이 어떻게 돼?",
+      "gold_product": "BNK부산 안정추구형플러스",
+      "category": "예금",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK공직자우대통장 어떤 상품이야?",
+      "gold_product": "BNK공직자우대통장",
+      "category": "예금",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "한동네 사장님 우대 적금 가입 대상 알려줘",
+      "gold_product": "한동네 사장님 우대 적금",
+      "category": "예금",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "아가소리적금 금리 조건이 어떻게 돼?",
+      "gold_product": "아가소리적금",
+      "category": "예금",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산은행 군인연금평생안심통장 어떤 상품이야?",
+      "gold_product": "부산은행 군인연금평생안심통장",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "사업파트너통장 가입 대상 알려줘",
+      "gold_product": "사업파트너통장",
+      "category": "예금",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "장기회전정기예금 금리 조건이 어떻게 돼?",
+      "gold_product": "장기회전정기예금",
+      "category": "예금",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "마이비정기예금 어떤 상품이야?",
+      "gold_product": "마이비정기예금",
+      "category": "예금",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "아이사랑 적금 가입 대상 알려줘",
+      "gold_product": "아이사랑 적금",
+      "category": "예금",
+      "gold_chunks": 33,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "연리지적금 금리 조건이 어떻게 돼?",
+      "gold_product": "연리지적금",
+      "category": "예금",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "장병내일준비적금 어떤 상품이야?",
+      "gold_product": "장병내일준비적금",
+      "category": "예금",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "굿-초이스자유적금 가입 대상 알려줘",
+      "gold_product": "굿-초이스자유적금",
+      "category": "예금",
+      "gold_chunks": 12,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "공공기관 전용 정기예금 금리 조건이 어떻게 돼?",
+      "gold_product": "공공기관 전용 정기예금",
+      "category": "예금",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK가치성장정기예금 어떤 상품이야?",
+      "gold_product": "BNK가치성장정기예금",
+      "category": "예금",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "사랑방정기예금 가입 대상 알려줘",
+      "gold_product": "사랑방정기예금",
+      "category": "예금",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "사장님월급통장 금리 조건이 어떻게 돼?",
+      "gold_product": "사장님월급통장",
+      "category": "예금",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "코리보금리연동 정기예금 어떤 상품이야?",
+      "gold_product": "코리보금리연동 정기예금",
+      "category": "예금",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산 적극수익추구형글로벌 가입 대상 알려줘",
+      "gold_product": "BNK부산 적극수익추구형글로벌",
+      "category": "예금",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "걷고싶은 갈맷길 적금 금리 조건이 어떻게 돼?",
+      "gold_product": "걷고싶은 갈맷길 적금",
+      "category": "예금",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK청춘공감적금 어떤 상품이야?",
+      "gold_product": "BNK청춘공감적금",
+      "category": "예금",
+      "gold_chunks": 16,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "프로젝트 한강을 위한 예금토큰거래기본 가입 대상 알려줘",
+      "gold_product": "프로젝트 한강을 위한 예금토큰거래기본",
+      "category": "예금",
+      "gold_chunks": 160,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK부산 안정추구형글로벌 금리 조건이 어떻게 돼?",
+      "gold_product": "BNK부산 안정추구형글로벌",
+      "category": "예금",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "뱅크라인 통장 어때?",
+      "gold_product": "뱅크라인통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "레저서포터스 통장 이거 뭐야?",
+      "gold_product": "레저서포터스통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK어울림 정기 예금 이거 뭐야?",
+      "gold_product": "BNK어울림 정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK아기천사 적금 좀 알려줘",
+      "gold_product": "BNK아기천사적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK썸농구단우승기원 적금 어때?",
+      "gold_product": "BNK썸농구단우승기원적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "평생주거래사업자 통장 이거 뭐야?",
+      "gold_product": "평생주거래사업자통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK어울림 적금 좀 알려줘",
+      "gold_product": "BNK어울림적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "가계당좌 예금 설명해줘",
+      "gold_product": "가계당좌예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 중수익추구형플러스 어때?",
+      "gold_product": "BNK부산 중수익추구형플러스",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "이라좋다Big적금 있어?",
+      "gold_product": "부산이라좋다Big적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "이라좋다Big 적금 어때?",
+      "gold_product": "부산이라좋다Big적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK오픈뱅킹 정기 예금 어때?",
+      "gold_product": "BNK오픈뱅킹 정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK지역사랑 통장 설명해줘",
+      "gold_product": "BNK지역사랑통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK참잘했어요! 적금 있어?",
+      "gold_product": "BNK참잘했어요!적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK은퇴디자인 정기 예금 설명해줘",
+      "gold_product": "BNK은퇴디자인 정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "코리보금리연동 정기예금 좀 알려줘",
+      "gold_product": "코리보금리연동정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK마이폰 통장 이거 뭐야?",
+      "gold_product": "BNK마이폰통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "백세청춘 실버 정기예금 어때?",
+      "gold_product": "백세청춘 실버정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "후주택청약종합저축 있어?",
+      "gold_product": "개정후주택청약종합저축",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "오징어 통장 이거 뭐야?",
+      "gold_product": "오징어통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK가을야구 예금 어때?",
+      "gold_product": "BNK가을야구예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "Simple 정기예금 좀 알려줘",
+      "gold_product": "Simple정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "기업자유 예금 어때?",
+      "gold_product": "기업자유예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "너만솔로 있어?",
+      "gold_product": "너만솔로 적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "BNK e-스마트 정기예금 있어?",
+      "gold_product": "BNK e-스마트정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "OnlyOne주거래우대 적금 이거 뭐야?",
+      "gold_product": "OnlyOne주거래우대적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "ESG행복그림 적금 어때?",
+      "gold_product": "ESG행복그림적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "양도성 예금증서 있어?",
+      "gold_product": "양도성예금증서",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK증권플러스 통장 좀 알려줘",
+      "gold_product": "BNK증권플러스통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "아이사랑 자유적금 좀 알려줘",
+      "gold_product": "아이사랑자유적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "이라 좋다 Big적금 이거 뭐야?",
+      "gold_product": "부산이라 좋다 Big적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "이라 좋다 Big 적금 좀 알려줘",
+      "gold_product": "부산이라 좋다 Big적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "이라 좋다 설명해줘",
+      "gold_product": "부산이라 좋다 Big적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "클린녹색 적금 설명해줘",
+      "gold_product": "클린녹색적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 안정추구형플러스 이거 뭐야?",
+      "gold_product": "BNK부산 안정추구형플러스",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK공직자우대 통장 이거 뭐야?",
+      "gold_product": "BNK공직자우대통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "아가소리 적금 이거 뭐야?",
+      "gold_product": "아가소리적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "군인연금평생안심통장 좀 알려줘",
+      "gold_product": "부산은행 군인연금평생안심통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "군인연금평생안심 통장 있어?",
+      "gold_product": "부산은행 군인연금평생안심통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "사업파트너 통장 좀 알려줘",
+      "gold_product": "사업파트너통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "장기회전 정기예금 이거 뭐야?",
+      "gold_product": "장기회전정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "마이비 정기예금 이거 뭐야?",
+      "gold_product": "마이비정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "연리지 적금 좀 알려줘",
+      "gold_product": "연리지적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "장병내일준비 적금 좀 알려줘",
+      "gold_product": "장병내일준비적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "굿-초이스 자유적금 이거 뭐야?",
+      "gold_product": "굿-초이스자유적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "공공기관 전용 정기 예금 있어?",
+      "gold_product": "공공기관 전용 정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "공공기관 전용 어때?",
+      "gold_product": "공공기관 전용 정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "BNK가치성장 정기예금 이거 뭐야?",
+      "gold_product": "BNK가치성장정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "사랑방 정기예금 설명해줘",
+      "gold_product": "사랑방정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "사장님월급 통장 설명해줘",
+      "gold_product": "사장님월급통장",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "코리보금리연동 정기 예금 있어?",
+      "gold_product": "코리보금리연동 정기예금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 적극수익추구형글로벌 있어?",
+      "gold_product": "BNK부산 적극수익추구형글로벌",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK청춘공감 적금 설명해줘",
+      "gold_product": "BNK청춘공감적금",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "프로젝트 한강을 위한 어때?",
+      "gold_product": "프로젝트 한강을 위한 예금토큰거래기본",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "BNK 안정추구형글로벌 이거 뭐야?",
+      "gold_product": "BNK부산 안정추구형글로벌",
+      "category": "예금",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "통화스왑외화변동수취원화고정지급 어떤 상품이야?",
+      "gold_product": "통화스왑외화변동수취원화고정지급",
+      "category": "외환",
+      "gold_chunks": 29,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026RTRF고객매입 가입 통화 알려줘",
+      "gold_product": "2026RTRF고객매입",
+      "category": "외환",
+      "gold_chunks": 32,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK모아드림외화적금 환전 수수료는?",
+      "gold_product": "BNK모아드림외화적금",
+      "category": "외환",
+      "gold_chunks": 35,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신용장개설용11 어떤 상품이야?",
+      "gold_product": "신용장개설용11",
+      "category": "외환",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026선물환고객매도 가입 통화 알려줘",
+      "gold_product": "2026선물환고객매도",
+      "category": "외환",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "EASY환테크듀얼통장 환전 수수료는?",
+      "gold_product": "EASY환테크듀얼통장",
+      "category": "외환",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026통화스왑외화변동지급원화고정수취 어떤 상품이야?",
+      "gold_product": "2026통화스왑외화변동지급원화고정수취",
+      "category": "외환",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026이자율스왑고객고정금리지급 가입 통화 알려줘",
+      "gold_product": "2026이자율스왑고객고정금리지급",
+      "category": "외환",
+      "gold_chunks": 21,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "파생거래신용보강약정서 환전 수수료는?",
+      "gold_product": "파생거래신용보강약정서",
+      "category": "외환",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026FXSWAP외환스왑고객외화SellBuy 어떤 상품이야?",
+      "gold_product": "2026FXSWAP외환스왑고객외화SellBuy",
+      "category": "외환",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "업앤업외화MMDA 가입 통화 알려줘",
+      "gold_product": "업앤업외화MMDA",
+      "category": "외환",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "굿뱅크선물환 사용자매뉴얼 환전 수수료는?",
+      "gold_product": "굿뱅크선물환 사용자매뉴얼",
+      "category": "외환",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK업앤업외화MMDA 어떤 상품이야?",
+      "gold_product": "BNK업앤업외화MMDA",
+      "category": "외환",
+      "gold_chunks": 15,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "지정환율자동송금서비스 가입 통화 알려줘",
+      "gold_product": "지정환율자동송금서비스",
+      "category": "외환",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2) 지정환율 자동환전 서비스 환전 수수료는?",
+      "gold_product": "2) 지정환율 자동환전 서비스",
+      "category": "외환",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외화당좌예금 어떤 상품이야?",
+      "gold_product": "외화당좌예금",
+      "category": "외환",
+      "gold_chunks": 17,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "지정환율 자동이체 서비스 가입 통화 알려줘",
+      "gold_product": "지정환율 자동이체 서비스",
+      "category": "외환",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자무역업무 표준 환전 수수료는?",
+      "gold_product": "전자무역업무 표준",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외화자동송금서비스 어떤 상품이야?",
+      "gold_product": "외화자동송금서비스",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "지정환율 자동송금 서비스 가입 통화 알려줘",
+      "gold_product": "지정환율 자동송금 서비스",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026통화스왑원화변동수취외화고정지급 환전 수수료는?",
+      "gold_product": "2026통화스왑원화변동수취외화고정지급",
+      "category": "외환",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026TRF고객매입 어떤 상품이야?",
+      "gold_product": "2026TRF고객매입",
+      "category": "외환",
+      "gold_chunks": 32,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "수입인수금융 가입 통화 알려줘",
+      "gold_product": "수입인수금융",
+      "category": "외환",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK LIBOR 연동 외화정기예금 환전 수수료는?",
+      "gold_product": "BNK LIBOR 연동 외화정기예금",
+      "category": "외환",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "인터넷 선물환거래 약정서 어떤 상품이야?",
+      "gold_product": "인터넷 선물환거래 약정서",
+      "category": "외환",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026선물환고객매입 가입 통화 알려줘",
+      "gold_product": "2026선물환고객매입",
+      "category": "외환",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외화예금거래기본 환전 수수료는?",
+      "gold_product": "외화예금거래기본",
+      "category": "외환",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외국환거래 추가약정서 어떤 상품이야?",
+      "gold_product": "외국환거래 추가약정서",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026CTRF고객매입 가입 통화 알려줘",
+      "gold_product": "2026CTRF고객매입",
+      "category": "외환",
+      "gold_chunks": 32,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026CTRF고객매도 환전 수수료는?",
+      "gold_product": "2026CTRF고객매도",
+      "category": "외환",
+      "gold_chunks": 34,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026통화스왑외화고정지급원화고정수취 어떤 상품이야?",
+      "gold_product": "2026통화스왑외화고정지급원화고정수취",
+      "category": "외환",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "6-1.BNK LIBOR연동 외화정기예금 가입 통화 알려줘",
+      "gold_product": "6-1.BNK LIBOR연동 외화정기예금",
+      "category": "외환",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "해외즉시자동송금 환전 수수료는?",
+      "gold_product": "해외즉시자동송금",
+      "category": "외환",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "꿈이룸외화자유적금 어떤 상품이야?",
+      "gold_product": "꿈이룸외화자유적금",
+      "category": "외환",
+      "gold_chunks": 15,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "해외즉시송금 가입 통화 알려줘",
+      "gold_product": "해외즉시송금",
+      "category": "외환",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026이자율스왑 고객고정금리수취 환전 수수료는?",
+      "gold_product": "2026이자율스왑 고객고정금리수취",
+      "category": "외환",
+      "gold_chunks": 26,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외국환거래 어떤 상품이야?",
+      "gold_product": "외국환거래",
+      "category": "외환",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "지정환율 자동환전 서비스 가입 통화 알려줘",
+      "gold_product": "지정환율 자동환전 서비스",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026외화이자율스왑고객고정금리지급 환전 수수료는?",
+      "gold_product": "2026외화이자율스왑고객고정금리지급",
+      "category": "외환",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "해외즉시송금 거래 어떤 상품이야?",
+      "gold_product": "해외즉시송금 거래",
+      "category": "외환",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "원클릭외화현찰배달서비스 가입 통화 알려줘",
+      "gold_product": "원클릭외화현찰배달서비스",
+      "category": "외환",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외화정기예금 환전 수수료는?",
+      "gold_product": "외화정기예금",
+      "category": "외환",
+      "gold_chunks": 21,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융 외화환전거래 어떤 상품이야?",
+      "gold_product": "전자금융 외화환전거래",
+      "category": "외환",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융외화환전서비스 가입 통화 알려줘",
+      "gold_product": "전자금융외화환전서비스",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외환거래기본 환전 수수료는?",
+      "gold_product": "외환거래기본",
+      "category": "외환",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "해외즉시자동송금거래 어떤 상품이야?",
+      "gold_product": "해외즉시자동송금거래",
+      "category": "외환",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융외화환전 가입 통화 알려줘",
+      "gold_product": "전자금융외화환전",
+      "category": "외환",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026RTRF고객매도 환전 수수료는?",
+      "gold_product": "2026RTRF고객매도",
+      "category": "외환",
+      "gold_chunks": 32,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK업앤업외화정기예금 어떤 상품이야?",
+      "gold_product": "BNK업앤업외화정기예금",
+      "category": "외환",
+      "gold_chunks": 19,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026외화이자율스왑고객고정금리수취 가입 통화 알려줘",
+      "gold_product": "2026외화이자율스왑고객고정금리수취",
+      "category": "외환",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026통화스왑외화고정수취원화고정지급 환전 수수료는?",
+      "gold_product": "2026통화스왑외화고정수취원화고정지급",
+      "category": "외환",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026FXSWAP외환스왑고객외화BuySell 어떤 상품이야?",
+      "gold_product": "2026FXSWAP외환스왑고객외화BuySell",
+      "category": "외환",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026TRF고객매도 가입 통화 알려줘",
+      "gold_product": "2026TRF고객매도",
+      "category": "외환",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "외화보통예금 환전 수수료는?",
+      "gold_product": "외화보통예금",
+      "category": "외환",
+      "gold_chunks": 22,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "거래한도 및 순신용금액한도 약정서 어떤 상품이야?",
+      "gold_product": "거래한도 및 순신용금액한도 약정서",
+      "category": "외환",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "RTRF고객매입 있어?",
+      "gold_product": "2026RTRF고객매입",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK모아드림외화 적금 있어?",
+      "gold_product": "BNK모아드림외화적금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "선물환고객매도 있어?",
+      "gold_product": "2026선물환고객매도",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "EASY환테크듀얼 통장 설명해줘",
+      "gold_product": "EASY환테크듀얼통장",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "통화스왑외화변동지급원화고정수취 어때?",
+      "gold_product": "2026통화스왑외화변동지급원화고정수취",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "이자율스왑고객고정금리지급 설명해줘",
+      "gold_product": "2026이자율스왑고객고정금리지급",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "파생거래신용보강 어때?",
+      "gold_product": "파생거래신용보강약정서",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "FXSWAP외환스왑고객외화SellBuy 어때?",
+      "gold_product": "2026FXSWAP외환스왑고객외화SellBuy",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "굿뱅크선물환 좀 알려줘",
+      "gold_product": "굿뱅크선물환 사용자매뉴얼",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "지정환율자동송금 서비스 설명해줘",
+      "gold_product": "지정환율자동송금서비스",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "외화당좌 예금 어때?",
+      "gold_product": "외화당좌예금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "외화자동송금 서비스 설명해줘",
+      "gold_product": "외화자동송금서비스",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "통화스왑원화변동수취외화고정지급 좀 알려줘",
+      "gold_product": "2026통화스왑원화변동수취외화고정지급",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "TRF고객매입 좀 알려줘",
+      "gold_product": "2026TRF고객매입",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK LIBOR 연동 외화 정기예금 있어?",
+      "gold_product": "BNK LIBOR 연동 외화정기예금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "인터넷 선물환거래 있어?",
+      "gold_product": "인터넷 선물환거래 약정서",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "선물환고객매입 어때?",
+      "gold_product": "2026선물환고객매입",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "외화 예금거래기본 설명해줘",
+      "gold_product": "외화예금거래기본",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "외국환거래 어때?",
+      "gold_product": "외국환거래 추가약정서",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "CTRF고객매입 이거 뭐야?",
+      "gold_product": "2026CTRF고객매입",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "CTRF고객매도 이거 뭐야?",
+      "gold_product": "2026CTRF고객매도",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "통화스왑외화고정지급원화고정수취 이거 뭐야?",
+      "gold_product": "2026통화스왑외화고정지급원화고정수취",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "꿈이룸외화 자유적금 이거 뭐야?",
+      "gold_product": "꿈이룸외화자유적금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "이자율스왑 고객고정금리수취 어때?",
+      "gold_product": "2026이자율스왑 고객고정금리수취",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "외화이자율스왑고객고정금리지급 어때?",
+      "gold_product": "2026외화이자율스왑고객고정금리지급",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "원클릭외화현찰배달 서비스 어때?",
+      "gold_product": "원클릭외화현찰배달서비스",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "외화 정기예금 이거 뭐야?",
+      "gold_product": "외화정기예금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전자금융외화환전 서비스 있어?",
+      "gold_product": "전자금융외화환전서비스",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "RTRF고객매도 이거 뭐야?",
+      "gold_product": "2026RTRF고객매도",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK업앤업외화 정기예금 설명해줘",
+      "gold_product": "BNK업앤업외화정기예금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "외화이자율스왑고객고정금리수취 이거 뭐야?",
+      "gold_product": "2026외화이자율스왑고객고정금리수취",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "통화스왑외화고정수취원화고정지급 좀 알려줘",
+      "gold_product": "2026통화스왑외화고정수취원화고정지급",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "FXSWAP외환스왑고객외화BuySell 좀 알려줘",
+      "gold_product": "2026FXSWAP외환스왑고객외화BuySell",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "TRF고객매도 좀 알려줘",
+      "gold_product": "2026TRF고객매도",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "외화보통 예금 어때?",
+      "gold_product": "외화보통예금",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "거래한도 및 순신용금액한도 좀 알려줘",
+      "gold_product": "거래한도 및 순신용금액한도 약정서",
+      "category": "외환",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "지방세입전자고지 서비스 어떤 서비스야?",
+      "gold_product": "지방세입전자고지 서비스",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸스토어 서비스 이용 방법 알려줘",
+      "gold_product": "썸스토어 서비스",
+      "category": "전자금융",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "자동화기기를 이용한 통장 및 무통장 무카드 거래 이용 이체한도가 어떻게 돼?",
+      "gold_product": "자동화기기를 이용한 통장 및 무통장 무카드 거래 이용",
+      "category": "전자금융",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "뱅크월렛온라인가맹점 서비스 어떤 서비스야?",
+      "gold_product": "뱅크월렛온라인가맹점 서비스",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "은행 공동 인증서비스 이용 이용 방법 알려줘",
+      "gold_product": "은행 공동 인증서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "지방세입 전자고지 서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "지방세입 전자고지 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "증권계좌개설서비스 어떤 서비스야?",
+      "gold_product": "증권계좌개설서비스",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸패스 카드결제 서비스 이용 이용 방법 알려줘",
+      "gold_product": "썸패스 카드결제 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "은행공동인증 서비스 이체한도가 어떻게 돼?",
+      "gold_product": "은행공동인증 서비스",
+      "category": "전자금융",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "휴대폰본인확인서비스이용 어떤 서비스야?",
+      "gold_product": "휴대폰본인확인서비스이용",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "공동인증서 이용 이용 방법 알려줘",
+      "gold_product": "공동인증서 이용",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "펌뱅킹 출금이체서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "펌뱅킹 출금이체서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산 동백전 전자금융거래 이용 어떤 서비스야?",
+      "gold_product": "부산 동백전 전자금융거래 이용",
+      "category": "전자금융",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "증권계좌개설서비스이용 이용 방법 알려줘",
+      "gold_product": "증권계좌개설서비스이용",
+      "category": "전자금융",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금융결제원CMS출금이체서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "금융결제원CMS출금이체서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "위치정보 수집 및 이용 어떤 서비스야?",
+      "gold_product": "위치정보 수집 및 이용",
+      "category": "전자금융",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "통신사 이용 이용 방법 알려줘",
+      "gold_product": "통신사 이용",
+      "category": "전자금융",
+      "gold_chunks": 19,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸씽송금 서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "썸씽송금 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸패스 서비스 이용 어떤 서비스야?",
+      "gold_product": "썸패스 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸패스 카드결제 서비스 가맹점 이용 방법 알려줘",
+      "gold_product": "썸패스 카드결제 서비스 가맹점",
+      "category": "전자금융",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "은행권공동 오픈플랫폼 자동계좌이체 이체한도가 어떻게 돼?",
+      "gold_product": "은행권공동 오픈플랫폼 자동계좌이체",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK모바일헌금플랫폼서비스 이용 어떤 서비스야?",
+      "gold_product": "BNK모바일헌금플랫폼서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "삼성월렛서비스 이용 방법 알려줘",
+      "gold_product": "삼성월렛서비스",
+      "category": "전자금융",
+      "gold_chunks": 12,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK모바일헌금플랫폼서비스이용 이체한도가 어떻게 돼?",
+      "gold_product": "BNK모바일헌금플랫폼서비스이용",
+      "category": "전자금융",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "동백패스 서비스 이용 어떤 서비스야?",
+      "gold_product": "동백패스 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "생체인증서비스 이용 방법 알려줘",
+      "gold_product": "생체인증서비스",
+      "category": "전자금융",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "스마트자산관리서비스 이체한도가 어떻게 돼?",
+      "gold_product": "스마트자산관리서비스",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸씽송금 서비스 어떤 서비스야?",
+      "gold_product": "썸씽송금 서비스",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "뱅크월렛서비스 온라인가맹점 이용 방법 알려줘",
+      "gold_product": "뱅크월렛서비스 온라인가맹점",
+      "category": "전자금융",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "금융결제원 전자인증서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "금융결제원 전자인증서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융서비스 이용 어떤 서비스야?",
+      "gold_product": "전자금융서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산 동백전 서비스 이용 이용 방법 알려줘",
+      "gold_product": "부산 동백전 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융거래기본 이체한도가 어떻게 돼?",
+      "gold_product": "전자금융거래기본",
+      "category": "전자금융",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BIC개설 및 서비스이용 어떤 서비스야?",
+      "gold_product": "BIC개설 및 서비스이용",
+      "category": "전자금융",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "모락커뮤니티서비스 이용 방법 알려줘",
+      "gold_product": "모락커뮤니티서비스",
+      "category": "전자금융",
+      "gold_chunks": 37,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "내 아이 금융하기 서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "내 아이 금융하기 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "오픈뱅킹공동업무 기업고객 금융정보조회 어떤 서비스야?",
+      "gold_product": "오픈뱅킹공동업무 기업고객 금융정보조회",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "STM서비스 이용 이용 방법 알려줘",
+      "gold_product": "STM서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융 이체한도 추가 약정서 이체한도가 어떻게 돼?",
+      "gold_product": "전자금융 이체한도 추가 약정서",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "뱅크아이디서비스이용 어떤 서비스야?",
+      "gold_product": "뱅크아이디서비스이용",
+      "category": "전자금융",
+      "gold_chunks": 49,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "모바일통지서비스 이용 이용 방법 알려줘",
+      "gold_product": "모바일통지서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "전자금융서비스 이체한도가 어떻게 돼?",
+      "gold_product": "전자금융서비스",
+      "category": "전자금융",
+      "gold_chunks": 14,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "기업고객 오픈뱅킹 서비스 이용 어떤 서비스야?",
+      "gold_product": "기업고객 오픈뱅킹 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "생체인증서비스 이용 이용 방법 알려줘",
+      "gold_product": "생체인증서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "서비스이용 이체한도가 어떻게 돼?",
+      "gold_product": "서비스이용",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸스토어 서비스 이용 어떤 서비스야?",
+      "gold_product": "썸스토어 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산은행 기업제로페이 서비스 이용 이용 방법 알려줘",
+      "gold_product": "부산은행 기업제로페이 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸뱅크 이용 이체한도가 어떻게 돼?",
+      "gold_product": "썸뱅크 이용",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸뱅크 서비스 어떤 서비스야?",
+      "gold_product": "썸뱅크 서비스",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "자동충전서비스 이용 방법 알려줘",
+      "gold_product": "자동충전서비스",
+      "category": "전자금융",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "머니박스+이용 이체한도가 어떻게 돼?",
+      "gold_product": "머니박스+이용",
+      "category": "전자금융",
+      "gold_chunks": 13,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "위치기반서비스 이용 어떤 서비스야?",
+      "gold_product": "위치기반서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "디지털OTP서비스 이용 이용 방법 알려줘",
+      "gold_product": "디지털OTP서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "쪼꼬미+서비스+이용 이체한도가 어떻게 돼?",
+      "gold_product": "쪼꼬미+서비스+이용",
+      "category": "전자금융",
+      "gold_chunks": 26,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산은행 삼성월렛 서비스 이용 어떤 서비스야?",
+      "gold_product": "부산은행 삼성월렛 서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 10,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸패스서비스 이용 방법 알려줘",
+      "gold_product": "썸패스서비스",
+      "category": "전자금융",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "뱅크월렛서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "뱅크월렛서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 19,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "스마트자산관리서비스 이용 어떤 서비스야?",
+      "gold_product": "스마트자산관리서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "썸패스 가맹점 이용 방법 알려줘",
+      "gold_product": "썸패스 가맹점",
+      "category": "전자금융",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "USIM칩 기반 현금자동입출금기서비스 이용 이체한도가 어떻게 돼?",
+      "gold_product": "USIM칩 기반 현금자동입출금기서비스 이용",
+      "category": "전자금융",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "자동화기기를 한 통장 및 무통장 무카드 거래 어때?",
+      "gold_product": "자동화기기를 이용한 통장 및 무통장 무카드 거래 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "자동화기기를 한 통장 및 무통장 무 카드 거래 좀 알려줘",
+      "gold_product": "자동화기기를 이용한 통장 및 무통장 무카드 거래 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "은행 공동 인증서비스 있어?",
+      "gold_product": "은행 공동 인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "은행 공동 인증 서비스 이거 뭐야?",
+      "gold_product": "은행 공동 인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "은행 공동 이거 뭐야?",
+      "gold_product": "은행 공동 인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "지방세입 전자고지 서비스 어때?",
+      "gold_product": "지방세입 전자고지 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "증권계좌개설 서비스 설명해줘",
+      "gold_product": "증권계좌개설서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "썸패스 카드결제 서비스 있어?",
+      "gold_product": "썸패스 카드결제 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "은행공동인증 설명해줘",
+      "gold_product": "은행공동인증 서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "휴대폰본인확인서비스 좀 알려줘",
+      "gold_product": "휴대폰본인확인서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "휴대폰본인확인 서비스 어때?",
+      "gold_product": "휴대폰본인확인서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "공동인증서 있어?",
+      "gold_product": "공동인증서 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "펌뱅킹 출금이체서비스 이거 뭐야?",
+      "gold_product": "펌뱅킹 출금이체서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "펌뱅킹 출금이체 서비스 어때?",
+      "gold_product": "펌뱅킹 출금이체서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "동백전 전자금융거래 설명해줘",
+      "gold_product": "부산 동백전 전자금융거래 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "증권계좌개설서비스 설명해줘",
+      "gold_product": "증권계좌개설서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "증권계좌개설 서비스 있어?",
+      "gold_product": "증권계좌개설서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "금융결제원CMS출금이체서비스 좀 알려줘",
+      "gold_product": "금융결제원CMS출금이체서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금융결제원CMS출금이체 서비스 이거 뭐야?",
+      "gold_product": "금융결제원CMS출금이체서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "위치정보 수집 및 어때?",
+      "gold_product": "위치정보 수집 및 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "썸씽송금 서비스 있어?",
+      "gold_product": "썸씽송금 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "썸패스 서비스 이거 뭐야?",
+      "gold_product": "썸패스 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 헌금플랫폼서비스 어때?",
+      "gold_product": "BNK모바일헌금플랫폼서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 헌금플랫폼 서비스 이거 뭐야?",
+      "gold_product": "BNK모바일헌금플랫폼서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "삼성월렛 서비스 좀 알려줘",
+      "gold_product": "삼성월렛서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 헌금플랫폼서비스 어때?",
+      "gold_product": "BNK모바일헌금플랫폼서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 헌금플랫폼 서비스 설명해줘",
+      "gold_product": "BNK모바일헌금플랫폼서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "동백패스 서비스 설명해줘",
+      "gold_product": "동백패스 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "동백패스 이거 뭐야?",
+      "gold_product": "동백패스 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "생체인증 서비스 좀 알려줘",
+      "gold_product": "생체인증서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "스마트자산관리 서비스 설명해줘",
+      "gold_product": "스마트자산관리서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "뱅크월렛 서비스 온라인가맹점 어때?",
+      "gold_product": "뱅크월렛서비스 온라인가맹점",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "금융결제원 전자인증서비스 있어?",
+      "gold_product": "금융결제원 전자인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "금융결제원 전자인증 서비스 설명해줘",
+      "gold_product": "금융결제원 전자인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전자금융서비스 좀 알려줘",
+      "gold_product": "전자금융서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "전자금융 서비스 좀 알려줘",
+      "gold_product": "전자금융서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "동백전 서비스 설명해줘",
+      "gold_product": "부산 동백전 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BIC개설 및 서비스 좀 알려줘",
+      "gold_product": "BIC개설 및 서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "모락커뮤니티 서비스 있어?",
+      "gold_product": "모락커뮤니티서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "내 아이 금융하기 서비스 좀 알려줘",
+      "gold_product": "내 아이 금융하기 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "STM 서비스 설명해줘",
+      "gold_product": "STM서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전자금융 이체한도 추가 좀 알려줘",
+      "gold_product": "전자금융 이체한도 추가 약정서",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "뱅크아이디서비스 좀 알려줘",
+      "gold_product": "뱅크아이디서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "뱅크아이디 서비스 설명해줘",
+      "gold_product": "뱅크아이디서비스이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "통지서비스 설명해줘",
+      "gold_product": "모바일통지서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "통지 서비스 이거 뭐야?",
+      "gold_product": "모바일통지서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "전자금융 서비스 설명해줘",
+      "gold_product": "전자금융서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "기업고객 오픈뱅킹 서비스 이거 뭐야?",
+      "gold_product": "기업고객 오픈뱅킹 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "생체인증서비스 있어?",
+      "gold_product": "생체인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "생체인증 서비스 이거 뭐야?",
+      "gold_product": "생체인증서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "썸스토어 서비스 이거 뭐야?",
+      "gold_product": "썸스토어 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "기업제로페이 서비스 좀 알려줘",
+      "gold_product": "부산은행 기업제로페이 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "기업제로페이 설명해줘",
+      "gold_product": "부산은행 기업제로페이 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "partial"
+    },
+    {
+      "q": "자동충전 서비스 있어?",
+      "gold_product": "자동충전서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "머니박스+ 있어?",
+      "gold_product": "머니박스+이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "위치기반서비스 어때?",
+      "gold_product": "위치기반서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "위치기반 서비스 이거 뭐야?",
+      "gold_product": "위치기반서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "디지털OTP서비스 좀 알려줘",
+      "gold_product": "디지털OTP서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "디지털OTP 서비스 어때?",
+      "gold_product": "디지털OTP서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "쪼꼬미+서비스+ 좀 알려줘",
+      "gold_product": "쪼꼬미+서비스+이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "쪼꼬미+ 서비스+ 이거 뭐야?",
+      "gold_product": "쪼꼬미+서비스+이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "삼성월렛 서비스 좀 알려줘",
+      "gold_product": "부산은행 삼성월렛 서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "썸패스 서비스 어때?",
+      "gold_product": "썸패스서비스",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "뱅크월렛서비스 어때?",
+      "gold_product": "뱅크월렛서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "뱅크월렛 서비스 어때?",
+      "gold_product": "뱅크월렛서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "스마트자산관리서비스 있어?",
+      "gold_product": "스마트자산관리서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "스마트자산관리 서비스 어때?",
+      "gold_product": "스마트자산관리서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "USIM칩 기반 현금자동입출금기서비스 좀 알려줘",
+      "gold_product": "USIM칩 기반 현금자동입출금기서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "USIM칩 기반 현금자동입출금기 서비스 좀 알려줘",
+      "gold_product": "USIM칩 기반 현금자동입출금기서비스 이용",
+      "category": "전자금융",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "해피포인트체크카드 어떤 카드야?",
+      "gold_product": "해피포인트체크카드",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "22후불하이패스 연회비 얼마야?",
+      "gold_product": "22후불하이패스",
+      "category": "카드",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "비씨체크카드개인회원 혜택 알려줘",
+      "gold_product": "비씨체크카드개인회원",
+      "category": "카드",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "e-플래티늄카드브랜드서비스 어떤 카드야?",
+      "gold_product": "e-플래티늄카드브랜드서비스",
+      "category": "카드",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신용카드 개인회원 부속 연회비 얼마야?",
+      "gold_product": "신용카드 개인회원 부속",
+      "category": "카드",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "교육사랑카드 251212 혜택 알려줘",
+      "gold_product": "교육사랑카드 251212",
+      "category": "카드",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "여신전문금융회사 표준 전자금융거래 기본 어떤 카드야?",
+      "gold_product": "여신전문금융회사 표준 전자금융거래 기본",
+      "category": "카드",
+      "gold_chunks": 11,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "오늘은e신용카드안내장 연회비 얼마야?",
+      "gold_product": "오늘은e신용카드안내장",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "선불카드표준 혜택 알려줘",
+      "gold_product": "선불카드표준",
+      "category": "카드",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "현금카드가맹점 어떤 카드야?",
+      "gold_product": "현금카드가맹점",
+      "category": "카드",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신용카드 기업회원 연회비 얼마야?",
+      "gold_product": "신용카드 기업회원",
+      "category": "카드",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "어디로든그린체크카드 2512120 혜택 알려줘",
+      "gold_product": "어디로든그린체크카드 2512120",
+      "category": "카드",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "청춘불패369체크카드 어떤 카드야?",
+      "gold_product": "청춘불패369체크카드",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신용카드 법인회원 연회비 부과 등에 관한 표준 연회비 얼마야?",
+      "gold_product": "신용카드 법인회원 연회비 부과 등에 관한 표준",
+      "category": "카드",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "온누리전자상품권 혜택 알려줘",
+      "gold_product": "온누리전자상품권",
+      "category": "카드",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "캐시백카드안내장 어떤 카드야?",
+      "gold_product": "캐시백카드안내장",
+      "category": "카드",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "e플래티늄카드상품서비스 연회비 얼마야?",
+      "gold_product": "e플래티늄카드상품서비스",
+      "category": "카드",
+      "gold_chunks": 48,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "REX2카드상품안내장 혜택 알려줘",
+      "gold_product": "REX2카드상품안내장",
+      "category": "카드",
+      "gold_chunks": 20,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BCe-플래티늄카드브랜드서비스 어떤 카드야?",
+      "gold_product": "BCe-플래티늄카드브랜드서비스",
+      "category": "카드",
+      "gold_chunks": 7,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2026부산동백전체크카드2 연회비 얼마야?",
+      "gold_product": "2026부산동백전체크카드2",
+      "category": "카드",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신용카드 개인회원 표준 혜택 알려줘",
+      "gold_product": "신용카드 개인회원 표준",
+      "category": "카드",
+      "gold_chunks": 31,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "하이체크카드 어떤 카드야?",
+      "gold_product": "하이체크카드",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "탑모아체크카드 연회비 얼마야?",
+      "gold_product": "탑모아체크카드",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "오늘은e체크 251212 혜택 알려줘",
+      "gold_product": "오늘은e체크 251212",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "딩딩신용카드상품안내장 어떤 카드야?",
+      "gold_product": "딩딩신용카드상품안내장",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BC다이아몬드카드브랜드서비스 연회비 얼마야?",
+      "gold_product": "BC다이아몬드카드브랜드서비스",
+      "category": "카드",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "모바일 현금카드 이용 혜택 알려줘",
+      "gold_product": "모바일 현금카드 이용",
+      "category": "카드",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "플래티늄카드상품서비스 어떤 카드야?",
+      "gold_product": "플래티늄카드상품서비스",
+      "category": "카드",
+      "gold_chunks": 39,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "청소년후불교통체크카드상품안내장 연회비 얼마야?",
+      "gold_product": "청소년후불교통체크카드상품안내장",
+      "category": "카드",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "2030플래티늄카드-압축됨 혜택 알려줘",
+      "gold_product": "2030플래티늄카드-압축됨",
+      "category": "카드",
+      "gold_chunks": 4,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK2030플래티늄카드상품안내장-압축됨 어떤 카드야?",
+      "gold_product": "BNK2030플래티늄카드상품안내장-압축됨",
+      "category": "카드",
+      "gold_chunks": 6,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산MBC문화카드 251212 연회비 얼마야?",
+      "gold_product": "부산MBC문화카드 251212",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "서원유통카드상품안내장 혜택 알려줘",
+      "gold_product": "서원유통카드상품안내장",
+      "category": "카드",
+      "gold_chunks": 8,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "빵빵체크카드안내장 어떤 카드야?",
+      "gold_product": "빵빵체크카드안내장",
+      "category": "카드",
+      "gold_chunks": 9,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "부산시소상공인3無희망잇기카드상품안내장 연회비 얼마야?",
+      "gold_product": "부산시소상공인3無희망잇기카드상품안내장",
+      "category": "카드",
+      "gold_chunks": 3,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "마이존체크카드상품안내장 혜택 알려줘",
+      "gold_product": "마이존체크카드상품안내장",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BC플래티늄카드브랜드서비스 어떤 카드야?",
+      "gold_product": "BC플래티늄카드브랜드서비스",
+      "category": "카드",
+      "gold_chunks": 12,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "39 37 부빅스안내장 251212 연회비 얼마야?",
+      "gold_product": "39 37 부빅스안내장 251212",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "RCMS연구비전용카드안내장 혜택 알려줘",
+      "gold_product": "RCMS연구비전용카드안내장",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "19부빅스부가세환급안내장 어떤 카드야?",
+      "gold_product": "19부빅스부가세환급안내장",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "팟카드안내장 연회비 얼마야?",
+      "gold_product": "팟카드안내장",
+      "category": "카드",
+      "gold_chunks": 1,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "듀얼파트너스카드 혜택 알려줘",
+      "gold_product": "듀얼파트너스카드",
+      "category": "카드",
+      "gold_chunks": 5,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "비씨체크카드 기업회원 어떤 카드야?",
+      "gold_product": "비씨체크카드 기업회원",
+      "category": "카드",
+      "gold_chunks": 2,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "해피포인트 체크카드 있어?",
+      "gold_product": "해피포인트체크카드",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "비씨 체크카드개인회원 어때?",
+      "gold_product": "비씨체크카드개인회원",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "e-플래티늄카드브랜드 서비스 좀 알려줘",
+      "gold_product": "e-플래티늄카드브랜드서비스",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신용 카드 개인회원 부속 좀 알려줘",
+      "gold_product": "신용카드 개인회원 부속",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "교육사랑카드 좀 알려줘",
+      "gold_product": "교육사랑카드 251212",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "교육사랑 카드 좀 알려줘",
+      "gold_product": "교육사랑카드 251212",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "오늘은e신용카드 이거 뭐야?",
+      "gold_product": "오늘은e신용카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "오늘은e 신용카드 설명해줘",
+      "gold_product": "오늘은e신용카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "선불 카드표준 좀 알려줘",
+      "gold_product": "선불카드표준",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "현금 카드가맹점 이거 뭐야?",
+      "gold_product": "현금카드가맹점",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신용 카드 기업회원 있어?",
+      "gold_product": "신용카드 기업회원",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "어디로든그린체크카드 이거 뭐야?",
+      "gold_product": "어디로든그린체크카드 2512120",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "어디로든그린 체크카드 어때?",
+      "gold_product": "어디로든그린체크카드 2512120",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "청춘불패369 체크카드 좀 알려줘",
+      "gold_product": "청춘불패369체크카드",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신용 카드 법인회원 연회비 부과 등에 관한 표준 설명해줘",
+      "gold_product": "신용카드 법인회원 연회비 부과 등에 관한 표준",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "캐시백카드 설명해줘",
+      "gold_product": "캐시백카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "캐시백 카드 좀 알려줘",
+      "gold_product": "캐시백카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "e플래티늄카드상품 서비스 좀 알려줘",
+      "gold_product": "e플래티늄카드상품서비스",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "REX2카드상품 있어?",
+      "gold_product": "REX2카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "REX2 카드상품 있어?",
+      "gold_product": "REX2카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BCe-플래티늄카드브랜드 서비스 설명해줘",
+      "gold_product": "BCe-플래티늄카드브랜드서비스",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "동백전체크카드2 이거 뭐야?",
+      "gold_product": "2026부산동백전체크카드2",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "동백전 체크카드2 어때?",
+      "gold_product": "2026부산동백전체크카드2",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신용 카드 개인회원 표준 설명해줘",
+      "gold_product": "신용카드 개인회원 표준",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "하이 체크카드 이거 뭐야?",
+      "gold_product": "하이체크카드",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "탑모아 체크카드 있어?",
+      "gold_product": "탑모아체크카드",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "오늘은e체크 설명해줘",
+      "gold_product": "오늘은e체크 251212",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "딩딩신용카드상품 설명해줘",
+      "gold_product": "딩딩신용카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "딩딩 신용카드상품 있어?",
+      "gold_product": "딩딩신용카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BC다이아몬드카드브랜드 서비스 어때?",
+      "gold_product": "BC다이아몬드카드브랜드서비스",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "현금카드 어때?",
+      "gold_product": "모바일 현금카드 이용",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "현금 카드 이거 뭐야?",
+      "gold_product": "모바일 현금카드 이용",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "플래티늄카드상품 서비스 좀 알려줘",
+      "gold_product": "플래티늄카드상품서비스",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "청소년후불교통체크카드상품 이거 뭐야?",
+      "gold_product": "청소년후불교통체크카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "청소년후불교통 체크카드상품 좀 알려줘",
+      "gold_product": "청소년후불교통체크카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "플래티늄카드-압축됨 설명해줘",
+      "gold_product": "2030플래티늄카드-압축됨",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "플래티늄 카드-압축됨 좀 알려줘",
+      "gold_product": "2030플래티늄카드-압축됨",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK 플래티늄카드상품 -압축됨 좀 알려줘",
+      "gold_product": "BNK2030플래티늄카드상품안내장-압축됨",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "BNK 플래티늄 카드상품 -압축됨 설명해줘",
+      "gold_product": "BNK2030플래티늄카드상품안내장-압축됨",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "MBC문화카드 있어?",
+      "gold_product": "부산MBC문화카드 251212",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "MBC문화 카드 좀 알려줘",
+      "gold_product": "부산MBC문화카드 251212",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "서원유통카드상품 이거 뭐야?",
+      "gold_product": "서원유통카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "서원유통 카드상품 이거 뭐야?",
+      "gold_product": "서원유통카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "빵빵체크카드 있어?",
+      "gold_product": "빵빵체크카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "빵빵 체크카드 좀 알려줘",
+      "gold_product": "빵빵체크카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "시소상공인3無희망잇기카드상품 이거 뭐야?",
+      "gold_product": "부산시소상공인3無희망잇기카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "시소상공인3無희망잇기 카드상품 설명해줘",
+      "gold_product": "부산시소상공인3無희망잇기카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "마이존체크카드상품 좀 알려줘",
+      "gold_product": "마이존체크카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "마이존 체크카드상품 좀 알려줘",
+      "gold_product": "마이존체크카드상품안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BC플래티늄카드브랜드 서비스 좀 알려줘",
+      "gold_product": "BC플래티늄카드브랜드서비스",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "RCMS연구비전용카드 좀 알려줘",
+      "gold_product": "RCMS연구비전용카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "RCMS연구비전용 카드 어때?",
+      "gold_product": "RCMS연구비전용카드안내장",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "듀얼파트너스 카드 좀 알려줘",
+      "gold_product": "듀얼파트너스카드",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "비씨 체크카드 기업회원 있어?",
+      "gold_product": "비씨체크카드 기업회원",
+      "category": "카드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "집합투자규약_신한지수연계증권투자신탁K-44호[채권] 어떤 펀드야?",
+      "gold_product": "집합투자규약_신한지수연계증권투자신탁K-44호[채권]",
+      "category": "펀드",
+      "gold_chunks": 53,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 미래에셋글로벌EMP솔루션증권 환매수수료 알려줘",
+      "gold_product": "투설 미래에셋글로벌EMP솔루션증권",
+      "category": "펀드",
+      "gold_chunks": 247,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 삼성알아서EMP목표전환형증권투자신탁6호 투자위험등급이 뭐야?",
+      "gold_product": "투설 삼성알아서EMP목표전환형증권투자신탁6호",
+      "category": "펀드",
+      "gold_chunks": 324,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "규약_삼성퇴직연금KOSPI200채권혼합증권자투자신탁제1호[채권혼합]_250718(1) 어떤 펀드야?",
+      "gold_product": "규약_삼성퇴직연금KOSPI200채권혼합증권자투자신탁제1호[채권혼합]_250718(1)",
+      "category": "펀드",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "약관_다올글로벌빅테크1등주증권[주식][1](8) 환매수수료 알려줘",
+      "gold_product": "약관_다올글로벌빅테크1등주증권[주식][1](8)",
+      "category": "펀드",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신한MAN글로벌투자등급채권증권투자신탁 투자위험등급이 뭐야?",
+      "gold_product": "신한MAN글로벌투자등급채권증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 199,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB자동으로변하는적격TDF2040증권자투자신탁 어떤 펀드야?",
+      "gold_product": "DB자동으로변하는적격TDF2040증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 242,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "집합투자규약_신한지수연계증권투자신탁K-29호[채권] 환매수수료 알려줘",
+      "gold_product": "집합투자규약_신한지수연계증권투자신탁K-29호[채권]",
+      "category": "펀드",
+      "gold_chunks": 57,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 NH-Amundi KRX300 스마트 인베스터 증권투자신탁 투자위험등급이 뭐야?",
+      "gold_product": "투설 NH-Amundi KRX300 스마트 인베스터 증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 144,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "BNK삼성전자중소형증권투자신탁1호 어떤 펀드야?",
+      "gold_product": "BNK삼성전자중소형증권투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 174,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB온국민적격TDF2050증권자 환매수수료 알려줘",
+      "gold_product": "KB온국민적격TDF2050증권자",
+      "category": "펀드",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "리츠-재간접형 투자위험등급이 뭐야?",
+      "gold_product": "리츠-재간접형",
+      "category": "펀드",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 프랭클린미국금리연동플러스 어떤 펀드야?",
+      "gold_product": "투설 프랭클린미국금리연동플러스",
+      "category": "펀드",
+      "gold_chunks": 130,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "다올액티브자산배분형증권자제1호 신탁계약 환매수수료 알려줘",
+      "gold_product": "다올액티브자산배분형증권자제1호 신탁계약",
+      "category": "펀드",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB스타코스닥150인덱스증권자투자신탁 투자위험등급이 뭐야?",
+      "gold_product": "KB스타코스닥150인덱스증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 158,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 BNK튼튼단기국공채증권투자신탁1호 어떤 펀드야?",
+      "gold_product": "투설 BNK튼튼단기국공채증권투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 150,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "약관_유리글로벌거래소증권자투자신탁제1호[주식][1] 환매수수료 알려줘",
+      "gold_product": "약관_유리글로벌거래소증권자투자신탁제1호[주식][1]",
+      "category": "펀드",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 AB글로벌고수익증권투자신탁 투자위험등급이 뭐야?",
+      "gold_product": "투설 AB글로벌고수익증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 124,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KCGI프리덤적격TDF2050증권자투자신탁 어떤 펀드야?",
+      "gold_product": "KCGI프리덤적격TDF2050증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 407,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 교보악사파워인덱스증권투자신탁1호 환매수수료 알려줘",
+      "gold_product": "투설 교보악사파워인덱스증권투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 204,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "주식파생형 투자위험등급이 뭐야?",
+      "gold_product": "주식파생형",
+      "category": "펀드",
+      "gold_chunks": 31,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB지수연계트리플리자드증권투자신탁KSE-59호-투자 어떤 펀드야?",
+      "gold_product": "DB지수연계트리플리자드증권투자신탁KSE-59호-투자",
+      "category": "펀드",
+      "gold_chunks": 139,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB지수연계더블플러스증권투자신탁SEK-58호 환매수수료 알려줘",
+      "gold_product": "DB지수연계더블플러스증권투자신탁SEK-58호",
+      "category": "펀드",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 템플턴 아시안 그로스 투자위험등급이 뭐야?",
+      "gold_product": "투설 템플턴 아시안 그로스",
+      "category": "펀드",
+      "gold_chunks": 120,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB지수연계더블플러스증권투자신탁SEK-60호-투자 어떤 펀드야?",
+      "gold_product": "DB지수연계더블플러스증권투자신탁SEK-60호-투자",
+      "category": "펀드",
+      "gold_chunks": 126,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "키움키워드림적격TDF2055증권투자신탁제1호 환매수수료 알려줘",
+      "gold_product": "키움키워드림적격TDF2055증권투자신탁제1호",
+      "category": "펀드",
+      "gold_chunks": 257,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "스팍스본재팬증권자투자신탁H 투자 투자위험등급이 뭐야?",
+      "gold_product": "스팍스본재팬증권자투자신탁H 투자",
+      "category": "펀드",
+      "gold_chunks": 163,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "키움OCIO타겟리턴안정형 어떤 펀드야?",
+      "gold_product": "키움OCIO타겟리턴안정형",
+      "category": "펀드",
+      "gold_chunks": 31,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB진주찾기증권자투자신탁제2호-투자 환매수수료 알려줘",
+      "gold_product": "DB진주찾기증권자투자신탁제2호-투자",
+      "category": "펀드",
+      "gold_chunks": 198,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "180604_규약_한화글로벌전환사채 투자위험등급이 뭐야?",
+      "gold_product": "180604_규약_한화글로벌전환사채",
+      "category": "펀드",
+      "gold_chunks": 30,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB지수연계더블플러스증권투자신탁SEK-102호 어떤 펀드야?",
+      "gold_product": "DB지수연계더블플러스증권투자신탁SEK-102호",
+      "category": "펀드",
+      "gold_chunks": 24,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 한국밸류10년투자소득공제증권투자신탁 환매수수료 알려줘",
+      "gold_product": "투설 한국밸류10년투자소득공제증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 142,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "05C72 20241022 한국투자TDF알아서2040증권투자신탁 투자위험등급이 뭐야?",
+      "gold_product": "05C72 20241022 한국투자TDF알아서2040증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신탁계약서_피델리티글로벌테크놀로지증권자투자신탁_20250214 어떤 펀드야?",
+      "gold_product": "신탁계약서_피델리티글로벌테크놀로지증권자투자신탁_20250214",
+      "category": "펀드",
+      "gold_chunks": 28,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "13-피델리티코리아적립식증권자투자신탁.20240125 환매수수료 알려줘",
+      "gold_product": "13-피델리티코리아적립식증권자투자신탁.20240125",
+      "category": "펀드",
+      "gold_chunks": 162,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "삼성아세안증권자투자신탁제2호 투자위험등급이 뭐야?",
+      "gold_product": "삼성아세안증권자투자신탁제2호",
+      "category": "펀드",
+      "gold_chunks": 378,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 KCGI코리아증권투자신탁1호 어떤 펀드야?",
+      "gold_product": "투설 KCGI코리아증권투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 206,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 신한MAN글로벌투자등급채권월배당증권투자신탁 환매수수료 알려줘",
+      "gold_product": "투설 신한MAN글로벌투자등급채권월배당증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 202,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "하나PIMCO글로벌인컴혼합H 투자위험등급이 뭐야?",
+      "gold_product": "하나PIMCO글로벌인컴혼합H",
+      "category": "펀드",
+      "gold_chunks": 192,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신한마음편한적격TDF2035증권자투자신탁 어떤 펀드야?",
+      "gold_product": "신한마음편한적격TDF2035증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 204,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB 중소형 고배당 목표전환 증권 투자신탁 운용전환완료일부터 투자 환매수수료 알려줘",
+      "gold_product": "KB 중소형 고배당 목표전환 증권 투자신탁 운용전환완료일부터 투자",
+      "category": "펀드",
+      "gold_chunks": 139,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 동양 탄소배출권 투자위험등급이 뭐야?",
+      "gold_product": "투설 동양 탄소배출권",
+      "category": "펀드",
+      "gold_chunks": 100,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "신탁계약서_브이아이 굿초이스 만기투자형 증권 투자신탁 4호[채권](2) 어떤 펀드야?",
+      "gold_product": "신탁계약서_브이아이 굿초이스 만기투자형 증권 투자신탁 4호[채권](2)",
+      "category": "펀드",
+      "gold_chunks": 23,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "유리스몰뷰티증권자투자신탁 환매수수료 알려줘",
+      "gold_product": "유리스몰뷰티증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 25,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 KBK-성장과지배구조50목표전환증권3 투자위험등급이 뭐야?",
+      "gold_product": "투설 KBK-성장과지배구조50목표전환증권3",
+      "category": "펀드",
+      "gold_chunks": 149,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "HDC디딤모아주고막아주는증권투자신탁1호 어떤 펀드야?",
+      "gold_product": "HDC디딤모아주고막아주는증권투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 190,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "채권혼합-재간접형 환매수수료 알려줘",
+      "gold_product": "채권혼합-재간접형",
+      "category": "펀드",
+      "gold_chunks": 269,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "베어링독일증권자투자신탁UH 2025.09.26 투자위험등급이 뭐야?",
+      "gold_product": "베어링독일증권자투자신탁UH 2025.09.26",
+      "category": "펀드",
+      "gold_chunks": 200,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KCGI코리아증권투자신탁 어떤 펀드야?",
+      "gold_product": "KCGI코리아증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 신영고배당소득공제증권자투자신탁 환매수수료 알려줘",
+      "gold_product": "투설 신영고배당소득공제증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 162,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 KB온국민적격TDF2030증권자 투자위험등급이 뭐야?",
+      "gold_product": "투설 KB온국민적격TDF2030증권자",
+      "category": "펀드",
+      "gold_chunks": 187,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 우리PIMCO토탈리턴증권자투자신탁 어떤 펀드야?",
+      "gold_product": "투설 우리PIMCO토탈리턴증권자투자신탁",
+      "category": "펀드",
+      "gold_chunks": 187,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "규약_미래에셋차이나심천100인덱스증권자투자신탁1호 환매수수료 알려줘",
+      "gold_product": "규약_미래에셋차이나심천100인덱스증권자투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 27,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "05Q62 20241022 한국투자코스피솔루션증권투자신탁 투자위험등급이 뭐야?",
+      "gold_product": "05Q62 20241022 한국투자코스피솔루션증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 26,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "에셋플러스글로벌리치투게더퇴직연금증권자투자신탁1호 어떤 펀드야?",
+      "gold_product": "에셋플러스글로벌리치투게더퇴직연금증권자투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 177,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 IBK플레인바닐라EMP증권투자신탁 환매수수료 알려줘",
+      "gold_product": "투설 IBK플레인바닐라EMP증권투자신탁",
+      "category": "펀드",
+      "gold_chunks": 190,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "DB지수연계트리플리자드증권투자신탁KSE-55호-투자 투자위험등급이 뭐야?",
+      "gold_product": "DB지수연계트리플리자드증권투자신탁KSE-55호-투자",
+      "category": "펀드",
+      "gold_chunks": 137,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 KB차이나H주식인덱스증권자 어떤 펀드야?",
+      "gold_product": "투설 KB차이나H주식인덱스증권자",
+      "category": "펀드",
+      "gold_chunks": 160,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "투설 BNK튼튼배당10증권자투자신탁1호 환매수수료 알려줘",
+      "gold_product": "투설 BNK튼튼배당10증권자투자신탁1호",
+      "category": "펀드",
+      "gold_chunks": 191,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "KB밸류포커스증권자투자 투자위험등급이 뭐야?",
+      "gold_product": "KB밸류포커스증권자투자",
+      "category": "펀드",
+      "gold_chunks": 147,
+      "style": "exact",
+      "variant": "template"
+    },
+    {
+      "q": "집합투자 _신한지수연계증권투자신탁K-44호 이거 뭐야?",
+      "gold_product": "집합투자규약_신한지수연계증권투자신탁K-44호[채권]",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "집합투자 _신한지수연계증권 투자신탁K-44호 좀 알려줘",
+      "gold_product": "집합투자규약_신한지수연계증권투자신탁K-44호[채권]",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 삼성알아서EMP목표전환형증권 투자신탁6호 어때?",
+      "gold_product": "투설 삼성알아서EMP목표전환형증권투자신탁6호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "_삼성퇴직연금KOSPI200채권혼합증권자투자신탁제1호 좀 알려줘",
+      "gold_product": "규약_삼성퇴직연금KOSPI200채권혼합증권자투자신탁제1호[채권혼합]_250718(1)",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "_삼성퇴직연금KOSPI200채권혼합증권자 투자신탁제1호 좀 알려줘",
+      "gold_product": "규약_삼성퇴직연금KOSPI200채권혼합증권자투자신탁제1호[채권혼합]_250718(1)",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "_다올글로벌빅테크1등주증권 좀 알려줘",
+      "gold_product": "약관_다올글로벌빅테크1등주증권[주식][1](8)",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "신한MAN글로벌투자등급채권증권 투자신탁 좀 알려줘",
+      "gold_product": "신한MAN글로벌투자등급채권증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "DB자동으로변하는적격TDF 증권자투자신탁 있어?",
+      "gold_product": "DB자동으로변하는적격TDF2040증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "DB자동으로변하는적격TDF 증권자 투자신탁 좀 알려줘",
+      "gold_product": "DB자동으로변하는적격TDF2040증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "집합투자 _신한지수연계증권투자신탁K-29호 설명해줘",
+      "gold_product": "집합투자규약_신한지수연계증권투자신탁K-29호[채권]",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "집합투자 _신한지수연계증권 투자신탁K-29호 어때?",
+      "gold_product": "집합투자규약_신한지수연계증권투자신탁K-29호[채권]",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 NH-Amundi KRX300 스마트 인베스터 증권 투자신탁 좀 알려줘",
+      "gold_product": "투설 NH-Amundi KRX300 스마트 인베스터 증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "BNK삼성전자중소형증권 투자신탁1호 어때?",
+      "gold_product": "BNK삼성전자중소형증권투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB온국민적격TDF 증권자 어때?",
+      "gold_product": "KB온국민적격TDF2050증권자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KB스타코스닥150인덱스증권자 투자신탁 있어?",
+      "gold_product": "KB스타코스닥150인덱스증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 BNK튼튼단기국공채증권 투자신탁1호 있어?",
+      "gold_product": "투설 BNK튼튼단기국공채증권투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "_유리글로벌거래소증권자투자신탁제1호 좀 알려줘",
+      "gold_product": "약관_유리글로벌거래소증권자투자신탁제1호[주식][1]",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "_유리글로벌거래소증권자 투자신탁제1호 좀 알려줘",
+      "gold_product": "약관_유리글로벌거래소증권자투자신탁제1호[주식][1]",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 AB글로벌고수익증권 투자신탁 있어?",
+      "gold_product": "투설 AB글로벌고수익증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KCGI프리덤적격TDF 증권자투자신탁 어때?",
+      "gold_product": "KCGI프리덤적격TDF2050증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "KCGI프리덤적격TDF 증권자 투자신탁 설명해줘",
+      "gold_product": "KCGI프리덤적격TDF2050증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 교보악사파워인덱스증권 투자신탁1호 이거 뭐야?",
+      "gold_product": "투설 교보악사파워인덱스증권투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "DB지수연계트리플리자드증권 투자신탁KSE-59호-투자 좀 알려줘",
+      "gold_product": "DB지수연계트리플리자드증권투자신탁KSE-59호-투자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "DB지수연계더블플러스증권 투자신탁SEK-58호 이거 뭐야?",
+      "gold_product": "DB지수연계더블플러스증권투자신탁SEK-58호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "DB지수연계더블플러스증권 투자신탁SEK-60호-투자 있어?",
+      "gold_product": "DB지수연계더블플러스증권투자신탁SEK-60호-투자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "키움키워드림적격TDF 증권투자신탁제1호 설명해줘",
+      "gold_product": "키움키워드림적격TDF2055증권투자신탁제1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "키움키워드림적격TDF 증권 투자신탁제1호 좀 알려줘",
+      "gold_product": "키움키워드림적격TDF2055증권투자신탁제1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "스팍스본재팬증권자 투자신탁H 투자 있어?",
+      "gold_product": "스팍스본재팬증권자투자신탁H 투자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "DB진주찾기증권자 투자신탁제2호-투자 설명해줘",
+      "gold_product": "DB진주찾기증권자투자신탁제2호-투자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "_ _한화글로벌전환사채 좀 알려줘",
+      "gold_product": "180604_규약_한화글로벌전환사채",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "DB지수연계더블플러스증권 투자신탁SEK-102호 설명해줘",
+      "gold_product": "DB지수연계더블플러스증권투자신탁SEK-102호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 한국밸류10년투자소득공제증권 투자신탁 있어?",
+      "gold_product": "투설 한국밸류10년투자소득공제증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신탁 _피델리티글로벌테크놀로지증권자투자신탁 어때?",
+      "gold_product": "신탁계약서_피델리티글로벌테크놀로지증권자투자신탁_20250214",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "신탁 _피델리티글로벌테크놀로지증권자 투자신탁 이거 뭐야?",
+      "gold_product": "신탁계약서_피델리티글로벌테크놀로지증권자투자신탁_20250214",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "삼성아세안증권자 투자신탁제2호 이거 뭐야?",
+      "gold_product": "삼성아세안증권자투자신탁제2호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 KCGI코리아증권 투자신탁1호 어때?",
+      "gold_product": "투설 KCGI코리아증권투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 신한MAN글로벌투자등급채권월배당증권 투자신탁 설명해줘",
+      "gold_product": "투설 신한MAN글로벌투자등급채권월배당증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신한마음편한적격TDF 증권자투자신탁 좀 알려줘",
+      "gold_product": "신한마음편한적격TDF2035증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "신한마음편한적격TDF 증권자 투자신탁 설명해줘",
+      "gold_product": "신한마음편한적격TDF2035증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KB 중소형 고배당 목표전환 증권 투자 신탁 운용전환완료일부터 투자 있어?",
+      "gold_product": "KB 중소형 고배당 목표전환 증권 투자신탁 운용전환완료일부터 투자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "신탁 _브이아이 굿초이스 만기투자형 증권 투자신탁 4호 이거 뭐야?",
+      "gold_product": "신탁계약서_브이아이 굿초이스 만기투자형 증권 투자신탁 4호[채권](2)",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "신탁 _브이아이 굿초이스 만기투자형 증권 투자 신탁 4호 좀 알려줘",
+      "gold_product": "신탁계약서_브이아이 굿초이스 만기투자형 증권 투자신탁 4호[채권](2)",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "유리스몰뷰티증권자 투자신탁 설명해줘",
+      "gold_product": "유리스몰뷰티증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "HDC디딤모아주고막아주는증권 투자신탁1호 설명해줘",
+      "gold_product": "HDC디딤모아주고막아주는증권투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "KCGI코리아증권 투자신탁 이거 뭐야?",
+      "gold_product": "KCGI코리아증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 신영고배당소득공제증권자 투자신탁 어때?",
+      "gold_product": "투설 신영고배당소득공제증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 KB온국민적격TDF 증권자 이거 뭐야?",
+      "gold_product": "투설 KB온국민적격TDF2030증권자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "투설 우리PIMCO토탈리턴증권자 투자신탁 이거 뭐야?",
+      "gold_product": "투설 우리PIMCO토탈리턴증권자투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "_미래에셋차이나심천100인덱스증권자투자신탁1호 어때?",
+      "gold_product": "규약_미래에셋차이나심천100인덱스증권자투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "tag_stripped"
+    },
+    {
+      "q": "_미래에셋차이나심천100인덱스증권자 투자신탁1호 좀 알려줘",
+      "gold_product": "규약_미래에셋차이나심천100인덱스증권자투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "에셋플러스글로벌리치투게더퇴직연금증권자 투자신탁1호 좀 알려줘",
+      "gold_product": "에셋플러스글로벌리치투게더퇴직연금증권자투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 IBK플레인바닐라EMP증권 투자신탁 어때?",
+      "gold_product": "투설 IBK플레인바닐라EMP증권투자신탁",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "DB지수연계트리플리자드증권 투자신탁KSE-55호-투자 설명해줘",
+      "gold_product": "DB지수연계트리플리자드증권투자신탁KSE-55호-투자",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    },
+    {
+      "q": "투설 BNK튼튼배당10증권자 투자신탁1호 있어?",
+      "gold_product": "투설 BNK튼튼배당10증권자투자신탁1호",
+      "category": "펀드",
+      "style": "realistic",
+      "variant": "spaced"
+    }
+  ]
+}

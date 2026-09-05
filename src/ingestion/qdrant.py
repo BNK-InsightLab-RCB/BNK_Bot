@@ -25,6 +25,8 @@ from qdrant_client.models import (
     MatchValue,
     PayloadSchemaType,
     PointStruct,
+    TextIndexParams,
+    TokenizerType,
     VectorParams,
 )
 
@@ -37,7 +39,33 @@ PAYLOAD_FIELDS = (
     "product_name", "category", "doc_type", "source_file",
     "page", "section", "kind", "chunk_index", "body",
 )
-INDEXED_FIELDS = ("category", "doc_type", "product_name", "source_file")
+# keyword(정확일치) 인덱스를 거는 필드. ``build_filter`` 가 쓰는 것들이다.
+INDEXED_FIELDS = ("category", "doc_type", "product_name")
+
+# 전문검색(부분일치) 인덱스를 거는 필드 — 어휘 필터(hybrid)용. `src/chat/lexical.py` 참조.
+#
+# ⚠️ ``source_file`` 이 여기 있는 이유가 핵심이다. 청크에 붙는 컨텍스트 헤더
+# `[파일명] · 카테고리/문서종류` 는 **임베딩 텍스트에만** 들어가고 payload ``body`` 에는
+# 없다. 그래서 body 만 전문검색하면 **상품명이 본문에 안 나오는 문서를 영원히 못 찾는다**
+# (실측: pass@1 실패 28건 중 24건이 이 경우 — 보험 안내장·카드·외환 약정서 등
+# 상품명이 파일명에만 있는 문서들). source_file 을 검색 대상에 넣어 그 고리를 잇는다.
+#
+# source_file 은 keyword 가 아니라 text 로 잡는다 — 정확일치로 필터하는 코드가 없고
+# (표시·감사용으로 읽기만 한다) 부분일치가 필요하기 때문이다.
+#
+# 토크나이저가 필드마다 다른 이유:
+#   source_file → PREFIX. 전문검색은 **토큰 단위**로만 맞아서, 고객이 띄어 쓰면
+#     ("유스타일정기예금" → "유스타일 정기예금") 어느 토큰도 파일명과 일치하지 않는다.
+#     그러면 흔한 토큰("정기예금")으로 엉뚱하게 좁혀 **dense 단독보다 나빠진다**.
+#     PREFIX 는 접두사를 색인해 부분일치를 가능하게 한다.
+#     실측(1,302문항): 전체 65%→**80%**, 띄어쓰기 변형 55%→**75%**, 부분명 49%→**77%**.
+#     비용 2.0초 · 디스크 증가 없음(파일명은 짧다).
+#   body → MULTILINGUAL. 본문은 양이 커서 PREFIX 로 접두사를 전부 펼치면 색인이
+#     커진다. **미검증이므로 바꾸지 말 것** — 필요하면 크기·시간을 먼저 재라.
+TEXT_INDEXED_FIELDS = {
+    "body": TokenizerType.MULTILINGUAL,
+    "source_file": TokenizerType.PREFIX,
+}
 
 
 class QdrantStore:
@@ -73,6 +101,16 @@ class QdrantStore:
                 )
             except Exception:
                 pass
+        for field, tokenizer in TEXT_INDEXED_FIELDS.items():
+            try:
+                self.client.create_payload_index(
+                    self.collection, field_name=field,
+                    field_schema=TextIndexParams(
+                        type="text", tokenizer=tokenizer,
+                        min_token_len=2, max_token_len=30, lowercase=True),
+                )
+            except Exception:
+                pass
 
     def count(self) -> int:
         return self.client.count(self.collection, exact=True).count
@@ -82,7 +120,21 @@ class QdrantStore:
         return str(uuid.uuid5(_NAMESPACE, f"{source_file}:{chunk_index}"))
 
     def upsert_chunks(self, chunks: Sequence[dict], vectors) -> int:
-        """chunks: list of chunk dicts; vectors: (N, dim) array/list aligned."""
+        """chunks: list of chunk dicts; vectors: (N, dim) array/list aligned.
+
+        청크가 0개면 **Qdrant 를 호출하지 않고** 0 을 반환한다. 빈 points 를 보내면
+        Qdrant 가 `400 Bad request: Empty update request` 로 거절하고, 파이프라인은
+        이를 '문서 처리 실패'로 기록한다 — 실제로는 실패가 아니라 **추출할 텍스트가
+        없는 문서**인데도.
+
+        실측: 카드 안내장 45건이 이 경로로 죽었다. 글자가 벡터 도형으로 그려진
+        디자인 리플렛이라 텍스트레이어가 없고, Docling 이 남긴 `<!-- image -->`
+        placeholder 를 청커가 정상적으로 제거하자 청크가 0개가 됐다.
+        (해당 문서를 실제로 색인하려면 OCR 쪽 대응이 따로 필요하다 — 이 가드는
+         '오류로 죽지 않게' 할 뿐 문서를 살리지는 못한다.)
+        """
+        if not chunks:
+            return 0
         points = []
         for c, v in zip(chunks, vectors):
             payload = {k: c.get(k) for k in PAYLOAD_FIELDS}

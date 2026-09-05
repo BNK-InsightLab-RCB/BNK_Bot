@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
+from src.chat.retriever import Retriever  # noqa: E402
 from src.config import settings  # noqa: E402
 from src.ingestion.embedder import Embedder  # noqa: E402
 from src.ingestion.qdrant import QdrantStore  # noqa: E402
@@ -86,8 +87,13 @@ def main() -> None:
     pass1 = pass5 = 0
     records = []
     out(f"== RETRIEVAL (top-{TOP_K}) ==")
+    # ⚠️ 예전엔 여기서 store.search() 를 직접 불렀는데, 그러면 **운영 경로를 재지 않는다**.
+    # Retriever 에 어휘 필터(hybrid)와 임계 게이트가 들어간 뒤로는 이 스크립트만
+    # 옛 결과를 그대로 뱉어 개선이 없는 것처럼 보였다. 반드시 Retriever 를 거칠 것.
+    # score_threshold=0.0 인 이유: 이 평가는 **순위**를 재는 것이라 게이트가 개입하면 안 된다.
+    retriever = Retriever(emb, store)
     for i, item in enumerate(QUESTIONS, 1):
-        hits = store.search(emb.embed_query(item["q"]), top_k=TOP_K)
+        hits = retriever.retrieve(item["q"], top_k=TOP_K, score_threshold=0.0)
         ok5 = judge(hits, item.get("product"), item.get("keywords"))
         ok1 = judge(hits[:1], item.get("product"), item.get("keywords"))
         pass1 += ok1

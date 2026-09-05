@@ -135,11 +135,18 @@ def ingest_paths(
 
     ok: list[dict] = []
     failed: list[dict] = []
+    empty: list[dict] = []      # 처리는 됐으나 추출 텍스트가 0 인 문서(색인에 없음)
     for i, p in enumerate(paths, 1):
         try:
             res = ingest_document(p, parser, embedder, store)
             ok.append(res)
-            logger.success(f"[{i}/{len(paths)}] {p.name} → {res['chunks']} chunks")
+            if res["chunks"] == 0:
+                # 오류는 아니지만 **색인에 아무것도 안 들어간** 문서다. 성공으로만 세면
+                # "이 상품은 왜 검색이 안 되지?" 를 나중에 추적할 수 없다 → 따로 집계.
+                empty.append({"file": p.name, "category": res["category"]})
+                logger.warning(f"[{i}/{len(paths)}] {p.name} → 0 chunks (추출된 텍스트 없음)")
+            else:
+                logger.success(f"[{i}/{len(paths)}] {p.name} → {res['chunks']} chunks")
         except Exception as e:  # isolate: one bad PDF must not stop the batch
             logger.error(f"[{i}/{len(paths)}] FAILED {p.name}: {e}")
             failed.append({"file": p.name, "error": str(e)})
@@ -157,15 +164,23 @@ def ingest_paths(
     summary = {
         "ok": len(ok),
         "failed": len(failed),
+        "empty": len(empty),          # 처리됐으나 색인에 안 들어간 문서 수
         "total": len(paths),
         "chunks": sum(r["chunks"] for r in ok),
         "points_in_collection": store.count(),
         "failures": failed,
+        "empty_documents": empty,     # 어떤 문서인지 남긴다(추적 가능해야 조치가 된다)
     }
     logger.info(
         f"ingest done: ok={summary['ok']} failed={summary['failed']} "
-        f"chunks={summary['chunks']} points={summary['points_in_collection']}"
+        f"empty={summary['empty']} chunks={summary['chunks']} "
+        f"points={summary['points_in_collection']}"
     )
+    if empty:
+        logger.warning(
+            f"⚠️ 텍스트를 추출하지 못해 색인되지 않은 문서 {len(empty)}건 "
+            f"(오류 아님 — 이미지/벡터 그래픽 문서일 가능성)"
+        )
     return summary
 
 

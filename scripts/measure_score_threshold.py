@@ -58,7 +58,33 @@ IN = [
     "만기일에 자동재예치 되나요?",
     "통장 분실하면 어떻게 해?",
     "저탄소실천예금 우대금리 조건은?",
+
+    # ── 2026-09-05 추가: 코퍼스가 예금 2카테고리 → 9카테고리(234,050청크)로 바뀌었다.
+    # 위 20문항은 전부 예금이라, 그것만으로 잡은 임계는 펀드·보험·신탁 질문에 대해
+    # 검증된 바가 없다. 아래는 **실제 색인된 상품명을 Qdrant 페이로드에서 뽑아** 만들고
+    # 검색이 해당 도메인 문서를 찾는지 1건씩 확인한 것들이다(전부 0.61 이상).
+    "AB글로벌고수익증권투자신탁의 투자위험등급은?",
+    "펀드 환매수수료는 어떻게 되나요?",
+    "집합투자업자와 판매회사는 어떻게 다른가요?",
+    "삼성달러표시단기채권증권자투자신탁 환헤지를 하나요?",
+    "경남지역개발 신탁의 신탁기간이 얼마인가요?",
+    "특정금전신탁 중도해지가 가능한가요?",
+    "외화정기예금 가입 통화는 어떤 게 있나요?",
+    "꿈이룸외화자유적금 가입금액 제한이 있나요?",
+    "주택담보노후연금대출 상환 방법은?",
+    "가계대출 중도상환수수료가 있나요?",
+    "전자금융서비스 이체한도는 얼마인가요?",
+    "신용카드 분실하면 어떻게 신고하나요?",
+    "다모아상해보험 보험료 납입기간은?",
+    "변액보험 최저보증이 무엇인가요?",
+    "변액저축보험 특별계정 운용 실적은 어떻게 확인하나요?",
+    "금융주소 한번에 서비스가 무엇인가요?",
+    "가족사랑통장 우대 혜택이 뭐야?",
+    "주택청약예금 가입 자격은?",
 ]
+# ⚠️ IN 의 의미: "**게이트가 열려야 한다**"이지 "top1 이 정확히 그 상품이다"가 아니다.
+# top1 정확도는 `eval_retrieval.py`(pass@1/@5)가 따로 잰다. 실제로 위 질문 중 몇 개는
+# 같은 도메인의 인접 상품을 top1 으로 물어온다(예: 주택청약예금 → 주택청약부금).
 
 OUT = [
     "오늘 비트코인 시세 알려줘",
@@ -73,11 +99,12 @@ OUT = [
     "부산에서 서울 KTX 시간표",
 ]
 
-NOT_YET = [   # 도메인은 맞지만 아직 미적재 → 적재되면 IN 으로 바뀐다
-    "펀드 수익률이 얼마나 돼?",
-    "주택담보대출 금리가 몇 퍼센트야?",
-    "신용카드 연회비는 얼마야?",
-    "실손보험 보장 내용 알려줘",
+NOT_YET = [   # 도메인은 맞지만 근거가 색인에 없다 → 지금은 "모름"이 정답
+    # 2026-09-05 갱신: 펀드·대출·카드는 적재됐으므로 IN 으로 옮겼다.
+    # 남은 것은 **근거가 실제로 없음을 청크 단위로 확인한** 질문들이다.
+    "실손보험 보장 내용 알려줘",          # 보험/약관 642건 중 27건(4%)만 색인
+    "그린카드 연회비는 얼마인가요?",       # 그린카드 5청크 중 '연회비' 포함 0개 — 카드 표 추출 실패
+    "공동인증서 재발급은 어떻게 하나요?",   # 공동인증 문서가 1청크뿐이고 '재발급' 언급 없음
 ]
 
 
@@ -114,7 +141,11 @@ def main() -> None:
         for q in qs:
             # score_threshold=0.0 — **보정 도구는 임계의 영향을 받으면 안 된다**.
             # (기본값을 쓰면 OUT 이 전부 빈 결과가 되어 분포를 잴 수 없다.)
-            hits = retriever.retrieve(q, top_k=TOP_K, score_threshold=0.0)
+            # use_lexical=False: 임계가 관장하는 것은 **게이트(무필터 dense)** 다.
+            # 어휘 필터를 켠 채로 재면 좁혀진 집합의 top1 을 재게 되어(실측 IN.min
+            # 0.6245 → 0.4664) 게이트가 실제로 하는 일과 다른 값을 잡는다.
+            hits = retriever.retrieve(q, top_k=TOP_K, score_threshold=0.0,
+                                      use_lexical=False)
             top1 = hits[0].score if hits else 0.0
             tops.append(top1)
             rows.append({
@@ -138,14 +169,46 @@ def main() -> None:
     lines.append(f"  OUT.max = {out_max:.4f}")
     lines.append(f"  gap     = {gap:+.4f}  ({'분리됨' if gap > 0 else '겹침 — 단일 임계로 불가'})")
 
-    if gap > 0:
-        # 중점을 쓰되 IN 쪽에 여유를 더 둔다(정상 답변을 죽이는 쪽이 더 나쁨).
-        suggested = round(out_max + gap * 0.4, 3)
-        lines.append(f"\n  → 권장 임계 = {suggested}  (OUT.max 위 40% 지점, IN 쪽 여유 확보)")
-        lines.append(f"    이 값이면 IN {sum(s >= suggested for s in scores['IN'])}/{len(IN)} 통과, "
-                     f"OUT {sum(s < suggested for s in scores['OUT'])}/{len(OUT)} 차단")
+    # ── 임계 스윕.
+    # 예전엔 gap<=0 이면 "분리 불가"로 끝냈는데, 그 판정은 **완전 분리만 성공으로 치는**
+    # 이분법이라 실제 최적 운영점을 놓친다. 코퍼스가 234,050청크로 커지자 무관 질문도
+    # 어딘가에 0.67 로 걸리게 됐고(예: "코스피 지수" → 펀드 투자설명서), 완전 분리는
+    # 원리상 불가능해졌다. 그래서 **IN 무손실을 제약으로 두고 OUT 차단을 최대화**한다.
+    #   왜 IN 무손실이 제약인가: 정상 질문을 죽이는 false refusal 이 무관 질문을 통과시키는
+    #   것보다 훨씬 나쁘다. 통과한 무관 질문은 뒤의 LLM 프롬프트+숫자 가드레일이 한 번 더
+    #   거른다(2단 방어). 반대로 게이트에서 죽은 정상 질문은 복구 경로가 없다.
+    # 0.005 격자에서 직접 고른다. **사후에 안전여유를 빼지 않는다** — 빼면 보고한 수치와
+    # 권장값이 어긋난다(실제로 그 버그가 있었다: 0.600 에서 잰 'OUT 9/10'을 0.595 권장에
+    # 붙였는데, 0.595 에서는 달러환율 0.5972 가 통과해 8/10 이었다).
+    # 여유는 격자에서 자연히 확보된다(권장값과 IN.min 의 거리로 보고).
+    grid = [round(0.40 + 0.005 * i, 3) for i in range(81)]
+    lines.append("\n== 임계 스윕 (IN 무손실 구간만) ==")
+    lines.append(f"  {'임계':>7} | {'IN 통과':>12} | {'OUT 차단':>12}")
+    best = None
+    for t in grid:
+        ip = sum(s >= t for s in scores["IN"])
+        ob = sum(s < t for s in scores["OUT"])
+        if ip == len(IN):
+            # 동점이면 **낮은 쪽**을 택한다: OUT 차단 성능이 같다면 IN 여유가 큰 쪽이 안전.
+            if best is None or ob > best[2]:
+                best = (t, ip, ob)
+            lines.append(f"  {t:>7.3f} | {ip:>3}/{len(IN)} {100*ip//len(IN):>3}% | "
+                         f"{ob:>3}/{len(OUT)} {100*ob//len(OUT):>3}%")
+
+    if best:
+        t, ip, ob = best
+        lines.append(f"\n  → 권장 임계 = {t}")
+        lines.append(f"    IN {ip}/{len(IN)} 통과(무손실) · OUT {ob}/{len(OUT)} 차단")
+        lines.append(f"    IN.min({in_min:.4f}) 까지 여유 {in_min - t:+.4f}")
+        cur = settings.retrieval_score_threshold
+        lines.append(f"    현재 설정값 = {cur} → IN {sum(s >= cur for s in scores['IN'])}/{len(IN)} 통과 · "
+                     f"OUT {sum(s < cur for s in scores['OUT'])}/{len(OUT)} 차단")
+        if ob < len(OUT):
+            lines.append("    통과하는 무관 질문(LLM 프롬프트+숫자 가드레일이 2차로 거름):")
+            for r in sorted((r for r in detail["OUT"] if r["top1"] >= t), key=lambda r: -r["top1"]):
+                lines.append(f"      {r['top1']:.4f}  {r['q']}  → {r['top1_product']}")
     else:
-        lines.append("\n  → 단일 절대임계로는 분리 불가. top1-top5 격차/카테고리 일관성 등 다른 신호 필요.")
+        lines.append("\n  → IN 무손실 지점이 없다. 임계 단독으로는 불가 — 다른 신호 필요.")
 
     lines.append("\n== NOT_YET(미적재 도메인) 참고 ==")
     lines.append("   적재되면 IN 이 되므로 임계 계산에서 제외했다. 현재 점수:")

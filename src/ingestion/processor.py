@@ -164,6 +164,42 @@ class KoreanFinanceProfile(DocProfile):
         return super().split_long_text(text, max_chars)
 
 
+# 임베딩 모델(KURE-v1)의 입력 상한 8,192 토큰에 대응하는 문자 수. 실측으로 한국어는
+# 약 1.8자/토큰이라 8,192토큰 ≈ 14,700자다. 여유를 두고 12,000자로 잡는다.
+MAX_EMBED_CHARS = 12_000
+
+
+def cap_for_embedding(body: str, kind: str, limit: int = MAX_EMBED_CHARS) -> list[str]:
+    """임베딩 상한을 넘는 덩어리를 나눈다. 넘지 않으면 그대로 1개 반환.
+
+    **왜 표까지 쪼개는가.** "표는 통째로 유지"가 원칙이지만, 상한을 넘으면 모델이
+    앞부분만 읽고 **초과분을 조용히 버린다** — 통째로 뒀는데 정작 뒷부분이 검색되지
+    않으므로 원칙이 이미 깨진 상태다. 쪼개면 전부 색인된다.
+    실측: 전체 237,911청크 중 초과는 114개(0.05%), 영향 문서는 11개(0.3%)뿐이라
+    대다수 문서의 청킹 결과는 이 규칙과 무관하게 동일하다.
+    (부수 효과: 초과 청크가 57개였던 보험 약관에서 어텐션 메모리가 폭증해 적재가
+     2시간 넘게 정지했다 — 상한이 그 정지도 없앤다.)
+
+    표는 **행 경계**에서만 자른다(행 중간을 자르면 라벨↔값이 깨진다).
+    헤더 행을 반복하지 않는 이유: 글자를 새로 만들지 않기 위해서다 —
+    `check_chunk_conservation` 이 "원본 글자 = 청크 글자"를 검증하는데, 헤더를
+    복제하면 그 불변식이 깨져 진짜 손실과 구분할 수 없게 된다.
+    """
+    if len(body) <= limit:
+        return [body]
+    lines = body.split("\n")
+    out, cur = [], []
+    for line in lines:
+        # 이 줄을 넣으면 상한을 넘고, 이미 담긴 게 있으면 끊는다(줄 = 표의 행 경계).
+        if cur and sum(len(x) + 1 for x in cur) + len(line) > limit:
+            out.append("\n".join(cur))
+            cur = []
+        cur.append(line)
+    if cur:
+        out.append("\n".join(cur))
+    return out
+
+
 def _greedy_split(pieces: list[str], max_chars: int) -> list[str]:
     out: list[str] = []
     cur = ""
@@ -264,6 +300,12 @@ def chunk_markdown(
         body = _nfc(body.strip())
         if not body:
             return
+        # 임베딩 한계를 넘는 덩어리는 여기서 쪼갠다. 표도 예외가 아니다 — 이유는
+        # `cap_for_embedding` 참조(통째로 두면 뒷부분이 조용히 버려진다).
+        for piece in cap_for_embedding(body, kind):
+            _emit_one(piece, page, kind)
+
+    def _emit_one(body: str, page: int, kind: str) -> None:
         # 헤더에는 가공 없는 파일명(stem)을, payload 라벨에는 추출된 상품명을 쓴다.
         # 둘을 분리한 이유: 헤더는 **검색 벡터에 들어가므로** 추출 실패가 검색 품질을
         # 오염시킨다. payload 는 표시·필터용이라 틀려도 검색엔 영향이 없다.
